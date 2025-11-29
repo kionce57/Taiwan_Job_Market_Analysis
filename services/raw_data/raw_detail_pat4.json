@@ -1,0 +1,240 @@
+{
+    "data": {
+        "corpImageRight": {
+            "corpImageRight": {
+                "imageUrl": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/custintroduce/image3.jpg?v=20250314160112",
+                "link": ""
+            }
+        },
+        "header": {
+            "corpImageTop": {
+                "imageUrl": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/custintroduce/image2.jpg?v=20250314160112",
+                "link": ""
+            },
+            "jobName": "LLM / Python 開發工程師 Large Language Model / Python Engineer",
+            "appearDate": "2025/11/18",
+            "custName": "北祥科技服務股份有限公司",
+            "custUrl": "https://www.104.com.tw/company/9mb0ddc",
+            "analysisType": 2,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8vtso",
+            "isSaved": false,
+            "isFollowed": false,
+            "isApplied": false,
+            "applyDate": "",
+            "userApplyCount": 0,
+            "hrBehaviorPR": 0.7878645458506519
+        },
+        "contact": {
+            "hrName": "HR",
+            "email": "",
+            "visit": "",
+            "phone": [],
+            "other": "",
+            "reply": ""
+        },
+        "environmentPic": {
+            "environmentPic": [
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_962627717426190211.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_962627717426190211.jpg?v=20250314160112",
+                    "description": "迎賓櫃台"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_965576701506925788.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_965576701506925788.jpg?v=20250314160112",
+                    "description": "業務銷售中心"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_890328564412706094.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_890328564412706094.jpg?v=20250314160112",
+                    "description": "開放明亮的多功能會議空間"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_964488071873056676.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_964488071873056676.jpg?v=20250314160112",
+                    "description": "團隊徒步21K遠征挑戰"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_964488071873056675.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_964488071873056675.jpg?v=20250314160112",
+                    "description": "北祥40周年員工旅遊-花東元氣三日遊"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_893506157124058371.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_893506157124058371.jpg?v=20250314160112",
+                    "description": "渣打公益路跑"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_965576701506925789.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_965576701506925789.jpg?v=20250314160112",
+                    "description": "2024年聖誕派對"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_962627717426190212.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_962627717426190212.jpg?v=20250314160112",
+                    "description": "綠意盎然的會議空間"
+                },
+                {
+                    "thumbnailLink": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/s_890328564411113303.jpg?v=20250314160112",
+                    "link": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/env/l_890328564411113303.jpg?v=20250314160112",
+                    "description": "公司外部綠地空間"
+                }
+            ],
+            "corpImageBottom": {
+                "imageUrl": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/custintroduce/image1.jpg?v=20250314160112",
+                "link": "https://www.pershing.com.tw/join_ptsc/"
+            }
+        },
+        "condition": {
+            "acceptRole": {
+                "role": [],
+                "disRole": {
+                    "needHandicapCompendium": false,
+                    "disability": []
+                }
+            },
+            "workExp": "不拘",
+            "edu": "大學以上",
+            "major": [
+                "資訊工程相關",
+                "數理統計相關"
+            ],
+            "language": [
+                {
+                    "code": 1,
+                    "language": "英文",
+                    "ability": {
+                        "listening": "中等",
+                        "speaking": "中等",
+                        "reading": "中等",
+                        "writing": "中等"
+                    }
+                }
+            ],
+            "localLanguage": [],
+            "specialty": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003097",
+                    "description": "LLM"
+                },
+                {
+                    "code": "12001003088",
+                    "description": "NLP"
+                },
+                {
+                    "code": "12001003099",
+                    "description": "Prompt"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                }
+            ],
+            "skill": [
+                {
+                    "code": "11009005007",
+                    "description": "Machine Learning"
+                },
+                {
+                    "code": "11009005012",
+                    "description": "AI"
+                }
+            ],
+            "certificate": [],
+            "driverLicense": [],
+            "other": "【加分條件】\n具備 Node.js 經驗尤佳\n熟悉 React / Vue / Bootstrap 等任一前端框架尤佳\n具備雲端平台開發經驗（GCP / AWS / IBM Cloud）"
+        },
+        "welfare": {
+            "tag": [
+                "年終獎金",
+                "特殊節日獎金禮品",
+                "員工舒壓按摩",
+                "結婚禮金",
+                "生育津貼",
+                "社團補助",
+                "國內旅遊",
+                "國外旅遊",
+                "部門聚餐",
+                "慶生會",
+                "社團活動",
+                "家庭日",
+                "員工停車位",
+                "特約商店"
+            ],
+            "welfare": "◆獎金/禮品類\n1.年終績效獎金/業績達成獎金\n2.中秋/端午節金或禮品\n3.生日禮券\n\n◆保險類\n1.依法投保勞健保及提撥勞工退休金\n2.員工本人團保(意外險/職災保險)/眷屬團保優惠\n3.活動公共意外責任險\n\n◆制度類\n1.依公司營運狀況及個人表現發放績效獎金\n2.依公司營運狀況與個人表現調薪\n3.教育訓練(內/外部)\n4.順暢的升遷管道\n5.員購筆電補助方案\n\n◆請休假制度\n1.彈性上下班(08:30-17:30、09:30-18:30上班)及午休時間75分鐘(12:00-13:15)\n2.加班換補休\n3.員工健康檢查每三年一次，且提供半天公假\n4.生日當月享有全薪生日假一天\n\n◆休閒類\n1.生育禮金、結婚禮金、喪葬、住院慰問禮品\n2.員工旅遊補助(2018年溫哥華旅遊、2022年花東三日遊)\n3.家庭日\n4.公司、部門聚餐\n5.社團活動：單車社、羽球社、籃球社\n6.免費按摩舒壓服務\n8.護理師健康關懷及諮詢服務\n9.台北總部提供室內機車停車場\n10.每週三次零食補給、現煮咖啡\n11.各期報章雜誌提供(ex:天下雜誌、商業週刊、貿易雜誌等)\n12.不定期員工福利活動(ex:尾牙/春酒聚餐及摸彩、聖誕節、勞動節活動、黑客松活動等)\n13.特約商店(ex:幼兒園優惠、連鎖咖啡店、餐飲店、購物網等)\n\n◆獎勵\n1.資深及優秀員工表揚\n2.專案慶功宴\n\n◆交通便利\n1.捷運站：走路約10分鐘(劍南路站西湖站)\n2.公車：走路約3分鐘(文湖國小站、美麗華站)\n3.Ubike租借站：公司大門對面50公尺",
+            "legalTag": [
+                "週休二日"
+            ]
+        },
+        "jobDetail": {
+            "jobDescription": "本職務將加入公司的 AI 技術開發團隊，參與 LLM 服務從模型選型、應用開發到部署的完整生命週期，協助客戶建構能真正產生價值、可維運的 AI 解決方案。\n\n【工作職責】 \n1. 負責協助客戶建置 AI 解決方案，並提供模型最佳化與技術支援\n2. 參與 LLM 應用服務的完整開發週期：需求分析、架構設計、開發、測試與部署\n3. 使用本地開源模型（如 Llama、Gemma 等）進行模型部署、微調與應用開發\n4. 建置與優化基於 RAG、Function Calling、Agentic Workflow 的 AI 系統架構\n5. 進行 API 整合、資料處理、模型推論流程與效能優化\n6. 跨部門協作（產品、企劃、專案管理）共同完成客戶專案\n\n【我們希望你具備的能力】\n- LLM 與 AI 技術能力\n理解 AI/ML、NLP 基礎概念與常見架構\n具備本地部署、維護或最佳化開源 LLM 的實務經驗\n精通 Prompt Engineering，能有效提升模型表現\n理解並能實作 RAG（Retrieval-Augmented Generation）\n熟悉 Function Calling 應用與外部 API 整合方法\n掌握至少一種主流 LLM 開發框架，如LangChain / LangGraph / LlamaIndex 等\n具模型工作流程（推論、向量資料庫、API串接）之開發經驗\n\n- 軟體工程能力\n精通 Python，熟悉常用套件、架構與專案開發流程\n熟悉 Git 版本控制\n具備 API 設計、開發與整合經驗（RESTful API 等）\n熟悉 SQL / NoSQL / Redis 等資料庫\n熟悉 Docker、Kubernetes 等容器化技術，能進行模型部署與管理\n\n【加分條件】\n具備 Node.js 經驗尤佳\n熟悉 React / Vue / Bootstrap 等任一前端框架尤佳\n具備雲端平台開發經驗（GCP / AWS / IBM Cloud）\n\n【加入團隊後的學習與支援】\n- 可深入了解並操作各種開源 LLM、向量資料庫與 AI 工具鏈\n- 累積跨產業 AI 落地專案經驗（製造、金融、零售、政府等）\n- 參與產品與 AI 服務的技術 roadmap 規劃，強化 AI 系統設計能力\n\n【職涯發展】\n可進階至 AI Solution Architect（AI 解決方案架構師）\n或成為 AI 產品技術經理\n\n【薪資與福利】\n- 依學經歷與能力核薪，並依公司營運與個人表現，發放年終獎金與專案獎金\n- 彈性上下班、學習資源補助、完善內部升遷輪調制度\n- 年度健康檢查、員工旅遊團體保險、優質辦公環境",
+            "jobCategory": [
+                {
+                    "code": "2007001012",
+                    "description": "演算法工程師"
+                },
+                {
+                    "code": "2007001004",
+                    "description": "軟體工程師"
+                },
+                {
+                    "code": "2016001007",
+                    "description": "統計學研究員"
+                }
+            ],
+            "salary": "待遇面議",
+            "salaryMin": 0,
+            "salaryMax": 0,
+            "salaryType": 10,
+            "jobType": 1,
+            "workType": [],
+            "addressNo": "6001001010",
+            "addressRegion": "台北市內湖區",
+            "addressArea": "台北市",
+            "addressDetail": "文湖街18號2樓",
+            "industryArea": "",
+            "longitude": "121.5611044",
+            "latitude": "25.0861747",
+            "manageResp": "不需負擔管理責任",
+            "businessTrip": "無需出差外派",
+            "workPeriod": "日班",
+            "vacationPolicy": "依公司規定",
+            "startWorkingDay": "不限",
+            "hireType": 0,
+            "delegatedRecruit": "",
+            "needEmp": "1人",
+            "landmark": "",
+            "remoteWork": null
+        },
+        "switch": "on",
+        "custLogo": "https://static.104.com.tw/b_profile/cust_picture/0000/20939790000/logo.png?v=20250314160112",
+        "postalCode": "114",
+        "closeDate": "",
+        "industry": "電腦系統整合服務業",
+        "custNo": "20939790000",
+        "reportUrl": "https://www.104.com.tw/feedback?category=2&custName=%E5%8C%97%E7%A5%A5%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8B%99%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobName=LLM+%2F+Python+%E9%96%8B%E7%99%BC%E5%B7%A5%E7%A8%8B%E5%B8%AB+Large+Language+Model+%2F+Python+Engineer",
+        "industryNo": "1001001001",
+        "employees": "240人",
+        "chinaCorp": false,
+        "interactionRecord": {
+            "lastProcessedResumeAtTime": 1763683143,
+            "lastCustReplyTimestamp": null,
+            "nowTimestamp": 1763964908
+        }
+    },
+    "metadata": {
+        "enableHTML": false,
+        "hiddenBanner": false,
+        "seo": {
+            "noindex": false
+        }
+    }
+}

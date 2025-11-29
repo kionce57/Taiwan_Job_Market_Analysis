@@ -1,0 +1,4115 @@
+{
+    "data": [
+        {
+            "appearDate": "20251120",
+            "applyCnt": 11,
+            "coIndustry": 1001001003,
+            "coIndustryDesc": "網際網路相關業",
+            "custName": "水文資訊有限公司",
+            "custNo": "130000000061970",
+            "description": "起薪會比系統維運工程師來的少一些，\n等你掌握了雲端、虛擬環境、用python寫些自動化程序維護系統，\n公司會再根據實際程度逐步調薪，\n調薪幅度可以參考系統維運工程師的薪資。\n\n水文一般會給比市場行情高一些的待遇，確保團隊成員穩定。\n工作壓力不大，工",
+            "descSnippet": "起薪會比系統維運工程師來的少一些，\n等你掌握了雲端、虛擬環境、用[[[python]]]寫些自動化程序維護系統，\n公司會再根據實際程度逐步調薪，\n調薪幅度可以參考系統維運工程師的薪資。\n\n水文一般會給比市場行情高一些的待遇，確保團隊成員穩定。\n工作壓力不大，工",
+            "mrtDist": 0.03,
+            "jobAddress": "和平東路2段175巷5弄1之1號1樓",
+            "jobAddrNo": 6001001005,
+            "jobAddrNoDesc": "台北市大安區",
+            "jobName": "網路管理工程師（需外勤）",
+            "jobNameSnippet": "網路管理工程師（需外勤）",
+            "jobNo": "14925367",
+            "jobRo": 1,
+            "jobType": 1,
+            "lat": 25.0267596,
+            "lon": 121.5229719,
+            "link": {
+                "job": "https://www.104.com.tw/job/8vwhj",
+                "cust": "https://www.104.com.tw/company/1a2x6bjb4i",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8vwhj?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001003010",
+            "mrtDesc": "捷運古亭站",
+            "optionEdu": [
+                3
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 70000,
+            "salaryLow": 50000,
+            "tags": {
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "landmark": {
+                    "desc": "距捷運古亭站約30公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.994609837413897,
+            "jobCat": [
+                2007002005,
+                2007002006,
+                2007002001
+            ],
+            "labels": [
+                "45plus@45invited",
+                "c@wf1"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763893737,
+                "lastCustReplyTimestamp": 1763893623,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251120",
+            "applyCnt": 5,
+            "coIndustry": 1004001006,
+            "coIndustryDesc": "其他金融及輔助業",
+            "custName": "烽泰科技有限公司",
+            "custNo": "130000000154388",
+            "description": " tools and data analysis (Excel, SQL, Python preferred).\n－Good command of both English and Mandarin.\n－Open to frequent business",
+            "descSnippet": " tools and data analysis (Excel, SQL, [[[Python]]] preferred).\n－Good command of both English and Mandarin.\n－Open to frequent business",
+            "mrtDist": 0.5,
+            "jobAddress": "南京西路捷運中山站六號出口共構大樓",
+            "jobAddrNo": 6001001002,
+            "jobAddrNoDesc": "台北市大同區",
+            "jobName": "【外商】Risk Operation Lead",
+            "jobNameSnippet": "【外商】Risk Operation Lead",
+            "jobNo": "14872712",
+            "jobRo": 1,
+            "jobType": 1,
+            "lat": 25.0537964,
+            "lon": 121.5152159,
+            "link": {
+                "job": "https://www.104.com.tw/job/8uruw",
+                "cust": "https://www.104.com.tw/company/1a2x6blafo",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8uruw?channel=104rpt"
+            },
+            "major": [
+                "經濟學相關",
+                "財稅金融相關",
+                "其他商業及管理相關"
+            ],
+            "mrt": "99001002010",
+            "mrtDesc": "捷運中山站",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "zoneForeign": {
+                    "desc": "外商公司",
+                    "param": 5
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf13": {
+                    "desc": "",
+                    "param": "wf13"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf32": {
+                    "desc": "",
+                    "param": "wf32"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "landmark": {
+                    "desc": "距捷運中山站約500公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.6214010506166131,
+            "jobCat": [
+                2003002020,
+                2003002002
+            ],
+            "labels": [
+                "c@wf29",
+                "foreigners@full_fc_em_jbs",
+                "45plus@45invited",
+                "c@wf10",
+                "c@wf1",
+                "c@wf3",
+                "c@wf13",
+                "c@wf26",
+                "c@wf7",
+                "c@wf30",
+                "foreigners@foreigners",
+                "c@wf14",
+                "foreigners@overseasStudents_tick",
+                "c@wf2",
+                "c@wf31",
+                "c@wf9",
+                "c@wf32",
+                "foreigners@foreigners_tick",
+                "c@wf8"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2,
+                32,
+                64,
+                65536
+            ],
+            "employeeCount": 200,
+            "pcSkills": [
+                {
+                    "code": "12001008003",
+                    "description": "Excel"
+                },
+                {
+                    "code": "12001008012",
+                    "description": "PowerPoint"
+                },
+                {
+                    "code": "12001008016",
+                    "description": "Word"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": 1763036432,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20250624",
+            "applyCnt": 3,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "稑燾智能有限公司",
+            "custNo": "130000000245290",
+            "description": "1. 熟Python Fastapi\n2.注重軟體開發品質\n3. 負責軟體之分析、設計以及程式撰寫。\n4. 規劃執行軟體架構及模組之設計，並控管軟體設計進度。\n5, 進行軟體之測試與修改。\n6. 規劃、執行與維護量產的產品。\n7. 具備研究軟體新",
+            "descSnippet": "1. 熟[[[Python]]] Fastapi\n2.注重軟體開發品質\n3. 負責軟體之分析、設計以及程式撰寫。\n4. 規劃執行軟體架構及模組之設計，並控管軟體設計進度。\n5, 進行軟體之測試與修改。\n6. 規劃、執行與維護量產的產品。\n7. 具備研究軟體新",
+            "mrtDist": 0.44,
+            "jobAddress": "堤頂大道二段285號",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "Python 後端工程師",
+            "jobNameSnippet": "[[[Python]]] 後端工程師",
+            "jobNo": "14539680",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0786056,
+            "lon": 121.5655473,
+            "link": {
+                "job": "https://www.104.com.tw/job/8nmw0",
+                "cust": "https://www.104.com.tw/company/1a2x6bn8kq",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8nmw0?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001016",
+            "mrtDesc": "捷運西湖站",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 6,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 9999999,
+            "salaryLow": 65000,
+            "tags": {
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "landmark": {
+                    "desc": "距捷運西湖站約440公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.8313677109188734,
+            "jobCat": [
+                2007001016,
+                2007001015,
+                2007001017
+            ],
+            "labels": [
+                "c@wf8",
+                "senior@senior_job_G",
+                "c@wf26"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2048,
+                4096,
+                32768
+            ],
+            "employeeCount": 100,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": 1763549807,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251106",
+            "applyCnt": 9,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "TradeBeyond_香港商科銳投資控股有限公司台灣分公司",
+            "custNo": "130000000087583",
+            "description": " Python foundation that makes our AI-powered products smarter and faster. Day to day, you’ll focus on the services for AI",
+            "descSnippet": " [[[Python]]] foundation that makes our AI-powered products smarter and faster. Day to day, you’ll focus on the services for AI",
+            "mrtDist": 0,
+            "jobAddress": "",
+            "jobAddrNo": 6001001011,
+            "jobAddrNoDesc": "台北市南港區",
+            "jobName": "Python Engineer",
+            "jobNameSnippet": "[[[Python]]] Engineer",
+            "jobNo": "14885859",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0312347,
+            "lon": 121.6111949,
+            "link": {
+                "job": "https://www.104.com.tw/job/8v203",
+                "cust": "https://www.104.com.tw/company/1a2x6bjuvz",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8v203?channel=104rpt"
+            },
+            "major": [
+                "數學及電算機科學學科類"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "09:00~18:00",
+            "hrBehaviorPR": 0.7232535824264055,
+            "jobCat": [
+                2007001004,
+                2007001016
+            ],
+            "labels": [
+                "c@wf26"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 18,
+                    "ability": {
+                        "listening": 2,
+                        "speaking": 2,
+                        "reading": 2,
+                        "writing": 2
+                    }
+                },
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 300,
+            "pcSkills": [
+                {
+                    "code": "12001002017",
+                    "description": "Jenkins"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003097",
+                    "description": "LLM"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763612213,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251120",
+            "applyCnt": 7,
+            "coIndustry": 1008003001,
+            "coIndustryDesc": "工商顧問服務業",
+            "custName": "新加坡商優思特股份有限公司台灣分公司",
+            "custNo": "130000000074273",
+            "description": "•\tAuthor automation workflows in Python, the Robot framework, and Powershell to make sure a Windows system with BMC, UEFI,",
+            "descSnippet": "•\tAuthor automation workflows in [[[Python]]], the Robot framework, and Powershell to make sure a Windows system with BMC, UEFI,",
+            "mrtDist": 0,
+            "jobAddress": "",
+            "jobAddrNo": 6001001001,
+            "jobAddrNoDesc": "台北市中正區",
+            "jobName": "Python Automation Engineer",
+            "jobNameSnippet": "[[[Python]]] Automation Engineer",
+            "jobNo": "14520697",
+            "jobRo": 1,
+            "jobType": 2,
+            "lat": 25.0421407,
+            "lon": 121.5198716,
+            "link": {
+                "job": "https://www.104.com.tw/job/8n88p",
+                "cust": "https://www.104.com.tw/company/1a2x6bjkm9",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8n88p?channel=104rpt"
+            },
+            "major": [
+                "電機電子工程相關",
+                "數學及電算機科學學科類",
+                "資訊管理相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 4,
+            "remoteWorkType": 1,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "remote": {
+                    "desc": "遠端工作"
+                },
+                "wf13": {
+                    "desc": "",
+                    "param": "wf13"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.897939401060408,
+            "jobCat": [
+                2007001005,
+                2007001004,
+                2009003007
+            ],
+            "labels": [
+                "c@wf13",
+                "45plus@45invited",
+                "c@wf9",
+                "c@wf12",
+                "c@wf10",
+                "c@wf8",
+                "c@wf7",
+                "c@wf2",
+                "c@wf26",
+                "foreigners@foreigners"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [],
+            "employeeCount": 30000,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763688383,
+                "lastCustReplyTimestamp": 1763453889,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20250819",
+            "applyCnt": 4,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "加林軟體科技有限公司",
+            "custNo": "130000000088849",
+            "description": "職位要求：\n1、最低兩年實際python開發經驗 \n2、希望為數據工程師\n3、主要負責Airflow開發.dbt開發.其它Python系統整合開發，（最好是以上的技術可以都會，但可以接受只會 python + SQL 的人選）",
+            "descSnippet": "職位要求：\n1、最低兩年實際[[[python]]]開發經驗 \n2、希望為數據工程師\n3、主要負責Airflow開發.dbt開發.其它[[[Python]]]系統整合開發，（最好是以上的技術可以都會，但可以接受只會 [[[python]]] + SQL 的人選）",
+            "mrtDist": 0.39,
+            "jobAddress": "衡陽路51號11樓",
+            "jobAddrNo": 6001001001,
+            "jobAddrNoDesc": "台北市中正區",
+            "jobName": "Python開發工程師",
+            "jobNameSnippet": "[[[Python]]]開發工程師",
+            "jobNo": "13802763",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0424085,
+            "lon": 121.5122009,
+            "link": {
+                "job": "https://www.104.com.tw/job/87ua3",
+                "cust": "https://www.104.com.tw/company/1a2x6bjvv5",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/87ua3?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001003013",
+            "mrtDesc": "捷運西門站",
+            "optionEdu": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 1,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "remote": {
+                    "desc": "遠端工作"
+                },
+                "landmark": {
+                    "desc": "距捷運西門站約390公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.5000807790033339,
+            "jobCat": [
+                2007001017,
+                2007001004
+            ],
+            "labels": [],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004031",
+                    "description": "MS SQL"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763437542,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251114",
+            "applyCnt": 5,
+            "coIndustry": 1004001006,
+            "coIndustryDesc": "其他金融及輔助業",
+            "custName": "皓德盛科技股份有限公司",
+            "custNo": "130000000223229",
+            "description": "維護。\n2.系統商業邏輯開發、設計及維護，程式碼之撰寫與除錯。\n3.資料庫設計。\n4.負責API設計、串接、開發工作。\n5.後端開發語言為 Python。\n6.前端開發語言為 HTML5、CSS3、JavaScript、AngularJS、",
+            "descSnippet": "維護。\n2.系統商業邏輯開發、設計及維護，程式碼之撰寫與除錯。\n3.資料庫設計。\n4.負責API設計、串接、開發工作。\n5.後端開發語言為 [[[Python]]]。\n6.前端開發語言為 HTML5、CSS3、JavaScript、AngularJS、",
+            "mrtDist": 0,
+            "jobAddress": "敦化南路二段76號5樓",
+            "jobAddrNo": 6001001005,
+            "jobAddrNoDesc": "台北市大安區",
+            "jobName": "Python 全端工程師",
+            "jobNameSnippet": "[[[Python]]] 全端工程師",
+            "jobNo": "14009929",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.029112,
+            "lon": 121.548223,
+            "link": {
+                "job": "https://www.104.com.tw/job/8ca4p",
+                "cust": "https://www.104.com.tw/company/1a2x6bmrjx",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8ca4p?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 55000,
+            "salaryLow": 40000,
+            "tags": {
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.46593329123033767,
+            "jobCat": [
+                2007001017,
+                2007001016,
+                2007001006
+            ],
+            "labels": [
+                "c@wf2",
+                "foreigners@foreigners_tick",
+                "foreigners@overseasStudents_tick",
+                "c@wf31"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                1024,
+                65536,
+                131072
+            ],
+            "employeeCount": 10,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001006013",
+                    "description": "HTML"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763613315,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251114",
+            "applyCnt": 2,
+            "coIndustry": 1012001002,
+            "coIndustryDesc": "診所",
+            "custName": "陽光燦亮診所",
+            "custNo": "130000000150553",
+            "description": "",
+            "descSnippet": "",
+            "mrtDist": 0.02,
+            "jobAddress": "忠孝東路四段166號7樓之3",
+            "jobAddrNo": 6001001005,
+            "jobAddrNoDesc": "台北市大安區",
+            "jobName": "python工程師",
+            "jobNameSnippet": "[[[python]]]工程師",
+            "jobNo": "14886334",
+            "jobRo": 2,
+            "jobType": 2,
+            "lat": 25.0412543,
+            "lon": 121.5505627,
+            "link": {
+                "job": "https://www.104.com.tw/job/8v2da",
+                "cust": "https://www.104.com.tw/company/1a2x6bl7h5",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8v2da?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001005016",
+            "mrtDesc": "捷運忠孝敦化站",
+            "optionEdu": [
+                3,
+                4,
+                5
+            ],
+            "period": 0,
+            "remoteWorkType": 2,
+            "s10": 20,
+            "salaryHigh": 30000,
+            "salaryLow": 10000,
+            "tags": {
+                "remote": {
+                    "desc": "遠端工作"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf28": {
+                    "desc": "",
+                    "param": "wf28"
+                },
+                "landmark": {
+                    "desc": "距捷運忠孝敦化站約20公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "無",
+            "hrBehaviorPR": 0.31268817836003937,
+            "jobCat": [
+                2007001021,
+                2007001017,
+                2007001022
+            ],
+            "labels": [
+                "c@wf2",
+                "c@wf28"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 20,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": 1761183568,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251118",
+            "applyCnt": 7,
+            "coIndustry": 1001001001,
+            "coIndustryDesc": "電腦系統整合服務業",
+            "custName": "北祥科技服務股份有限公司",
+            "custNo": "20939790000",
+            "description": " Calling 應用與外部 API 整合方法\n掌握至少一種主流 LLM 開發框架，如LangChain / LangGraph / LlamaIndex 等\n具模型工作流程（推論、向量資料庫、API串接）之開發經驗\n\n- 軟體工程能力\n精通 Python，熟悉",
+            "descSnippet": " Calling 應用與外部 API 整合方法\n掌握至少一種主流 LLM 開發框架，如LangChain / LangGraph / LlamaIndex 等\n具模型工作流程（推論、向量資料庫、API串接）之開發經驗\n\n- 軟體工程能力\n精通 [[[Python]]]，熟悉",
+            "mrtDist": 0,
+            "jobAddress": "文湖街18號2樓",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "LLM / Python 開發工程師 Large Language Model / Python Engineer",
+            "jobNameSnippet": "LLM / [[[Python]]] 開發工程師 Large Language Model / [[[Python]]] Engineer",
+            "jobNo": "14921880",
+            "jobRo": 1,
+            "jobType": 2,
+            "lat": 25.0861747,
+            "lon": 121.5611044,
+            "link": {
+                "job": "https://www.104.com.tw/job/8vtso",
+                "cust": "https://www.104.com.tw/company/9mb0ddc",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8vtso?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關",
+                "數理統計相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf25": {
+                    "desc": "",
+                    "param": "wf25"
+                },
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf28": {
+                    "desc": "",
+                    "param": "wf28"
+                },
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf18": {
+                    "desc": "",
+                    "param": "wf18"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.7878645458506519,
+            "jobCat": [
+                2007001012,
+                2007001004,
+                2016001007
+            ],
+            "labels": [
+                "c@wf2",
+                "c@wf8",
+                "c@wf25",
+                "c@wf30",
+                "c@wf7",
+                "c@wf10",
+                "c@wf1",
+                "c@wf26",
+                "c@wf28",
+                "c@wf14",
+                "c@wf3",
+                "c@wf29",
+                "c@wf18",
+                "c@wf9"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [],
+            "employeeCount": 240,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003097",
+                    "description": "LLM"
+                },
+                {
+                    "code": "12001003088",
+                    "description": "NLP"
+                },
+                {
+                    "code": "12001003099",
+                    "description": "Prompt"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763683143,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251113",
+            "applyCnt": 4,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "日新軟體股份有限公司",
+            "custNo": "53343286000",
+            "description": "料倉儲架構相關概念。\n- 具備邏輯思考及商業分析技術，主動解決問題和良好溝通能力。\n- 熟悉 SQL語法。\n- 熟悉 Python 、R 任一種語言佳。",
+            "descSnippet": "料倉儲架構相關概念。\n- 具備邏輯思考及商業分析技術，主動解決問題和良好溝通能力。\n- 熟悉 SQL語法。\n- 熟悉 [[[Python]]] 、R 任一種語言佳。",
+            "mrtDist": 0.34,
+            "jobAddress": "瑞光路333號16樓",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "Data Analyst(Python/R)",
+            "jobNameSnippet": "Data Analyst([[[Python]]]/R)",
+            "jobNo": "14709460",
+            "jobRo": 1,
+            "jobType": 2,
+            "lat": 25.077132,
+            "lon": 121.5743966,
+            "link": {
+                "job": "https://www.104.com.tw/job/8r9w4",
+                "cust": "https://www.104.com.tw/company/oi77qwg",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8r9w4?channel=104rpt"
+            },
+            "major": [
+                "統計學相關",
+                "數理統計相關",
+                "應用數學相關"
+            ],
+            "mrt": "99001001017",
+            "mrtDesc": "捷運港墘站",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 6,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "zoneForeign": {
+                    "desc": "外商公司",
+                    "param": 5
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf25": {
+                    "desc": "",
+                    "param": "wf25"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf35": {
+                    "desc": "",
+                    "param": "wf35"
+                },
+                "wf17": {
+                    "desc": "",
+                    "param": "wf17"
+                },
+                "wf27": {
+                    "desc": "",
+                    "param": "wf27"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf34": {
+                    "desc": "",
+                    "param": "wf34"
+                },
+                "wf33": {
+                    "desc": "",
+                    "param": "wf33"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf13": {
+                    "desc": "",
+                    "param": "wf13"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "landmark": {
+                    "desc": "距捷運港墘站約340公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.44944213530727845,
+            "jobCat": [
+                2016001007,
+                2016001006
+            ],
+            "labels": [
+                "c@wf12",
+                "c@wf26",
+                "c@wf25",
+                "c@wf10",
+                "c@wf35",
+                "c@wf17",
+                "c@wf27",
+                "c@wf8",
+                "c@wf2",
+                "c@wf34",
+                "c@wf33",
+                "c@wf7",
+                "c@wf3",
+                "c@wf30",
+                "c@wf1",
+                "c@wf31",
+                "c@wf13",
+                "c@wf9",
+                "c@wf29"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 4,
+                        "speaking": 4,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [],
+            "employeeCount": 300,
+            "pcSkills": [
+                {
+                    "code": "12001003078",
+                    "description": "R"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763687939,
+                "lastCustReplyTimestamp": 1763609689,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251031",
+            "applyCnt": 1,
+            "coIndustry": 1006003001,
+            "coIndustryDesc": "廣告行銷公關業",
+            "custName": "魔競娛樂股份有限公司",
+            "custNo": "130000000070598",
+            "description": "一．職務描述：\n我們正在尋找一位具備扎實 Python 編程技能的後端開發工程師，負責設計、開發和維護我們的後端系統。您將與前端開發工程師、產品經理和其他技術團隊成員密切合作，確保系統性能穩定且功能強大，為我們的用戶提供最佳的體驗。\n\n二．工作內",
+            "descSnippet": "一．職務描述：\n我們正在尋找一位具備扎實 [[[Python]]] 編程技能的後端開發工程師，負責設計、開發和維護我們的後端系統。您將與前端開發工程師、產品經理和其他技術團隊成員密切合作，確保系統性能穩定且功能強大，為我們的用戶提供最佳的體驗。\n\n二．工作內",
+            "mrtDist": 0.31,
+            "jobAddress": "洲子街71號9樓",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "Python 後端開發工程師",
+            "jobNameSnippet": "[[[Python]]] 後端開發工程師",
+            "jobNo": "14302992",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0799081,
+            "lon": 121.5720354,
+            "link": {
+                "job": "https://www.104.com.tw/job/8ik9c",
+                "cust": "https://www.104.com.tw/company/1a2x6bjhs6",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8ik9c?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001017",
+            "mrtDesc": "捷運港墘站",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "landmark": {
+                    "desc": "距捷運港墘站約310公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "1000AM~1900PM",
+            "hrBehaviorPR": 0.7405280498969455,
+            "jobCat": [
+                2007001016
+            ],
+            "labels": [
+                "45plus@45invited",
+                "c@wf26",
+                "c@wf2",
+                "c@wf1",
+                "c@wf9",
+                "c@wf29",
+                "c@wf8"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 58,
+            "pcSkills": [
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006013",
+                    "description": "HTML"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001004031",
+                    "description": "MS SQL"
+                },
+                {
+                    "code": "12001003100",
+                    "description": "Microsoft Azure"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763706696,
+                "lastCustReplyTimestamp": 1761904558,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251120",
+            "applyCnt": 7,
+            "coIndustry": 1006003001,
+            "coIndustryDesc": "廣告行銷公關業",
+            "custName": "烏龜移動科技股份有限公司",
+            "custNo": "130000000093134",
+            "description": "網路架構及 Web 應用基本知識\n3、能夠撰寫 Python 資料處理腳本或是 Web API\n4、了解 RDBMS 及 NoSQL\n5、良好溝通能力, 能夠與其他團隊協作\n6、分析及解決問題的能力\n7、對程式開發有興趣, 能夠持續學習新知識並應用",
+            "descSnippet": "網路架構及 Web 應用基本知識\n3、能夠撰寫 [[[Python]]] 資料處理腳本或是 Web API\n4、了解 RDBMS 及 NoSQL\n5、良好溝通能力, 能夠與其他團隊協作\n6、分析及解決問題的能力\n7、對程式開發有興趣, 能夠持續學習新知識並應用",
+            "mrtDist": 0.31,
+            "jobAddress": "民權東路三段144號13樓1521室",
+            "jobAddrNo": 6001001004,
+            "jobAddrNoDesc": "台北市松山區",
+            "jobName": "Python 軟體工程師",
+            "jobNameSnippet": "[[[Python]]] 軟體工程師",
+            "jobNo": "13306383",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0617,
+            "lon": 121.5471202,
+            "link": {
+                "job": "https://www.104.com.tw/job/7x79r",
+                "cust": "https://www.104.com.tw/company/1a2x6bjz66",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7x79r?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001012",
+            "mrtDesc": "捷運中山國中站",
+            "optionEdu": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 60000,
+            "salaryLow": 40000,
+            "tags": {
+                "wf33": {
+                    "desc": "",
+                    "param": "wf33"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf32": {
+                    "desc": "",
+                    "param": "wf32"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "landmark": {
+                    "desc": "距捷運中山國中站約310公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.13036262428951195,
+            "jobCat": [
+                2007001004,
+                2007001006,
+                2007001012
+            ],
+            "labels": [
+                "c@wf33",
+                "c@wf29",
+                "c@wf12",
+                "c@wf32",
+                "c@wf26",
+                "c@wf31",
+                "c@wf2",
+                "c@wf9",
+                "c@wf7",
+                "c@wf14"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 35,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002012",
+                    "description": "Systems Analysis"
+                },
+                {
+                    "code": "12001002013",
+                    "description": "Systems Analyst"
+                },
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004041",
+                    "description": "RDBMS"
+                },
+                {
+                    "code": "12001005022",
+                    "description": "hadoop"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251106",
+            "applyCnt": 5,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "杰倫智能科技股份有限公司",
+            "custNo": "130000000118540",
+            "description": "、高效率的程式碼，並針對 AI 相關模組進行優化\n-排除系統問題並進行效能調優，確保 AI 服務穩定運行\n-與前端、AI 研究團隊及其他相關部門協作，共同打造領先的生成式 AI 產品\n\n\n\n ​​​​▍基本要求\n\n-熟悉 Python 程式語言。",
+            "descSnippet": "、高效率的程式碼，並針對 AI 相關模組進行優化\n-排除系統問題並進行效能調優，確保 AI 服務穩定運行\n-與前端、AI 研究團隊及其他相關部門協作，共同打造領先的生成式 AI 產品\n\n\n\n ​​​​▍基本要求\n\n-熟悉 [[[Python]]] 程式語言。",
+            "mrtDist": 0.45,
+            "jobAddress": "基隆路一段111號6樓",
+            "jobAddrNo": 6001001007,
+            "jobAddrNoDesc": "台北市信義區",
+            "jobName": "Python 後端工程師｜  Python Backend Engineer (生成式 AI 平台)",
+            "jobNameSnippet": "[[[Python]]] 後端工程師｜  [[[Python]]] Backend Engineer (生成式 AI 平台)",
+            "jobNo": "14846754",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0451194,
+            "lon": 121.5670785,
+            "link": {
+                "job": "https://www.104.com.tw/job/8u7tu",
+                "cust": "https://www.104.com.tw/company/1a2x6bkirw",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8u7tu?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001005018",
+            "mrtDesc": "捷運市政府站",
+            "optionEdu": [
+                3,
+                4,
+                5
+            ],
+            "period": 3,
+            "remoteWorkType": 2,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "remote": {
+                    "desc": "遠端工作"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf18": {
+                    "desc": "",
+                    "param": "wf18"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "landmark": {
+                    "desc": "距捷運市政府站約450公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.3755489300453831,
+            "jobCat": [
+                2007001004,
+                2007002003,
+                2007001006
+            ],
+            "labels": [
+                "c@wf2",
+                "c@wf18",
+                "c@wf1",
+                "c@wf4",
+                "c@wf29",
+                "c@wf9",
+                "c@wf26",
+                "c@wf30",
+                "c@wf7",
+                "c@wf10",
+                "c@wf8",
+                "c@new_company_job"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 70,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763619837,
+                "lastCustReplyTimestamp": 1759499563,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251122",
+            "applyCnt": 10,
+            "coIndustry": 1006003001,
+            "coIndustryDesc": "廣告行銷公關業",
+            "custName": "瑪樂愛迪科技股份有限公司",
+            "custNo": "130000000157763",
+            "description": "我們正在尋找一位熱衷於資料科學，具有豐富Python網路爬蟲經驗的夥伴。你將會加入我們的數據分析團隊，用你的專業技術來為我們的網紅產業資料作出深度挖掘與分析。你的主要任務是利用Python網路爬蟲工具，獲取及解析各大社群平台數據（",
+            "descSnippet": "我們正在尋找一位熱衷於資料科學，具有豐富[[[Python]]]網路爬蟲經驗的夥伴。你將會加入我們的數據分析團隊，用你的專業技術來為我們的網紅產業資料作出深度挖掘與分析。你的主要任務是利用[[[Python]]]網路爬蟲工具，獲取及解析各大社群平台數據（",
+            "mrtDist": 0.36,
+            "jobAddress": "信義路四段415號8樓之4",
+            "jobAddrNo": 6001001007,
+            "jobAddrNoDesc": "台北市信義區",
+            "jobName": "Data Engineer | Python爬蟲工程師",
+            "jobNameSnippet": "Data Engineer | [[[Python]]]爬蟲工程師",
+            "jobNo": "12128786",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0332847,
+            "lon": 121.5592244,
+            "link": {
+                "job": "https://www.104.com.tw/job/77ymq",
+                "cust": "https://www.104.com.tw/company/1a2x6bld1f",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/77ymq?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001002002",
+            "mrtDesc": "捷運台北101/世貿站",
+            "optionEdu": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "landmark": {
+                    "desc": "距捷運台北101/世貿站約360公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.9611428515477747,
+            "jobCat": [
+                2007001004,
+                2007001006,
+                2007001022
+            ],
+            "labels": [
+                "c@wf10",
+                "c@wf3",
+                "c@wf7",
+                "c@wf1",
+                "c@wf8",
+                "c@wf26",
+                "c@wf29",
+                "c@wf2"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 22,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763921649,
+                "lastCustReplyTimestamp": 1763345891,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251105",
+            "applyCnt": 8,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "塔台智能網絡股份有限公司",
+            "custNo": "130000000154369",
+            "description": "加入我們，參與和改進以下領域的應用開發：      \n\nSaaS 平台：打造一個高度可靠的雲端平台，具有強大的服務水準協議 (SLA)。優化現有架構，實現自動化部署，以確保系統性能的最佳表現。    \n\nAWS 雲端和本地基礎架構： 我們的系統主要部署在 AWS Lightsail 上，我們正在尋求您的專業知識，以利用微服務架構，使其能夠兼容將軟體部署到客戶的本地伺服器上。\n\n產品擴展專案和內部工具： 參與客戶管理系統、郵件傳送系統、系統穩定性監控工具和客服回報系統的開發。這些改進旨在提升我們客戶的整體產品體驗。 \n\n\nJoin us in developing and enhancing applications in the following domains:   \n\nSaaS Platform: Construct a highly reliable cloud platform with a strong Service Level Agreement (SLA). Improve the existing architecture and implement automated deployment to ensure optimal system performance.   \n\nAWS Cloud and On-Premises Infrastructure: Our system primarily deploys on AWS Lightsail, and we are seeking your expertise in utilizing microservices architecture, making it compatible for deploying software to customers' on-premises servers.\n\nProduct Extension Projects and Internal Tools: Contribute to the development of customer management systems, email delivery systems, system stability monitoring tools, and customer support reporting systems. These enhancements aim to elevate the overall product experience for our customers.\n\n\n我們期待你具備有以下特質：\n\n積極學習技術：對底層系統架構和技術原理充滿熱情，主動追求新知識。\n團隊溝通：良好的團隊合作和溝通能力對我們的項目至關重要。\n樂於解決技術問題與分享：喜歡解決挑戰性的技術問題，並樂於分享知識和解決經驗。\n\nQualities\nWe expect you to possess the following qualities:\n\nProactive Technology Learning: Enthusiastic about understanding underlying system architecture and technical principles, actively pursuing new knowledge.\nTeam Communication: Strong team collaboration and communication skills are crucial for our projects.\nPassion for Problem Solving and Knowledge Sharing: Enjoy tackling challenging technical issues and are willing to share your knowledge and problem-solving experiences.",
+            "descSnippet": "加入我們，參與和改進以下領域的應用開發：      \n\nSaaS 平台：打造一個高度可靠的雲端平台，具有強大的服務水準協議 (SLA)。優化現有架構，實現自動化部署，以確保系統性能的最佳表現。    \n\nAWS 雲端和本地基礎架構： 我們的系統主要部署在 AWS Lightsail 上，我們正在尋求您的專業知識，以利用微服務架構，使其能夠兼容將軟體部署到客戶的本地伺服器上。\n\n產品擴展專案和內部工具： 參與客戶管理系統、郵件傳送系統、系統穩定性監控工具和客服回報系統的開發。這些改進旨在提升我們客戶的整體產品體驗。 \n\n\nJoin us in developing and enhancing applications in the following domains:   \n\nSaaS Platform: Construct a highly reliable cloud platform with a strong Service Level Agreement (SLA). Improve the existing architecture and implement automated deployment to ensure optimal system performance.   \n\nAWS Cloud and On-Premises Infrastructure: Our system primarily deploys on AWS Lightsail, and we are seeking your expertise in utilizing microservices architecture, making it compatible for deploying software to customers' on-premises servers.\n\nProduct Extension Projects and Internal Tools: Contribute to the development of customer management systems, email delivery systems, system stability monitoring tools, and customer support reporting systems. These enhancements aim to elevate the overall product experience for our customers.\n\n\n我們期待你具備有以下特質：\n\n積極學習技術：對底層系統架構和技術原理充滿熱情，主動追求新知識。\n團隊溝通：良好的團隊合作和溝通能力對我們的項目至關重要。\n樂於解決技術問題與分享：喜歡解決挑戰性的技術問題，並樂於分享知識和解決經驗。\n\nQualities\nWe expect you to possess the following qualities:\n\nProactive Technology Learning: Enthusiastic about understanding underlying system architecture and technical principles, actively pursuing new knowledge.\nTeam Communication: Strong team collaboration and communication skills are crucial for our projects.\nPassion for Problem Solving and Knowledge Sharing: Enjoy tackling challenging technical issues and are willing to share your knowledge and problem-solving experiences.",
+            "mrtDist": 0.44,
+            "jobAddress": "園區街3之2號9樓",
+            "jobAddrNo": 6001001011,
+            "jobAddrNoDesc": "台北市南港區",
+            "jobName": "Junior Backend Engineer - Python",
+            "jobNameSnippet": "Junior Backend Engineer - [[[Python]]]",
+            "jobNo": "14510614",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0583599,
+            "lon": 121.6119783,
+            "link": {
+                "job": "https://www.104.com.tw/job/8n0gm",
+                "cust": "https://www.104.com.tw/company/1a2x6blaf5",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8n0gm?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001023",
+            "mrtDesc": "捷運南港軟體園區站",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 60,
+            "salaryHigh": 900000,
+            "salaryLow": 700000,
+            "tags": {
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "landmark": {
+                    "desc": "距捷運南港軟體園區站約440公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "彈性上班 9:00-10:00到17:00-18:00",
+            "hrBehaviorPR": 0.5242043268171604,
+            "jobCat": [
+                2007001016,
+                2007001004,
+                2007001006
+            ],
+            "labels": [
+                "foreigners@overseasStudents_tick",
+                "foreigners@foreigners_tick",
+                "c@wf14",
+                "c@wf4",
+                "c@wf31",
+                "c@wf8",
+                "c@wf12",
+                "c@wf7",
+                "c@wf2",
+                "c@wf1",
+                "c@wf29",
+                "c@wf26",
+                "c@wf9"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                16,
+                32,
+                64,
+                1024,
+                2048,
+                65536,
+                131072
+            ],
+            "employeeCount": 7,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763488630,
+                "lastCustReplyTimestamp": 1763085660,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20250923",
+            "applyCnt": 7,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "長川資訊股份有限公司",
+            "custNo": "130000000005993",
+            "description": "Python fullstack Engineer 全端工程師\nRiversoft, with an AI team, offers a dynamic startup environment that fosters exceptional",
+            "descSnippet": "[[[Python]]] fullstack Engineer 全端工程師\nRiversoft, with an AI team, offers a dynamic startup environment that fosters exceptional",
+            "mrtDist": 0.5,
+            "jobAddress": "長安東路一段18號6F",
+            "jobAddrNo": 6001001003,
+            "jobAddrNoDesc": "台北市中山區",
+            "jobName": "Python 全端工程師",
+            "jobNameSnippet": "[[[Python]]] 全端工程師",
+            "jobNo": "14657923",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.049198,
+            "lon": 121.5236027,
+            "link": {
+                "job": "https://www.104.com.tw/job/8q64j",
+                "cust": "https://www.104.com.tw/company/1a2x6bi3xl",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8q64j?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001002010",
+            "mrtDesc": "捷運中山站",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 9999999,
+            "salaryLow": 50000,
+            "tags": {
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "landmark": {
+                    "desc": "距捷運中山站約500公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.8944952781000779,
+            "jobCat": [
+                2007001004
+            ],
+            "labels": [
+                "c@wf3",
+                "c@wf14",
+                "c@wf2",
+                "c@wf7",
+                "c@wf26"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                },
+                {
+                    "language": 2,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [],
+            "employeeCount": 26,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                },
+                {
+                    "code": "12001006013",
+                    "description": "HTML"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763918521,
+                "lastCustReplyTimestamp": 1763450191,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251104",
+            "applyCnt": 4,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "Linker Vision Co., Ltd._鑫蘊林科股份有限公司",
+            "custNo": "130000000184064",
+            "description": "\n-\n▋What You Must Have:\n▸ Proficient in Python and Experience Python web frameworks (We use Django & Django Rest Framework)",
+            "descSnippet": "\n-\n▋What You Must Have:\n▸ Proficient in [[[Python]]] and Experience [[[Python]]] web frameworks (We use Django & Django Rest Framework)",
+            "mrtDist": 0,
+            "jobAddress": "",
+            "jobAddrNo": 6001001005,
+            "jobAddrNoDesc": "台北市大安區",
+            "jobName": "[台北] 資深後端工程師 Senior Backend Engineer (Python/Django)",
+            "jobNameSnippet": "[台北] 資深後端工程師 Senior Backend Engineer ([[[Python]]]/Django)",
+            "jobNo": "12642985",
+            "jobRo": 1,
+            "jobType": 2,
+            "lat": 25.0249441,
+            "lon": 121.5433783,
+            "link": {
+                "job": "https://www.104.com.tw/job/7ize1",
+                "cust": "https://www.104.com.tw/company/1a2x6blxc0",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7ize1?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 150000,
+            "salaryLow": 90000,
+            "tags": {
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.48324447642966595,
+            "jobCat": [
+                2007001004
+            ],
+            "labels": [
+                "c@wf26",
+                "c@wf29",
+                "c@wf8",
+                "c@wf9"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 70,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763907816,
+                "lastCustReplyTimestamp": 1762313415,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251105",
+            "applyCnt": 2,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "塔台智能網絡股份有限公司",
+            "custNo": "130000000154369",
+            "description": "加入我們，參與和改進以下領域的應用開發：  \n\nSaaS 平台：打造一個高度可靠的雲端平台，具有強大的服務水準協議 (SLA)。優化現有架構，實現自動化部署，以確保系統性能的最佳表現。  \n\nAWS 雲端和本地基礎架構： 我們的系統主要部署在 AWS Lightsail 上，我們正在尋求您的專業知識，以利用微服務架構，使其能夠兼容將軟體部署到客戶的本地伺服器上。\n\n產品擴展專案和內部工具： 參與客戶管理系統、郵件傳送系統、系統穩定性監控工具和客服回報系統的開發。這些改進旨在提升我們客戶的整體產品體驗。\n\n\nJoin us in developing and enhancing applications in the following domains:\n\nSaaS Platform: Construct a highly reliable cloud platform with a strong Service Level Agreement (SLA). Improve the existing architecture and implement automated deployment to ensure optimal system performance.   \n\nAWS Cloud and On-Premises Infrastructure: Our system primarily deploys on AWS Lightsail, and we are seeking your expertise in utilizing microservices architecture, making it compatible for deploying software to customers' on-premises servers.\n\nProduct Extension Projects and Internal Tools: Contribute to the development of customer management systems, email delivery systems, system stability monitoring tools, and customer support reporting systems. These enhancements aim to elevate the overall product experience for our customers.\n\n\n我們期待你具備有以下特質： \n\n積極學習技術：對底層系統架構和技術原理充滿熱情，主動追求新知識。\n團隊溝通：良好的團隊合作和溝通能力對我們的項目至關重要。\n樂於解決技術問題與分享：喜歡解決挑戰性的技術問題，並樂於分享知識和解決經驗。\n\n\nWe expect you to possess the following qualities: \n\nProactive Technology Learning: Enthusiastic about understanding underlying system architecture and technical principles, actively pursuing new knowledge.\nTeam Communication: Strong team collaboration and communication skills are crucial for our projects.\nPassion for Problem Solving and Knowledge Sharing: Enjoy tackling challenging technical issues and are willing to share your knowledge and problem-solving experiences.",
+            "descSnippet": "加入我們，參與和改進以下領域的應用開發：  \n\nSaaS 平台：打造一個高度可靠的雲端平台，具有強大的服務水準協議 (SLA)。優化現有架構，實現自動化部署，以確保系統性能的最佳表現。  \n\nAWS 雲端和本地基礎架構： 我們的系統主要部署在 AWS Lightsail 上，我們正在尋求您的專業知識，以利用微服務架構，使其能夠兼容將軟體部署到客戶的本地伺服器上。\n\n產品擴展專案和內部工具： 參與客戶管理系統、郵件傳送系統、系統穩定性監控工具和客服回報系統的開發。這些改進旨在提升我們客戶的整體產品體驗。\n\n\nJoin us in developing and enhancing applications in the following domains:\n\nSaaS Platform: Construct a highly reliable cloud platform with a strong Service Level Agreement (SLA). Improve the existing architecture and implement automated deployment to ensure optimal system performance.   \n\nAWS Cloud and On-Premises Infrastructure: Our system primarily deploys on AWS Lightsail, and we are seeking your expertise in utilizing microservices architecture, making it compatible for deploying software to customers' on-premises servers.\n\nProduct Extension Projects and Internal Tools: Contribute to the development of customer management systems, email delivery systems, system stability monitoring tools, and customer support reporting systems. These enhancements aim to elevate the overall product experience for our customers.\n\n\n我們期待你具備有以下特質： \n\n積極學習技術：對底層系統架構和技術原理充滿熱情，主動追求新知識。\n團隊溝通：良好的團隊合作和溝通能力對我們的項目至關重要。\n樂於解決技術問題與分享：喜歡解決挑戰性的技術問題，並樂於分享知識和解決經驗。\n\n\nWe expect you to possess the following qualities: \n\nProactive Technology Learning: Enthusiastic about understanding underlying system architecture and technical principles, actively pursuing new knowledge.\nTeam Communication: Strong team collaboration and communication skills are crucial for our projects.\nPassion for Problem Solving and Knowledge Sharing: Enjoy tackling challenging technical issues and are willing to share your knowledge and problem-solving experiences.",
+            "mrtDist": 0.44,
+            "jobAddress": "園區街3之2號9樓",
+            "jobAddrNo": 6001001011,
+            "jobAddrNoDesc": "台北市南港區",
+            "jobName": "Senior Backend Engineer - Python",
+            "jobNameSnippet": "Senior Backend Engineer - [[[Python]]]",
+            "jobNo": "14510622",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0583599,
+            "lon": 121.6119783,
+            "link": {
+                "job": "https://www.104.com.tw/job/8n0gu",
+                "cust": "https://www.104.com.tw/company/1a2x6blaf5",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8n0gu?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001023",
+            "mrtDesc": "捷運南港軟體園區站",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 60,
+            "salaryHigh": 1300000,
+            "salaryLow": 1100000,
+            "tags": {
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf14": {
+                    "desc": "",
+                    "param": "wf14"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "landmark": {
+                    "desc": "距捷運南港軟體園區站約440公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "彈性上班 9:00-10:00到17:00-18:00",
+            "hrBehaviorPR": 0.26871747421191516,
+            "jobCat": [
+                2007001016,
+                2007001004,
+                2007001012
+            ],
+            "labels": [
+                "c@wf1",
+                "c@wf26",
+                "c@wf7",
+                "foreigners@overseasStudents_tick",
+                "c@wf4",
+                "c@wf31",
+                "c@wf8",
+                "c@wf9",
+                "foreigners@foreigners_tick",
+                "c@wf14",
+                "c@wf29",
+                "c@wf12",
+                "c@wf2"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                32,
+                64,
+                2048,
+                65536,
+                131072
+            ],
+            "employeeCount": 7,
+            "pcSkills": [
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003095",
+                    "description": "SaaS"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251117",
+            "applyCnt": 0,
+            "coIndustry": 1005001004,
+            "coIndustryDesc": "補習班",
+            "custName": "聯成電腦股份有限公司(聯成電腦/聯成外語)",
+            "custNo": "86142443000",
+            "description": "【業界經驗】至少有python開發經驗2年以上。\n【授課經驗】若有尤佳，若無則需準備教材試教以確認教學能力。\n【其它】\n+ 熟 Python程式語言、Scipy、Spark、SQL Server資料庫、資料探勘、統計分析相關經驗。\n+ 需有作品",
+            "descSnippet": "【業界經驗】至少有[[[python]]]開發經驗2年以上。\n【授課經驗】若有尤佳，若無則需準備教材試教以確認教學能力。\n【其它】\n+ 熟 [[[Python]]]程式語言、Scipy、Spark、SQL Server資料庫、資料探勘、統計分析相關經驗。\n+ 需有作品",
+            "mrtDist": 0,
+            "jobAddress": "",
+            "jobAddrNo": 6001001001,
+            "jobAddrNoDesc": "台北市中正區",
+            "jobName": "Python 程式設計語言講師 - 基隆、大台北地區",
+            "jobNameSnippet": "[[[Python]]] 程式設計語言講師 - 基隆、大台北地區",
+            "jobNo": "9607651",
+            "jobRo": 2,
+            "jobType": 2,
+            "lat": 25.0421407,
+            "lon": 121.5198716,
+            "link": {
+                "job": "https://www.104.com.tw/job/5pxb7",
+                "cust": "https://www.104.com.tw/company/13kmziew",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/5pxb7?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 30,
+            "salaryHigh": 1200,
+            "salaryLow": 350,
+            "tags": {
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "wf28": {
+                    "desc": "",
+                    "param": "wf28"
+                }
+            },
+            "s9": [
+                1,
+                2,
+                8
+            ],
+            "s5": 0,
+            "d3": "日班/晚班/假日班",
+            "hrBehaviorPR": 0.786058033594274,
+            "jobCat": [
+                2016002010,
+                2007001004
+            ],
+            "labels": [
+                "c@wf29",
+                "foreigners@pt_fc_em_jbs",
+                "c@wf3",
+                "c@wf2",
+                "c@wf31",
+                "c@wf1",
+                "45plus@45invited",
+                "c@wf7",
+                "senior@senior_job_D",
+                "c@wf4",
+                "foreigners@foreigners_tick",
+                "c@wf28"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                32,
+                64,
+                2048
+            ],
+            "employeeCount": 300,
+            "pcSkills": [
+                {
+                    "code": "12001003025",
+                    "description": "Java"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763711969,
+                "lastCustReplyTimestamp": 1763637404,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251111",
+            "applyCnt": 7,
+            "coIndustry": 1004002002,
+            "coIndustryDesc": "證券及期貨業",
+            "custName": "阿爾發證券投資顧問股份有限公司",
+            "custNo": "130000000147129",
+            "description": "1. 大學資訊相關科系畢業\n2. 熟悉Python程式語言\n3. 熟悉 FastAPI 或 Flask 框架\n4. 瞭解WebService資料串接，與加解密原理\n5. RESTful API 開發與串接\n6. 金融創新服務演算法開發\n7. 懂",
+            "descSnippet": "1. 大學資訊相關科系畢業\n2. 熟悉[[[Python]]]程式語言\n3. 熟悉 FastAPI 或 Flask 框架\n4. 瞭解WebService資料串接，與加解密原理\n5. RESTful API 開發與串接\n6. 金融創新服務演算法開發\n7. 懂",
+            "mrtDist": 0.04,
+            "jobAddress": "羅斯福路二段102號8樓之1",
+            "jobAddrNo": 6001001001,
+            "jobAddrNoDesc": "台北市中正區",
+            "jobName": "Python後端工程師",
+            "jobNameSnippet": "[[[Python]]]後端工程師",
+            "jobNo": "11538263",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0266541,
+            "lon": 121.5224244,
+            "link": {
+                "job": "https://www.104.com.tw/job/6vazb",
+                "cust": "https://www.104.com.tw/company/1a2x6bl4u1",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/6vazb?channel=104rpt"
+            },
+            "major": [
+                "資訊管理相關",
+                "資訊工程相關"
+            ],
+            "mrt": "99001003010",
+            "mrtDesc": "捷運古亭站",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf28": {
+                    "desc": "",
+                    "param": "wf28"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf25": {
+                    "desc": "",
+                    "param": "wf25"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "landmark": {
+                    "desc": "距捷運古亭站約40公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.6909591160329187,
+            "jobCat": [
+                2007001004,
+                2007001006,
+                2007001009
+            ],
+            "labels": [
+                "c@wf30",
+                "c@wf28",
+                "c@wf3",
+                "c@wf7",
+                "c@wf9",
+                "c@wf1",
+                "c@wf29",
+                "c@wf8",
+                "c@wf26",
+                "c@wf31",
+                "c@wf10",
+                "c@wf25",
+                "c@wf4"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                2048
+            ],
+            "employeeCount": 30,
+            "pcSkills": [
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004031",
+                    "description": "MS SQL"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763719827,
+                "lastCustReplyTimestamp": 1761011681,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251118",
+            "applyCnt": 6,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "潤新資訊股份有限公司",
+            "custNo": "130000000206631",
+            "description": "\n\n必備條件：\n1.計算機科學、電子工程、數學、金融工程或相關領域的碩士以上學位。\n2.紮實的​​理論基礎和 Transformer 或 LSTM 等序列模型的實務經驗。\n3.精通 Python，並且深度熟悉 PyTorch 深度學習框架。\n4.熟",
+            "descSnippet": "\n\n必備條件：\n1.計算機科學、電子工程、數學、金融工程或相關領域的碩士以上學位。\n2.紮實的​​理論基礎和 Transformer 或 LSTM 等序列模型的實務經驗。\n3.精通 [[[Python]]]，並且深度熟悉 PyTorch 深度學習框架。\n4.熟",
+            "mrtDist": 0.09,
+            "jobAddress": "復興北路150號11樓之5",
+            "jobAddrNo": 6001001003,
+            "jobAddrNoDesc": "台北市中山區",
+            "jobName": "Python軟體工程師(非駐點、派遣職缺)",
+            "jobNameSnippet": "[[[Python]]]軟體工程師(非駐點、派遣職缺)",
+            "jobNo": "14806965",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0527392,
+            "lon": 121.5438101,
+            "link": {
+                "job": "https://www.104.com.tw/job/8td4l",
+                "cust": "https://www.104.com.tw/company/1a2x6bmeqv",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8td4l?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001001011",
+            "mrtDesc": "捷運南京復興站",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "landmark": {
+                    "desc": "距捷運南京復興站約90公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.49751788153391985,
+            "jobCat": [
+                2007001016,
+                2007001017,
+                2007001004
+            ],
+            "labels": [
+                "c@wf1",
+                "c@wf26",
+                "c@wf2",
+                "c@wf3",
+                "c@wf7"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763944676,
+                "lastCustReplyTimestamp": 1758530777,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20250717",
+            "applyCnt": 3,
+            "coIndustry": 1001001004,
+            "coIndustryDesc": "多媒體傳播相關業",
+            "custName": "海易科技股份有限公司",
+            "custNo": "130000000182367",
+            "description": " 設計與開發\n•撰寫產品規格書與相關技術說明文件\n•協作提升程式碼品質、穩定性與風格一致性\n•參與團隊 brainstorming，貢獻實作想法並實踐概念產品\n\nRequired:\n•熟悉 Python,包含 Numpy 、 Pandas 等套件與",
+            "descSnippet": " 設計與開發\n•撰寫產品規格書與相關技術說明文件\n•協作提升程式碼品質、穩定性與風格一致性\n•參與團隊 brainstorming，貢獻實作想法並實踐概念產品\n\nRequired:\n•熟悉 [[[Python]]],包含 Numpy 、 Pandas 等套件與",
+            "mrtDist": 0.3,
+            "jobAddress": "三重路19之6號7樓",
+            "jobAddrNo": 6001001011,
+            "jobAddrNoDesc": "台北市南港區",
+            "jobName": "後端工程師（Python）",
+            "jobNameSnippet": "後端工程師（[[[Python]]]）",
+            "jobNo": "12904834",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.058709,
+            "lon": 121.61331,
+            "link": {
+                "job": "https://www.104.com.tw/job/7olfm",
+                "cust": "https://www.104.com.tw/company/1a2x6blw0v",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7olfm?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關",
+                "其他數學及電算機科學相關",
+                "資訊管理相關"
+            ],
+            "mrt": "99001001023",
+            "mrtDesc": "捷運南港軟體園區站",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 9999999,
+            "salaryLow": 45000,
+            "tags": {
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "landmark": {
+                    "desc": "距捷運南港軟體園區站約300公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "09:00-18:00",
+            "hrBehaviorPR": 0.2192856198686974,
+            "jobCat": [
+                2007001004
+            ],
+            "labels": [
+                "c@wf3",
+                "c@wf9",
+                "c@wf2",
+                "c@wf7",
+                "c@wf10",
+                "c@wf1"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 10,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763430564,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251124",
+            "applyCnt": 7,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "緯德科技股份有限公司 (TechLink Corporation)",
+            "custNo": "27571256000",
+            "description": "- 熟悉Python語言撰寫實務經驗1年以上。\r\n- 可獨立或與團隊合作，工作態度積極、負責，能配合公司規定。\r\n- 依不同經驗及能力來負責系統之分析(SA)、設計(SD)以及程式撰寫(PG)。\r\n- 配合公司專案需求至客戶端駐點服務。",
+            "descSnippet": "- 熟悉[[[Python]]]語言撰寫實務經驗1年以上。\r\n- 可獨立或與團隊合作，工作態度積極、負責，能配合公司規定。\r\n- 依不同經驗及能力來負責系統之分析(SA)、設計(SD)以及程式撰寫(PG)。\r\n- 配合公司專案需求至客戶端駐點服務。",
+            "mrtDist": 0,
+            "jobAddress": "敦化北路207號8F-13",
+            "jobAddrNo": 6001001004,
+            "jobAddrNoDesc": "台北市松山區",
+            "jobName": "Python工程師",
+            "jobNameSnippet": "[[[Python]]]工程師",
+            "jobNo": "10505210",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0580023,
+            "lon": 121.5496155,
+            "link": {
+                "job": "https://www.104.com.tw/job/695ve",
+                "cust": "https://www.104.com.tw/company/cnz7pa8",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/695ve?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": [],
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "09:00~18:00",
+            "hrBehaviorPR": 0.5976985327595576,
+            "jobCat": [
+                2007001004,
+                2007001006,
+                2007002003
+            ],
+            "labels": [],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                32,
+                64
+            ],
+            "employeeCount": 220,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763814691,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20250916",
+            "applyCnt": 2,
+            "coIndustry": 1001001003,
+            "coIndustryDesc": "網際網路相關業",
+            "custName": "鈦度科技有限公司",
+            "custNo": "130000000149464",
+            "description": "\n1. 開發網站(如Django framework) \n2. 系統串連，如以SQLAlchemy連結Relational Database (PostgreSQL)\n3. 需熟悉OOP及MVC觀念及運用。 \n4.  開發Restful API。 \n5. 熟悉版本控制及testing技術。\n",
+            "descSnippet": "\n1. 開發網站(如Django framework) \n2. 系統串連，如以SQLAlchemy連結Relational Database (PostgreSQL)\n3. 需熟悉OOP及MVC觀念及運用。 \n4.  開發Restful API。 \n5. 熟悉版本控制及testing技術。\n",
+            "mrtDist": 0,
+            "jobAddress": "堤頂大道二段15號8樓",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "Python 後端軟體工程師",
+            "jobNameSnippet": "[[[Python]]] 後端軟體工程師",
+            "jobNo": "14818020",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0755936,
+            "lon": 121.5719814,
+            "link": {
+                "job": "https://www.104.com.tw/job/8tlno",
+                "cust": "https://www.104.com.tw/company/1a2x6bl6mw",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8tlno?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 4,
+            "remoteWorkType": 0,
+            "s10": 60,
+            "salaryHigh": 9999999,
+            "salaryLow": 1000000,
+            "tags": {
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "10:00-19:00",
+            "hrBehaviorPR": 0.8383563186315547,
+            "jobCat": [
+                2007001006,
+                2007001004
+            ],
+            "labels": [
+                "c@wf8",
+                "c@wf1"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2,
+                64,
+                2048
+            ],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763456113,
+                "lastCustReplyTimestamp": 1763456102,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251008",
+            "applyCnt": 9,
+            "coIndustry": 1013002003,
+            "coIndustryDesc": "其他組織",
+            "custName": "財團法人臺灣海洋保育與漁業永續基金會",
+            "custNo": "130000000129412",
+            "description": "進行海洋事務或漁業管理相關服務網站或平台的後端功能開發撰寫、維護並優化頁面效能。 \n須熟悉Python，具備一年以上Python後端開發經驗，能立即上手工作。熟悉PHP加分。\n\n工作職責\n1. 程式開發：\n深入了解客戶及使用者需求，與專案管理、前",
+            "descSnippet": "進行海洋事務或漁業管理相關服務網站或平台的後端功能開發撰寫、維護並優化頁面效能。 \n須熟悉[[[Python]]]，具備一年以上[[[Python]]]後端開發經驗，能立即上手工作。熟悉PHP加分。\n\n工作職責\n1. 程式開發：\n深入了解客戶及使用者需求，與專案管理、前",
+            "mrtDist": 0,
+            "jobAddress": "詔安街284號",
+            "jobAddrNo": 6001001001,
+            "jobAddrNoDesc": "台北市中正區",
+            "jobName": "後端工程師 Python",
+            "jobNameSnippet": "後端工程師 [[[Python]]]",
+            "jobNo": "13266371",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0280005,
+            "lon": 121.5085159,
+            "link": {
+                "job": "https://www.104.com.tw/job/7wceb",
+                "cust": "https://www.104.com.tw/company/1a2x6bkr5w",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7wceb?channel=104rpt"
+            },
+            "major": [
+                "資訊管理相關",
+                "資訊工程相關",
+                "電機電子工程相關"
+            ],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                4,
+                5
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 51000,
+            "salaryLow": 43000,
+            "tags": {
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.9577990903794655,
+            "jobCat": [
+                2007001004,
+                2007001006,
+                2007001008
+            ],
+            "labels": [
+                "c@wf1",
+                "college@student_invited"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 150,
+            "pcSkills": [
+                {
+                    "code": "12001003041",
+                    "description": "PHP"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001006013",
+                    "description": "HTML"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001006030",
+                    "description": "jQuery"
+                },
+                {
+                    "code": "12001006038",
+                    "description": "VueJS"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001006041",
+                    "description": "D3.js"
+                },
+                {
+                    "code": "12001011012",
+                    "description": "Power BI​"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763455119,
+                "lastCustReplyTimestamp": 1763762725,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251114",
+            "applyCnt": 2,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "騰芯數位有限公司",
+            "custNo": "130000000208915",
+            "description": "在客戶端依照需求開發\n2年以上爬蟲, 資料處理經驗\n熟悉mssql, mysql",
+            "descSnippet": "在客戶端依照需求開發\n2年以上爬蟲, 資料處理經驗\n熟悉mssql, mysql",
+            "mrtDist": 0.2,
+            "jobAddress": "松江路129號11樓",
+            "jobAddrNo": 6001001003,
+            "jobAddrNoDesc": "台北市中山區",
+            "jobName": "python工程師",
+            "jobNameSnippet": "[[[python]]]工程師",
+            "jobNo": "13589721",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0538169,
+            "lon": 121.5333449,
+            "link": {
+                "job": "https://www.104.com.tw/job/839w9",
+                "cust": "https://www.104.com.tw/company/1a2x6bmgib",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/839w9?channel=104rpt"
+            },
+            "major": [
+                "資訊管理相關",
+                "資訊工程相關"
+            ],
+            "mrt": "99001003016",
+            "mrtDesc": "捷運松江南京站",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 3,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 70000,
+            "salaryLow": 45000,
+            "tags": {
+                "landmark": {
+                    "desc": "距捷運松江南京站約200公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.02247614571553062,
+            "jobCat": [
+                2007001004,
+                2007001006
+            ],
+            "labels": [],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004031",
+                    "description": "MS SQL"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": 1756788928,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251106",
+            "applyCnt": 2,
+            "coIndustry": 1001001002,
+            "coIndustryDesc": "電腦軟體服務業",
+            "custName": "杰倫智能科技股份有限公司",
+            "custNo": "130000000118540",
+            "description": "技術交流，推廣最佳開發實踐。\n\n# 基本要求\n- 資訊相關科系畢業\n- 具有一年以上的後端開發經驗，或兩年以上相關工作經驗\n- 精通 Python 語言，我們主要使用 Python，但同樣歡迎具備其他後端技術（如 Go、Java 或 Node.js",
+            "descSnippet": "技術交流，推廣最佳開發實踐。\n\n# 基本要求\n- 資訊相關科系畢業\n- 具有一年以上的後端開發經驗，或兩年以上相關工作經驗\n- 精通 [[[Python]]] 語言，我們主要使用 [[[Python]]]，但同樣歡迎具備其他後端技術（如 Go、Java 或 Node.js",
+            "mrtDist": 0.43,
+            "jobAddress": "基隆路一段111號3樓",
+            "jobAddrNo": 6001001007,
+            "jobAddrNoDesc": "台北市信義區",
+            "jobName": "資深Python 後端工程師｜ Senior Python Backend Engineer",
+            "jobNameSnippet": "資深[[[Python]]] 後端工程師｜ Senior [[[Python]]] Backend Engineer",
+            "jobNo": "12195297",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0449772,
+            "lon": 121.5670046,
+            "link": {
+                "job": "https://www.104.com.tw/job/79dy9",
+                "cust": "https://www.104.com.tw/company/1a2x6bkirw",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/79dy9?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001005018",
+            "mrtDesc": "捷運市政府站",
+            "optionEdu": [
+                3,
+                4,
+                5
+            ],
+            "period": 2,
+            "remoteWorkType": 2,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "remote": {
+                    "desc": "遠端工作"
+                },
+                "wf4": {
+                    "desc": "",
+                    "param": "wf4"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf30": {
+                    "desc": "",
+                    "param": "wf30"
+                },
+                "wf18": {
+                    "desc": "",
+                    "param": "wf18"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf8": {
+                    "desc": "",
+                    "param": "wf8"
+                },
+                "landmark": {
+                    "desc": "距捷運市政府站約430公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.16673275857848538,
+            "jobCat": [
+                2007001004,
+                2007002003,
+                2007001006
+            ],
+            "labels": [
+                "c@wf4",
+                "c@wf1",
+                "c@wf26",
+                "c@wf9",
+                "c@wf10",
+                "c@wf30",
+                "c@new_company_job",
+                "c@wf18",
+                "c@wf7",
+                "c@wf2",
+                "c@wf29",
+                "c@wf8"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 70,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763693691,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251124",
+            "applyCnt": 0,
+            "coIndustry": 1003002002,
+            "coIndustryDesc": "食品什貨零售業",
+            "custName": "饌元股份有限公司",
+            "custNo": "130000000059911",
+            "description": "【公司介紹】\nUrMart 也是全台灣第一個線上付費會員制模式的電商平台擁有近萬名高年收入、高黏著度、高貢獻度的 U 黑卡會員，為了滿足 U 黑卡的更多需求，今年開始 UrMart 也計畫著手打造平台專屬的線上課程！如果你也喜歡運動、注重飲食，擁有熱情、想法和衝勁，對知識內容產業有興趣，希望一起壯大 U 黑卡社群的話，歡迎加入我們！\n\n【關於職缺】\n我們正在尋找擁有對技術與商業有同等熱誠，認為用戶體驗至上的後端工程師。你擁有3年以上的軟體開發經驗，你的職責會是與技術團隊開發能幫助 公司業務 與 使用者體驗滿意度 成長的新功能，幫助我們獲得更多用戶與回購率，甚至是透過開發內部工具改善團隊的工作流程與效率\n\n我們不傾向重新造輪子， 但希望你具備有如何讓程式碼好維護的開發思維，能寫出簡潔又效能好的程式碼，並具備有以元件化和模組化思維來建構系統的能力。我們希望你跟現有團隊成員一樣，對於學習新技術（知識）充滿熱情，並且喜歡與人合作，分享自己的經驗，成為團隊成長的催化劑\n\n【工作內容 】\n●\t依據需求開發、重構、優化功能，強化用戶體驗，提升運營效率\n●\t使用AWS服務，建置可靠且高彈性的系統架構\n●\t強化系統安全性，減低因安全性問題所帶來的損失\n●\t協助數據資料整理及報表建置，提供產品數據分析洞見\n●\tRESTful API 建置，全服務前後端分離\n●\t工程文件撰寫加速溝通效率\n\n【工作要求 】\n●\t3 年以上工作經驗 或 從無到有完整參與產品開發\n●\tDjango 產品開發經驗 2 年以上\n●\tDRF專案經驗，設計過 RESTful API\n●\tPostgreSQL、MySQL語法使用\n●\t熟悉 git 版本控制與開發流程\n\n【加分條件】\n●\t熟悉 AWS 包含不限於 Beanstalk / EC2 / ElasticCache / RDS / SQS / Cloufront / Lambda / EFS / S3…等\n●\t串接過金流 / FB API 等第三方工具\n●\t良好的 Coding Style\n●\t有單元測試經驗\n●\t有敏捷開發經驗\n●\t有CI/CD 的專案經驗\n",
+            "descSnippet": "【公司介紹】\nUrMart 也是全台灣第一個線上付費會員制模式的電商平台擁有近萬名高年收入、高黏著度、高貢獻度的 U 黑卡會員，為了滿足 U 黑卡的更多需求，今年開始 UrMart 也計畫著手打造平台專屬的線上課程！如果你也喜歡運動、注重飲食，擁有熱情、想法和衝勁，對知識內容產業有興趣，希望一起壯大 U 黑卡社群的話，歡迎加入我們！\n\n【關於職缺】\n我們正在尋找擁有對技術與商業有同等熱誠，認為用戶體驗至上的後端工程師。你擁有3年以上的軟體開發經驗，你的職責會是與技術團隊開發能幫助 公司業務 與 使用者體驗滿意度 成長的新功能，幫助我們獲得更多用戶與回購率，甚至是透過開發內部工具改善團隊的工作流程與效率\n\n我們不傾向重新造輪子， 但希望你具備有如何讓程式碼好維護的開發思維，能寫出簡潔又效能好的程式碼，並具備有以元件化和模組化思維來建構系統的能力。我們希望你跟現有團隊成員一樣，對於學習新技術（知識）充滿熱情，並且喜歡與人合作，分享自己的經驗，成為團隊成長的催化劑\n\n【工作內容 】\n●\t依據需求開發、重構、優化功能，強化用戶體驗，提升運營效率\n●\t使用AWS服務，建置可靠且高彈性的系統架構\n●\t強化系統安全性，減低因安全性問題所帶來的損失\n●\t協助數據資料整理及報表建置，提供產品數據分析洞見\n●\tRESTful API 建置，全服務前後端分離\n●\t工程文件撰寫加速溝通效率\n\n【工作要求 】\n●\t3 年以上工作經驗 或 從無到有完整參與產品開發\n●\tDjango 產品開發經驗 2 年以上\n●\tDRF專案經驗，設計過 RESTful API\n●\tPostgreSQL、MySQL語法使用\n●\t熟悉 git 版本控制與開發流程\n\n【加分條件】\n●\t熟悉 AWS 包含不限於 Beanstalk / EC2 / ElasticCache / RDS / SQS / Cloufront / Lambda / EFS / S3…等\n●\t串接過金流 / FB API 等第三方工具\n●\t良好的 Coding Style\n●\t有單元測試經驗\n●\t有敏捷開發經驗\n●\t有CI/CD 的專案經驗\n",
+            "mrtDist": 0.33,
+            "jobAddress": "三重路19-9號B棟6樓(南港軟體科學園區) (南港軟體工業園區)",
+            "jobAddrNo": 6001001011,
+            "jobAddrNoDesc": "台北市南港區",
+            "jobName": "[研發處]Backend Developer - Senior (Python/Django)",
+            "jobNameSnippet": "[研發處]Backend Developer - Senior ([[[Python]]]/Django)",
+            "jobNo": "14341593",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0580858,
+            "lon": 121.613463,
+            "link": {
+                "job": "https://www.104.com.tw/job/8je1l",
+                "cust": "https://www.104.com.tw/company/1a2x6bj9jb",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/8je1l?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001005023",
+            "mrtDesc": "捷運南港展覽館站",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 3,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "landmark": {
+                    "desc": "距捷運南港展覽館站約330公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.99,
+            "jobCat": [
+                2007001004,
+                2007001016,
+                2007001006
+            ],
+            "labels": [],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 60,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": null,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251121",
+            "applyCnt": 5,
+            "coIndustry": 1001005003,
+            "coIndustryDesc": "其他電子零組件相關業",
+            "custName": "艾新科環保材料有限公司",
+            "custNo": "130000000087975",
+            "description": " 熟悉 Python 語言，具備2年以上後端開發經驗\n2. 熟悉 Flask 框架，具備實際專案開發經驗\n3. 熟悉 uWSGI 部署及相關設定\n4. 熟悉 RESTful API 設計與實作\n5. 熟悉 MariaDB、MongoDB 資料庫操作與",
+            "descSnippet": " 熟悉 [[[Python]]] 語言，具備2年以上後端開發經驗\n2. 熟悉 Flask 框架，具備實際專案開發經驗\n3. 熟悉 uWSGI 部署及相關設定\n4. 熟悉 RESTful API 設計與實作\n5. 熟悉 MariaDB、MongoDB 資料庫操作與",
+            "mrtDist": 0.13,
+            "jobAddress": "基隆路一段163號17樓之3",
+            "jobAddrNo": 6001001007,
+            "jobAddrNoDesc": "台北市信義區",
+            "jobName": "Python 後端工程師",
+            "jobNameSnippet": "[[[Python]]] 後端工程師",
+            "jobNo": "12425368",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.041788,
+            "lon": 121.565287,
+            "link": {
+                "job": "https://www.104.com.tw/job/7ebh4",
+                "cust": "https://www.104.com.tw/company/1a2x6bjv6v",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7ebh4?channel=104rpt"
+            },
+            "major": [
+                "資訊工程相關",
+                "資訊管理相關"
+            ],
+            "mrt": "99001005018",
+            "mrtDesc": "捷運市政府站",
+            "optionEdu": [
+                3,
+                4,
+                5
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 50000,
+            "salaryLow": 35000,
+            "tags": {
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "landmark": {
+                    "desc": "距捷運市政府站約130公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "09:00-18:00",
+            "hrBehaviorPR": 0.8463852619932342,
+            "jobCat": [
+                2007001004,
+                2007001016,
+                2007001017
+            ],
+            "labels": [
+                "c@wf10",
+                "c@wf1",
+                "c@wf3",
+                "c@wf29",
+                "c@wf7",
+                "foreigners@full_fc_em_jbs",
+                "c@wf2"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003080",
+                    "description": "Go"
+                },
+                {
+                    "code": "12001006034",
+                    "description": "Node.js"
+                },
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003095",
+                    "description": "SaaS"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001006038",
+                    "description": "VueJS"
+                },
+                {
+                    "code": "12001006037",
+                    "description": "AngularJS"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763746110,
+                "lastCustReplyTimestamp": 1758764766,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251121",
+            "applyCnt": 10,
+            "coIndustry": 1003002013,
+            "coIndustryDesc": "百貨相關業",
+            "custName": "大葉高島屋百貨股份有限公司",
+            "custNo": "86382689000",
+            "description": "1. Python系統開發 \n2.既有程式優化及修正並開發新功能\n3.參與規劃執行軟體架構及模組之設計 \n4.具備 Git 版本管控 (GitLab)使用經驗\n5.了解Web框架如 Flask、Django",
+            "descSnippet": "1. [[[Python]]]系統開發 \n2.既有程式優化及修正並開發新功能\n3.參與規劃執行軟體架構及模組之設計 \n4.具備 Git 版本管控 (GitLab)使用經驗\n5.了解Web框架如 Flask、Django",
+            "mrtDist": 0,
+            "jobAddress": "忠誠路二段55號",
+            "jobAddrNo": 6001001008,
+            "jobAddrNoDesc": "台北市士林區",
+            "jobName": "Python web 工程師",
+            "jobNameSnippet": "[[[Python]]] web 工程師",
+            "jobNo": "12767506",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.1118523,
+            "lon": 121.5314695,
+            "link": {
+                "job": "https://www.104.com.tw/job/7lngy",
+                "cust": "https://www.104.com.tw/company/13om0tew",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7lngy?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "",
+            "mrtDesc": "",
+            "optionEdu": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 0,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf28": {
+                    "desc": "",
+                    "param": "wf28"
+                },
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf27": {
+                    "desc": "",
+                    "param": "wf27"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                }
+            },
+            "s9": [
+                1,
+                8
+            ],
+            "s5": 0,
+            "d3": "早班09:30~18:30",
+            "hrBehaviorPR": 0.6162654642834413,
+            "jobCat": [
+                2007001006,
+                2007001004,
+                2007001007
+            ],
+            "labels": [
+                "c@wf3",
+                "c@wf7",
+                "foreigners@full_fc_em_jbs",
+                "senior@senior_job_G",
+                "c@wf28",
+                "c@wf9",
+                "c@wf10",
+                "c@wf2",
+                "c@wf27",
+                "c@wf1"
+            ],
+            "languageRequirements": [
+                {
+                    "language": 1,
+                    "ability": {
+                        "listening": 8,
+                        "speaking": 8,
+                        "reading": 8,
+                        "writing": 8
+                    }
+                }
+            ],
+            "acceptRole": [
+                2,
+                64,
+                2048,
+                32768
+            ],
+            "employeeCount": 220,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004031",
+                    "description": "MS SQL"
+                },
+                {
+                    "code": "12001004032",
+                    "description": "MySQL"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006030",
+                    "description": "jQuery"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763858952,
+                "lastCustReplyTimestamp": 1762740266,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251119",
+            "applyCnt": 9,
+            "coIndustry": 1001001003,
+            "coIndustryDesc": "網際網路相關業",
+            "custName": "紐奧谷科技股份有限公司",
+            "custNo": "130000000167000",
+            "description": "發者精神\n\n### 希望你會 ###\n1. 熟悉Python、任一Python Web Framework(Flask, Django…etc)\n2. 熟悉使用ORM(SQLAlchamy…etc)\n3. 熟悉物件導向程式設計、結構化程式設計\n4.",
+            "descSnippet": "發者精神\n\n### 希望你會 ###\n1. 熟悉[[[Python]]]、任一[[[Python]]] Web Framework(Flask, Django…etc)\n2. 熟悉使用ORM(SQLAlchamy…etc)\n3. 熟悉物件導向程式設計、結構化程式設計\n4.",
+            "mrtDist": 0.44,
+            "jobAddress": "台北市內湖區瑞光瑞光路423號(距捷運港墘站約450公尺)",
+            "jobAddrNo": 6001001010,
+            "jobAddrNoDesc": "台北市內湖區",
+            "jobName": "軟體工程師 Software Engineer (Python Developer)｜保障14個月＋獎金",
+            "jobNameSnippet": "軟體工程師 Software Engineer ([[[Python]]] Developer)｜保障14個月＋獎金",
+            "jobNo": "12792251",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.0783051,
+            "lon": 121.571245,
+            "link": {
+                "job": "https://www.104.com.tw/job/7m6kb",
+                "cust": "https://www.104.com.tw/company/1a2x6blk60",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/7m6kb?channel=104rpt"
+            },
+            "major": [
+                "資訊管理相關",
+                "資訊工程相關",
+                "其他數學及電算機科學相關"
+            ],
+            "mrt": "99001001017",
+            "mrtDesc": "捷運港墘站",
+            "optionEdu": [
+                4,
+                5,
+                6
+            ],
+            "period": 3,
+            "remoteWorkType": 0,
+            "s10": 50,
+            "salaryHigh": 9999999,
+            "salaryLow": 60000,
+            "tags": {
+                "wf9": {
+                    "desc": "",
+                    "param": "wf9"
+                },
+                "wf26": {
+                    "desc": "",
+                    "param": "wf26"
+                },
+                "wf13": {
+                    "desc": "",
+                    "param": "wf13"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "wf12": {
+                    "desc": "",
+                    "param": "wf12"
+                },
+                "wf31": {
+                    "desc": "",
+                    "param": "wf31"
+                },
+                "landmark": {
+                    "desc": "距捷運港墘站約440公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "09:00-18:00(前後一小時彈性)",
+            "hrBehaviorPR": 0.7228888529871096,
+            "jobCat": [
+                2007001004,
+                2007001012
+            ],
+            "labels": [
+                "c@wf9",
+                "c@wf26",
+                "c@wf13",
+                "c@wf1",
+                "c@wf10",
+                "c@wf7",
+                "c@wf2",
+                "c@wf29",
+                "c@wf12",
+                "c@wf31"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [],
+            "employeeCount": 0,
+            "pcSkills": [
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001004039",
+                    "description": "PostgreSQL"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763807179,
+                "lastCustReplyTimestamp": null,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        },
+        {
+            "appearDate": "20251122",
+            "applyCnt": 6,
+            "coIndustry": 1006003001,
+            "coIndustryDesc": "廣告行銷公關業",
+            "custName": "新據點廣告事業股份有限公司",
+            "custNo": "97301848000",
+            "description": "我們正在尋找一位熱衷於資料科學，具有豐富Python網路爬蟲經驗的夥伴。你將會加入我們的數據分析團隊，用你的專業技術來為我們的網紅產業資料作出深度挖掘與分析。你的主要任務是利用Python網路爬蟲工具，獲取及解析各大社群平台數據（",
+            "descSnippet": "我們正在尋找一位熱衷於資料科學，具有豐富[[[Python]]]網路爬蟲經驗的夥伴。你將會加入我們的數據分析團隊，用你的專業技術來為我們的網紅產業資料作出深度挖掘與分析。你的主要任務是利用[[[Python]]]網路爬蟲工具，獲取及解析各大社群平台數據（",
+            "mrtDist": 0.34,
+            "jobAddress": "信義路4段415號14樓",
+            "jobAddrNo": 6001001007,
+            "jobAddrNoDesc": "台北市信義區",
+            "jobName": "Data Engineer | Python爬蟲工程師",
+            "jobNameSnippet": "Data Engineer | [[[Python]]]爬蟲工程師",
+            "jobNo": "13527337",
+            "jobRo": 1,
+            "jobType": 0,
+            "lat": 25.033272,
+            "lon": 121.55937,
+            "link": {
+                "job": "https://www.104.com.tw/job/81xrd",
+                "cust": "https://www.104.com.tw/company/18p70af4",
+                "applyAnalyze": "https://www.104.com.tw/jobs/apply/analysis/81xrd?channel=104rpt"
+            },
+            "major": [],
+            "mrt": "99001002002",
+            "mrtDesc": "捷運台北101/世貿站",
+            "optionEdu": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "period": 2,
+            "remoteWorkType": 0,
+            "s10": 10,
+            "salaryHigh": 0,
+            "salaryLow": 0,
+            "tags": {
+                "wf2": {
+                    "desc": "",
+                    "param": "wf2"
+                },
+                "wf7": {
+                    "desc": "",
+                    "param": "wf7"
+                },
+                "wf10": {
+                    "desc": "",
+                    "param": "wf10"
+                },
+                "wf1": {
+                    "desc": "",
+                    "param": "wf1"
+                },
+                "wf3": {
+                    "desc": "",
+                    "param": "wf3"
+                },
+                "wf29": {
+                    "desc": "",
+                    "param": "wf29"
+                },
+                "landmark": {
+                    "desc": "距捷運台北101/世貿站約340公尺"
+                }
+            },
+            "s9": [
+                1
+            ],
+            "s5": 0,
+            "d3": "",
+            "hrBehaviorPR": 0.7136384331810771,
+            "jobCat": [
+                2007001004,
+                2007002002,
+                2013001006
+            ],
+            "labels": [
+                "c@wf2",
+                "c@wf7",
+                "c@wf10",
+                "c@wf1",
+                "c@wf3",
+                "c@wf29"
+            ],
+            "languageRequirements": [],
+            "acceptRole": [
+                2
+            ],
+            "employeeCount": 50,
+            "pcSkills": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "isSave": null,
+            "interactionRecord": {
+                "lastProcessedResumeAtTime": 1763893187,
+                "lastCustReplyTimestamp": 1759284272,
+                "nowTimestamp": 1763953310
+            },
+            "isApplied": null,
+            "applyDate": null,
+            "userApplyCount": null
+        }
+    ],
+    "metadata": {
+        "pagination": {
+            "count": 32,
+            "currentPage": 1,
+            "lastPage": 100,
+            "total": 3433
+        },
+        "isPreciseHotJob": false,
+        "filterQuery": {
+            "order": 15,
+            "asc": 0,
+            "keyword": "Python",
+            "fz": 8,
+            "kwop": 7,
+            "excludeKwFz": 4,
+            "excludeKwKwop": 8,
+            "area": [
+                "6001001000"
+            ],
+            "ro": [
+                0
+            ],
+            "scstrict": 0,
+            "scneg": 0,
+            "page": 1,
+            "pagesize": 30
+        },
+        "personalBoost": 0
+    }
+}

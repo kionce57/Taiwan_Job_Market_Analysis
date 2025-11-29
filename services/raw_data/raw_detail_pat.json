@@ -1,0 +1,136 @@
+{
+    "data": {
+        "corpImageRight": {
+            "corpImageRight": {
+                "imageUrl": "",
+                "link": ""
+            }
+        },
+        "header": {
+            "corpImageTop": {
+                "imageUrl": "",
+                "link": ""
+            },
+            "jobName": "網路管理工程師（需外勤）",
+            "appearDate": "2025/11/20",
+            "custName": "水文資訊有限公司",
+            "custUrl": "https://www.104.com.tw/company/1a2x6bjb4i",
+            "analysisType": 3,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8vwhj",
+            "isSaved": false,
+            "isFollowed": false,
+            "isApplied": false,
+            "applyDate": "",
+            "userApplyCount": 0,
+            "hrBehaviorPR": 0.994609837413897
+        },
+        "contact": {
+            "hrName": "蔡宜達",
+            "email": "",
+            "visit": "",
+            "phone": [],
+            "other": "",
+            "reply": "本職務設定3個工作天回覆"
+        },
+        "environmentPic": {
+            "environmentPic": [],
+            "corpImageBottom": {
+                "imageUrl": "",
+                "link": ""
+            }
+        },
+        "condition": {
+            "acceptRole": {
+                "role": [],
+                "disRole": {
+                    "needHandicapCompendium": false,
+                    "disability": []
+                }
+            },
+            "workExp": "3年以上",
+            "edu": "專科",
+            "major": [],
+            "language": [],
+            "localLanguage": [],
+            "specialty": [],
+            "skill": [],
+            "certificate": [],
+            "driverLicense": [],
+            "other": "須具備汽機車駕照，能配合外出支援客戶或異地專案。\n能接受外勤工作，配合客戶安裝設備、排除設備故障與網路障礙。\n（主要雙北，偶有中南部支援）。\n一個月約有50小時的外勤，不是需要從早跑到晚的工作類型。"
+        },
+        "welfare": {
+            "tag": [
+                "年終獎金"
+            ],
+            "welfare": "保障14個月年薪，獎金按職位與績效發給",
+            "legalTag": [
+                "勞保",
+                "健保",
+                "就業保險",
+                "職災保險"
+            ]
+        },
+        "jobDetail": {
+            "jobDescription": "##招募說明\n這個職缺與系統維運工程師是同一個，\n只是我們把對求職者的條件要求分成了不同等級。\n\n我們會先要求你具備一般網管的能力，\n在工作上手後，開始在職訓練你學習雲端GCP與AWS，\n管理公司的雲端主機，\n過去我們就是這麼幹的。\n\n這份工作的起薪會比系統維運工程師來的少一些，\n等你掌握了雲端、虛擬環境、用python寫些自動化程序維護系統，\n公司會再根據實際程度逐步調薪，\n調薪幅度可以參考系統維運工程師的薪資。\n\n水文一般會給比市場行情高一些的待遇，確保團隊成員穩定。\n工作壓力不大，工時彈性好安排，職場的人際關係單純，工作穩定，\n而且只要你想學，公司是真的可以讓你學走一身本事，\n先前的同事待了快九年。\n\n但公司會要求你不斷的進修雲端管理技能，\n如果不是想往雲端管理發展，\n這個職缺可能不太適合你的人生規劃。\n\n##工作內容\n1. 負責公司及客戶端資訊系統維運、設備巡檢與技術支援。\n2. 維護公司內部及客戶端 Windows Server、Linux 系統（Ubuntu／CentOS），包含帳號管理、排程、備份與監控。\n3. 管理防火牆、NAS、VPN、路由器、監控主機等周邊設備。具備基礎網路架構與資安知識（TCP/IP、VLAN、VPN、防火牆、SSL）。\n4. 提供現場與遠端技術支援，撰寫維運紀錄與技術文件。\n\n##工作技能\n- 網路設備設定與異常排除\n- 作業系統安裝與維護（Windows／Linux）\n- 系統維運與文件撰寫\n\n##加分條件\n- GCP與AWS雲端主機管理能力\n- 使用Python撰寫自動化程序\n- 熟悉資料庫備份與還原\n- 建置及維護虛擬化與容器環境（VMware、Docker、Docker Compose 等），確保系統穩定與版本一致性。\n- 建立並維運 CI/CD Pipeline（Drone、Jenkins、GitLab CI、GitHub Actions 或等效工具），提升系統部署與維運效率。\n- 有導入或維護ISO27001經驗。",
+            "jobCategory": [
+                {
+                    "code": "2007002005",
+                    "description": "網路管理工程師"
+                },
+                {
+                    "code": "2007002006",
+                    "description": "系統工程師"
+                },
+                {
+                    "code": "2007002001",
+                    "description": "MIS／網管主管"
+                }
+            ],
+            "salary": "月薪50,000~70,000元",
+            "salaryMin": 50000,
+            "salaryMax": 70000,
+            "salaryType": 50,
+            "jobType": 1,
+            "workType": [],
+            "addressNo": "6001001005",
+            "addressRegion": "台北市大安區",
+            "addressArea": "台北市",
+            "addressDetail": "和平東路2段175巷5弄1之1號1樓",
+            "industryArea": "",
+            "longitude": "121.5229719",
+            "latitude": "25.0267596",
+            "manageResp": "不需負擔管理責任",
+            "businessTrip": "無需出差外派",
+            "workPeriod": "日班",
+            "vacationPolicy": "依公司規定",
+            "startWorkingDay": "不限",
+            "hireType": 0,
+            "delegatedRecruit": "",
+            "needEmp": "1人",
+            "landmark": "距捷運古亭站約30公尺",
+            "remoteWork": null
+        },
+        "switch": "on",
+        "custLogo": "",
+        "postalCode": "106",
+        "closeDate": "",
+        "industry": "網際網路相關業",
+        "custNo": "130000000061970",
+        "reportUrl": "https://www.104.com.tw/feedback?category=2&custName=%E6%B0%B4%E6%96%87%E8%B3%87%E8%A8%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobName=%E7%B6%B2%E8%B7%AF%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%88%E9%9C%80%E5%A4%96%E5%8B%A4%EF%BC%89",
+        "industryNo": "1001001003",
+        "employees": "暫不提供",
+        "chinaCorp": false,
+        "interactionRecord": {
+            "lastProcessedResumeAtTime": 1763893737,
+            "lastCustReplyTimestamp": 1763893623,
+            "nowTimestamp": 1763956416
+        }
+    },
+    "metadata": {
+        "enableHTML": false,
+        "hiddenBanner": false,
+        "seo": {
+            "noindex": false
+        }
+    }
+}

@@ -7,17 +7,16 @@ from services.db import MongoDB_one_zero_four
 set_up_logging(debug=True)
 logger = logging.getLogger(__name__)
 
-class Main():
+class Main:
     def __init__(self):
         # 有在猶豫是否要弄成 class, 最終決定避免在一次任務中需要重複建立其他功能 class 
         self.crawler = One_zero_four_crawler()
         self.db = MongoDB_one_zero_four()
 
-    def fetch_data_and_save_to_db(self):
-        # 使用者輸入關鍵字
-        keyword = input("請輸入關鍵字: ")
-        # 使用者輸入地區
-        area = input("請輸入地區: ")
+    def fetch_data_and_save_to_db(self, keyword:str, area:str):
+        if not isinstance(keyword, str) and not isinstance(area, str):
+            logger.error("Keyword and area must be strings.")
+            return
 
         try:
             # 爬取資料
@@ -34,12 +33,14 @@ class Main():
             logger.exception(f"Failed to connection to MongoDB:{e}")
 
 
-    def select_data_and_draw(self, condition:dict, projection:dict):
-        # 從資料庫取出資料
-        try:
-            result_by_select = self.db.select_from_bronze(condition, projection)
+    # def select_data_and_draw(self, condition:dict, projection:dict):
+    #     # 從資料庫取出資料
+    #     try:
+    #         result_by_select = self.db.select_from_bronze(condition, projection)
 
-        # 將資料轉換成圖表
+    #     # 將資料轉換成 DF
+
+    #     # 將資料輸出成 csv 格式, 以便 PowerBI 使用
 
 
 
@@ -48,5 +49,10 @@ class Main():
 
 if __name__ == "__main__":
     # fetch_data_and_save_to_db()
-    condition = {"header.jobName": {"$regex": "python", "$options": "i"}}
-    projection = {"header": 1, "condition": 1, "_id": 0}
+    # condition = {"header.jobName": {"$regex": "python", "$options": "i"}}
+    # projection = {"header": 1, "condition": 1, "_id": 0}
+    # next kw: 後端工程
+    main = Main()
+    keyword = "資料工程"
+    area = "台北市"
+    main.fetch_data_and_save_to_db()

@@ -4,23 +4,18 @@
 
 ## 使用流程
 
-1. 鍵入 keyword, area(只允許到縣市級別)
-2. 爬取資料
-3. 清洗與整理 (Bronze?)
-4. 存放進 Non-SQL(不能省略, 它能直接儲存 json 格式, 非常簡單)
-5. 更深入的清洗與整理, 尤其是 job description 中那些非結構化資料, 很多企業喜歡把真正的工作細節與要求藏在那裏(但我時間
-應該不夠)(Silver?)
-6. 根據已有的資料建幾張圖表出來
-    e.g. 薪水面議出現的次數以及最常出現在哪個職稱,
-    善用工具中出現次數前三的是哪些,
-    要求工作經歷 1 年以上的工作的薪水中位數與平均值是多少?
-    學歷的要求分布
+### 無資料情況
+1. 爬取
+2. 存入 DB
+3. 從 DB 讀取資料
+4. 篩選資料
+5. 建圖表
 
-最簡單的:
-    一個 DF -> [工作名, salary, 學歷, workExp, major]
-    第二個 工具 -> [公司名, Python, Linux, NLP, LLM,....] -> 有要求就T, 沒有就F, 可以統計工具出現總次數之類的
-    第三個 技能 -> [公司名, Machine Learning, AI,....] -> 如上
-    第二跟第三具有公司名是預留給第一個 merge 的空間
+### 有資料情況
+1. 從 DB 讀取資料
+2. 篩選資料
+3. 建圖表
+
 
 ## dev step
 
@@ -30,17 +25,19 @@ A. Extract
     1. 逆向工程 API
     2. 拆解 resp 的資料結構
     3. 先剔除掉最不需要的資料欄位
-    x. try-except 查不到工作的情況
+    x. try-except 查不到工作的情況 (if data == [], 已處理)
 
 B. Load: 先將剃除過的 json 格式的資料儲存到 MongoDB (Bronze)
 
-C. Transformer: 建圖表, 建 DF
+C. Question: 針對這個資料模型要做什麼樣的資料分析?
 
-B. Load: 從 db 取出資料進行二次清洗,  (Silver)
+D. Transformer: 建圖表, 建 DF
 
-C. Transformer: 建圖表, 建 DF
+D. Load: 從 db 取出資料進行二次清洗, 有需要可以存到 Silver db
 
-D. 針對這個資料模型要做什麼樣的資料分析?
+E. Transformer: 根據需求建立 DataFrame 以供 PowerBI 使用
+
+F. 
 
 ## 簡報結構
 

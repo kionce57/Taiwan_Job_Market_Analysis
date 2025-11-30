@@ -32,14 +32,16 @@ class MongoDB_one_zero_four(Db):
         cluster = os.getenv("CLUSTER")
         db_user = os.getenv("DB_USER")
         db_pwd = os.getenv("DB_PASSWORD")
-  
+
         # 第一段是 if not all so when all() False 的時候會進入 if 區塊, 因此我們要做的是"找到導致 all() is false" 的 value, 所以是 if not value
         if not all([mongo_host, cluster, db_user, db_pwd]):
-                # locals()：這是一個 Python 內建函數，它會回傳一個字典 (Dictionary)，包含當前作用域（Scope）內所有的區域變數, e.g. {variable:value}。
-                missing_vars = [k for k, v in locals().items() if not v and k in ['mongo_host', "cluster", 'db_user', 'db_pwd']]
-                error_msg = f"Missing environment variables: {missing_vars}"
-                logger.error(error_msg)
-                raise ValueError(error_msg)
+            # locals()：這是一個 Python 內建函數，它會回傳一個字典 (Dictionary)，包含當前作用域（Scope）內所有的區域變數, e.g. {variable:value}。
+            missing_vars = [
+                k for k, v in locals().items() if not v and k in ["mongo_host", "cluster", "db_user", "db_pwd"]
+            ]
+            error_msg = f"Missing environment variables: {missing_vars}"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
 
         db_user = urllib.parse.quote_plus(db_user)
         db_pwd = urllib.parse.quote_plus(db_pwd)
@@ -105,7 +107,7 @@ class MongoDB_one_zero_four(Db):
             # 紀錄完後，選擇是否要再往上拋出
             raise bwe
 
-    def select_from_bronze(self, condition: dict, projection: dict) -> list:
+    def select_from_bronze(self, condition: dict, projection: dict=None) -> list:
         """
         condition pattern: -> like where in MySQL
             {"col":"val"}

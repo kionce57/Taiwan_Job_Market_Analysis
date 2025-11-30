@@ -8,7 +8,7 @@ LOGGING_COFIG = {
     "disable_existing_loggers": False,  # 防止覆蓋其他套件原本的 log 設定
     "formatters": {
         "basis": {
-            "format": "[%(levelname)s] %(asctime)s %(module)s-%(message)s",
+            "format": "[%(levelname)s] %(asctime)s %(module)s %(message)s",
             "style": "%",  # 這是指上面的 format 用甚麼符號
         }
     },

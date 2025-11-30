@@ -68,9 +68,9 @@ class Main:
 if __name__ == "__main__":
     main = Main()
     # next kw: 後端工程
-    # keyword = "資料工程"
-    # area = "台北市"
-    # main.fetch_data_and_save_to_db()
+    keyword = "資料工程"
+    area = "台北市"
+    main.fetch_data_and_save_to_db(keyword, area)
 
     # job_name_include_regex = "Python"
     # file_title = "taipei_python"

@@ -3,6 +3,7 @@ import logging
 import random
 import re
 import time
+import urllib.parse
 
 import requests
 
@@ -27,12 +28,13 @@ class One_zero_four_crawler:
 
     def _get_job_detail_url_and_jobid(self, keyword, area, page, pagesize=PAGESIZE) -> list[dict]:
         area_num = self._transformer_area_to_num(area)
-
+        url_parsed_keyword = urllib.parse.quote(keyword) 
+        
         headers = {
             "Accept": "application/json, text/plain, */*",
             "Host": "www.104.com.tw",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
-            "Referer": f"https://www.104.com.tw/jobs/search/?area={area_num}&jobsource=joblist_search&keyword={keyword}&mode=s&page={page}",
+            "Referer": f"https://www.104.com.tw/jobs/search/?area={area_num}&jobsource=joblist_search&keyword={url_parsed_keyword}&mode=s&page={page}",
         }
 
         params = {

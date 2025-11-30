@@ -71,10 +71,10 @@ class Main:
 if __name__ == "__main__":
     main = Main()
     # next kw: 後端工程
-    # keyword = "資料工程"
-    # area = "台北市"
-    # main.fetch_data_and_save_to_db(keyword, area)
+    keyword = "資料工程"
+    area = "台北市"
+    main.fetch_data_and_save_to_db(keyword, area)
 
-    job_name_include_regex = r"Python"
-    file_title = "python_taipei"
-    main.output_jobname_skill_specialty_as_3_csv(job_name_include_regex, file_title)
+    # job_name_include_regex = r"Python"
+    # file_title = "python_taipei"
+    # main.output_jobname_skill_specialty_as_3_csv(job_name_include_regex, file_title)

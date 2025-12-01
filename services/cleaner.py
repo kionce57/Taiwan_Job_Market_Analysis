@@ -1,6 +1,9 @@
 import logging
 
+import numpy as np
 import pandas as pd
+
+from typing import Literal
 
 logger = logging.getLogger(__name__)
 
@@ -30,8 +33,8 @@ def make_jobid_with_jobname(original_df: pd.DataFrame) -> pd.DataFrame:
 
 
 # 製作 job_id with skill 的 df
-def make_job_skill_or_specialty(original_df: pd.DataFrame, skill_or_specialty: str) -> pd.DataFrame:
-    purpose = str(skill_or_specialty)
+def make_job_skill_or_specialty(original_df: pd.DataFrame, mode: Literal["skill", "specialty"]) -> pd.DataFrame:
+    purpose = str(mode)
 
     if purpose not in ["skill", "specialty"]:
         raise ValueError("purpose must be 'skill' or 'specialty'")
@@ -44,7 +47,7 @@ def make_job_skill_or_specialty(original_df: pd.DataFrame, skill_or_specialty: s
         exploded_df = cp_ori_df.explode(purpose).reset_index()
         exploded_df = exploded_df.dropna(subset=[purpose])
 
-        id_with_purpose_df = exploded_df[["_id", purpose]]
+        id_with_purpose_df = exploded_df[["_id", purpose]].reset_index(drop=True)
 
         description_df = pd.json_normalize(id_with_purpose_df[purpose])
 
@@ -70,23 +73,51 @@ def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
         logger.exception(f"Failed to make salary DataFrame: {e}")
 
 
-def exact_salary(original_df: pd.DataFrame) -> pd.DataFrame:
+def process_salary_info(original_df: pd.DataFrame, mode:Literal["exact", "negotiable"] = "exact") -> pd.DataFrame:
     """
+    salaryType=10 is 面議
     salaryType=50 is 月薪(會包含 xxx 以上)
+    salaryType=60 is 年薪(會包含 xxx 以上)
+    該 func 只處理明確標示薪資上下限的職缺
     """
+    if mode not in ["exact", "negotiable"]:
+        raise ValueError("exact_or_negotiable must be 'exact' or 'negotiable'")
+
     cp_ori_df = original_df.copy()
 
-    json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[["salary", "salaryMin", "salaryMax", "salaryType"]]
-    
-    # axis=1, 表示以 row 為標準合併, index=0 與 index=0 join 以此類推
-    salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
-    salary_df = salary_df.drop(columns="jobDetail", axis=1)
+    try:
+        json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[["salary", "salaryMin", "salaryMax", "salaryType"]]
+        
+        # axis=1, 表示以 row 為標準合併, index=0 與 index=0 join 以此類推
+        salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
+        salary_df = salary_df.drop(columns="jobDetail", axis=1)
 
-    mask = (salary_df["salaryType"] == 50) & (salary_df["salaryMin"] > 0) & (salary_df["salaryMax"] < 5000000)
-    month_salary = salary_df[mask]
-    month_salary = month_salary[["_id", "salaryMin", "salaryMax"]]
+        if mode == "exact":
+            mask_monthly = salary_df["salaryType"] == 50
+            mask_annual = salary_df["salaryType"] == 60
+            salary_range = (salary_df["salaryMin"] > 0) & (salary_df["salaryMax"] != 9999999)
+
+            monthly_salary = salary_df[(mask_monthly | mask_annual) & salary_range].copy()
+
+            ANNUAL_FACTOR = 13 # 年薪轉月薪
+
+            # 把年薪換算成月薪, 無法換算則保持原樣
+            monthly_salary["salaryMin"] = np.where(monthly_salary["salaryType"] == 60, monthly_salary["salaryMin"]//ANNUAL_FACTOR, monthly_salary["salaryMin"])
+            monthly_salary["salaryMax"] = np.where(monthly_salary["salaryType"] == 60, monthly_salary["salaryMax"]//ANNUAL_FACTOR, monthly_salary["salaryMax"])
+
+        elif mode == "negotiable":
+            mask_negotiable = salary_df["salaryType"] == 10
+            mask_monthly = salary_df["salaryType"] == 50
+            mask_annual = salary_df["salaryType"] == 60
+            salary_range = (salary_df["salaryMin"] == 0) & (salary_df["salaryMax"] == 0) | (salary_df["salaryMax"] == 9999999)
+
+            monthly_salary = salary_df[(mask_negotiable | mask_monthly | mask_annual) & salary_range].copy()
+
+        monthly_salary = monthly_salary[["_id", "salaryMin", "salaryMax"]].reset_index(drop=True)
+        return monthly_salary
     
-    return month_salary
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
 
 def negotiable_salary():
     """

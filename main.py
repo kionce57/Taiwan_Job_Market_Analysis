@@ -1,17 +1,17 @@
 import logging
+from pathlib import Path
 
 from services.cleaner import (
     make_job_skill_or_specialty,
     make_jobid_with_jobname,
+    process_salary_info,
     use_original_documents_make_df,
-    process_salary_info
 )
 from services.config_log import set_up_logging
 from services.crawler import One_zero_four_crawler
 from services.db import MongoDB_one_zero_four
-from pathlib import Path
 
-set_up_logging(debug=True)
+set_up_logging(debug=False)
 logger = logging.getLogger(__name__)
 
 
@@ -28,6 +28,8 @@ class Main:
 
         try:
             # 爬取資料
+            logger.info(f"Start crawling data with keyword: {keyword} and area: {area}")
+
             self.crawler = One_zero_four_crawler()
             datas = self.crawler.job_cleaned_pipeline_bronze(keyword, area)
         except Exception as e:
@@ -36,7 +38,7 @@ class Main:
         # 將資料存入資料庫
         try:
             self.db.insert_into_bronze(datas)
-            logger.info("fetch data and save to db successfully")
+            logger.info(f"Use {keyword} to fetch data and save to db successfully")
         except Exception as e:
             logger.exception(f"Failed to connection to MongoDB:{e}")
 
@@ -55,7 +57,7 @@ class Main:
         # 放在第一個, 避免它在最後才出錯浪費資源
         result_dir = Path("result")
         result_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # 從資料庫取出資料, pattern: Data from bronze
         condition = {"header.jobName": {"$regex": job_name_include_regex, "$options": "i"}}
         documents = self.db.select_from_bronze(condition)
@@ -71,15 +73,15 @@ class Main:
 
         # job_name with job_id 作為映射主表
         input_dfs = {
-            "job_name": make_jobid_with_jobname(original_df), 
-            "skills": make_job_skill_or_specialty(original_df, "skill"), 
+            "job_name": make_jobid_with_jobname(original_df),
+            "skills": make_job_skill_or_specialty(original_df, "skill"),
             "specialtys": make_job_skill_or_specialty(original_df, "specialty"),
             "exact_salary": process_salary_info(original_df, mode="exact"),
-            "negotiable_salary": process_salary_info(original_df, mode="negotiable")
+            "negotiable_salary": process_salary_info(original_df, mode="negotiable"),
         }
 
         logger.info(f"Exporting {len(input_dfs)} CSV files to {result_dir.absolute()}...")
-        
+
         # 將資料輸出成 csv 格式, 以便 PowerBI 使用
         for name, df in input_dfs.items():
             file_path = result_dir / f"{file_title}_{name}.csv"
@@ -87,21 +89,20 @@ class Main:
                 df.to_csv(file_path, index=False, encoding="utf-8-sig")
             except Exception as e:
                 logger.exception(f"Failed to export {name} to CSV: {e}")
-        
+
         logger.info("Export to csv files completed.")
-    
-    
+
     # def main():
     # 用 argument 讓 user 控制程序的行為 [fetch and save | select and draw | fetch and save, and then select and draw]
 
 
 if __name__ == "__main__":
     main = Main()
-    # next kw: 後端工程
-    # keyword = ""
+    # next kw: 爬蟲
+    # keyword = 
     # area = "台北市"
     # main.fetch_data_and_save_to_db(keyword, area)
 
-    job_name_include_regex = r"Python"
+    job_name_include_regex = r"Python|Engineer|資料工程"
     file_title = "python_taipei"
     main.select_bronze_data_and_output_csv(job_name_include_regex, file_title)

@@ -28,8 +28,8 @@ class One_zero_four_crawler:
 
     def _get_job_detail_url_and_jobid(self, keyword, area, page, pagesize=PAGESIZE) -> list[dict]:
         area_num = self._transformer_area_to_num(area)
-        url_parsed_keyword = urllib.parse.quote(keyword) 
-        
+        url_parsed_keyword = urllib.parse.quote(keyword)
+
         headers = {
             "Accept": "application/json, text/plain, */*",
             "Host": "www.104.com.tw",
@@ -159,7 +159,9 @@ class One_zero_four_crawler:
             time.sleep(random.uniform(1.5, 4))
 
         # 傳遞給 db class 讓它存到 db 去
-        logger.info(f"The cleaned job details is prepared, total amount: {len(cleaned_job_details)}")
+        logger.info(
+            f"The cleaned job details is prepared, total amount: {len(cleaned_job_details)}"
+        )
         return cleaned_job_details
 
 

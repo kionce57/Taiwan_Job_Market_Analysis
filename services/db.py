@@ -5,7 +5,12 @@ from abc import ABC, abstractmethod
 
 from dotenv import load_dotenv
 from pymongo import MongoClient, UpdateOne
-from pymongo.errors import BulkWriteError, ConfigurationError, OperationFailure, ServerSelectionTimeoutError
+from pymongo.errors import (
+    BulkWriteError,
+    ConfigurationError,
+    OperationFailure,
+    ServerSelectionTimeoutError,
+)
 
 logger = logging.getLogger(__name__)
 load_dotenv()
@@ -37,7 +42,9 @@ class MongoDB_one_zero_four(Db):
         if not all([mongo_host, cluster, db_user, db_pwd]):
             # locals()：這是一個 Python 內建函數，它會回傳一個字典 (Dictionary)，包含當前作用域（Scope）內所有的區域變數, e.g. {variable:value}。
             missing_vars = [
-                k for k, v in locals().items() if not v and k in ["mongo_host", "cluster", "db_user", "db_pwd"]
+                k
+                for k, v in locals().items()
+                if not v and k in ["mongo_host", "cluster", "db_user", "db_pwd"]
             ]
             error_msg = f"Missing environment variables: {missing_vars}"
             logger.error(error_msg)
@@ -107,7 +114,7 @@ class MongoDB_one_zero_four(Db):
             # 紀錄完後，選擇是否要再往上拋出
             raise bwe
 
-    def select_from_bronze(self, condition: dict, projection: dict=None) -> list:
+    def select_from_bronze(self, condition: dict, projection: dict = None) -> list:
         """
         condition pattern: -> like where in MySQL
             {"col":"val"}
@@ -125,8 +132,15 @@ class MongoDB_one_zero_four(Db):
         if not condition:
             raise ValueError("The select condition must be provided.")
 
+        """
+        Gemini:
+        呼叫 find 時，PyMongo 驅動程式會負責將你的 Python 字典 (Dictionary) 序列化 (Serialize) 為 BSON (Binary JSON) 格式。
+        BSON 規範強制要求字串必須是 UTF-8 編碼。PyMongo 會自動幫你完成這個轉換。
+        """
         if projection:
-            cursor = self.bronze_collection.find(condition, max_time_ms=10000, projection=projection)
+            cursor = self.bronze_collection.find(
+                condition, max_time_ms=10000, projection=projection
+            )
         else:
             cursor = self.bronze_collection.find(condition, max_time_ms=10000)
 

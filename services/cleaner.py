@@ -74,24 +74,25 @@ def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make salary DataFrame: {e}")
 
+
 def _convert_annual_to_monthly(df, annual_factor=13):
     """
     將年薪 (Type 60) 轉換為月薪，但保護 max == 9999999 的特殊標記。
     """
     # 1. 定義基礎遮罩：找出所有年薪制的資料
     mask_annual = df["salaryType"] == 60
-    
+
     # 2. 處理 salaryMin (下限)
     # 邏輯：只要是年薪制，下限通常都是有效數字，直接轉換, 0/13 = 0
     df.loc[mask_annual, "salaryMin"] = df.loc[mask_annual, "salaryMin"] // annual_factor
-    
+
     # 3. 處理 salaryMax (上限) - 加入你要求的功能
     # 邏輯：是年薪制 (Type 60) 且 (AND) 上限不是特殊標記 (Max != 9999999)
     mask_convert_max = mask_annual & (df["salaryMax"] != 9999999)
-    
+
     # 只有符合上述複合條件的，才進行除法運算
     df.loc[mask_convert_max, "salaryMax"] = df.loc[mask_convert_max, "salaryMax"] // annual_factor
-    
+
     return df
 
 

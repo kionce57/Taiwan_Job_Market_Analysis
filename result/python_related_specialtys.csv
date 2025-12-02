@@ -4,7 +4,6 @@
 8uzq4,PyTorch
 8uzq4,Git
 8uzq4,Linux
-8vsve,Python
 8nwo9,Python
 8nwo9,XML
 8nwo9,Shell
@@ -323,10 +322,9 @@
 8vsla,C++
 8vsla,OpenCV
 8vsla,C#
-8vsus,C#
-8vsus,Python
-8vsus,Scrum
 6xtfl,Python
+86auy,C++
+86auy,Python
 7evi2,Git
 7evi2,Java
 7evi2,Spring
@@ -335,22 +333,34 @@
 4ftgq,Python
 4ftgq,XML Web services
 81za3,Python
+8sbho,Git
+8sbho,Python
+8sbho,R
+8sbho,MLOPs
+4u9yz,Python
+8viql,Linux
+8viql,Python
 8vruy,Python
 8kg3e,COBOL
 8kg3e,PHP
 8kg3e,Python
 8kg3e,MySQL
+8vbn8,SAS
+8vbn8,Python
+8vbn8,R
+5cdpt,Python
+5cdpt,R
 7dpwf,Python
 7dpwf,MS SQL
-73nm5,Python
-73nm5,AWS
-7sx7j,Github
-7sx7j,Git
-7sx7j,Python
-7sx7j,MySQL
-7sx7j,PostgreSQL
-7sx7j,JavaScript
-7sx7j,Node.js
+6k2x6,Python
+6k2x6,LLM
+6k2x6,Prompt
+80g1d,Python
+80g1d,ETL
+80g1d,SAP
+7f52h,Git
+7f52h,Python
+7f52h,MS SQL
 8ix5r,ChatGPT
 8ix5r,AWS
 8ix5r,Microsoft Azure
@@ -361,17 +371,20 @@
 86aui,Linux
 86aui,C++
 86aui,Python
-8o4g1,Python
-8o4g1,Scrum
-8o4g1,AWS
-8o4g1,Cloud
-8o4g1,Linux
-8o4g1,Github
+81z9y,Python
 7hf8u,Github
 7hf8u,Python
 7hf8u,UNIX
-7adje,PHP
-7adje,Python
+7bdre,Linux
+7bdre,Java
+7bdre,Python
+7bdre,JDBC
+7bdre,MySQL
+7bdre,ODBC
+76wdy,Python
+76wdy,R
+76wdy,SAS
+76wdy,SPSS
 889qn,Linux
 889qn,Windows Server 2019
 889qn,Git
@@ -410,12 +423,6 @@
 8lrzp,Security
 8lrzp,TCP/IP
 8lrzp,UDP
-6sfcs,Linux
-6sfcs,Shell
-6sfcs,Python
-6sfcs,Go
-6sfcs,PostgreSQL
-6sfcs,AWS
 8syby,HTML
 8syby,CSS
 8syby,Python
@@ -432,18 +439,6 @@
 7mof7,Java
 7mof7,Python
 8tyah,Python
-8t1cx,Java
-8t1cx,OOP
-8t1cx,Go
-8t1cx,Git
-8t1cx,Github
-8t1cx,Python
-8t1cx,Node.js
-8rmhd,AWS
-8rmhd,MySQL
-8rmhd,Git
-8rmhd,Go
-8rmhd,Python
 7wutg,Linux
 7wutg,Python
 7wutg,AWS
@@ -455,19 +450,22 @@
 8p6el,Python
 8p6el,AWS
 8p6el,FTP
-7k1tw,Git
-7k1tw,Python
 8e0qu,Linux
 8e0qu,Shell
 8e0qu,Git
 8e0qu,C++
 8e0qu,Python
-8m01b,Git
-8m01b,Java
-8m01b,Python
-8m01b,Go
-8m01b,MySQL
-8m01b,JavaScript
+8tdh6,Linux
+8tdh6,Shell
+8tdh6,Git
+8tdh6,Python
+7ez67,Linux
+7ez67,Github
+7ez67,Git
+7ez67,Python
+7ez67,R
+7ez67,MS SQL
+7ez67,PostgreSQL
 7gu74,Linux
 7gu74,C#
 7gu74,C++
@@ -475,12 +473,17 @@
 7gu74,Python
 7gu74,Go
 7gu74,JavaScript
-8761y,Linux
-8761y,Shell
-8761y,Github
-8761y,Git
-8761y,Python
-8761y,Django
+7mgua,Python
+7mgua,R
+7mgua,Excel
+7mgua,PowerPoint
+7mgua,Word
+7mgua,中文打字20~50
+7mgua,英文打字20~50
+7mgua,Tableau
+7mgua,Power BI​
+7mgua,SAS
+7mgua,SPSS
 8vydf,Python
 8vydf,AWS
 8vydf,Github
@@ -493,40 +496,42 @@
 8qlbk,AWS
 8qlbk,LLM
 8qlbk,Cloud
-8jsbj,Git
-8jsbj,Java
-8jsbj,Python
-8jsbj,Go
-8jsbj,MySQL
-8jsbj,JavaScript
+7fxhq,Linux
+7fxhq,Python
+7fxhq,MySQL
+7fxhq,MS SQL
+7fxhq,Oracle
+7fxhq,PostgreSQL
+7fxhq,hadoop
+7fxhq,Tableau
 8cxgu,Python
 8cxgu,JavaScript
+73510,Python
+73510,R
+73510,SAS
 8qxu5,Python
 8qxu5,MySQL
 8qxu5,PyTorch
+8tpdm,PyTorch
+8tpdm,Power BI​
+8tpdm,Python
+8tpdm,R
 8l3ub,Github
 8l3ub,Git
 8l3ub,Python
-8q8wq,C++
-8q8wq,Python
-8q8wq,ChatGPT
+7vwye,Python
+7vwye,NLP
+7vwye,MySQL
 87p9z,Python
 87p9z,ETL
 87p9z,MS SQL
 87p9z,Excel
 87p9z,Tableau
 87p9z,Power BI​
-81x0z,Git
-81x0z,Python
-81x0z,MySQL
 8vt1f,MS SQL
 8vt1f,Python
 8vt1f,ETL
 8vt1f,Git
-7zlep,PHP
-7zlep,Python
-7zlep,AWS
-7zlep,JavaScript
 8lqxs,Linux
 8lqxs,Git
 8lqxs,C
@@ -541,11 +546,37 @@
 7xeh1,Go
 7xeh1,MS SQL
 7xeh1,AWS
+8uu0k,Python
 8jl93,iOS
 8jl93,Github
 8jl93,Git
 8jl93,Python
 8jl93,Objective-C
+85yiu,Linux
+85yiu,Shell
+85yiu,Git
+85yiu,Python
+85yiu,Go
+85yiu,MySQL
+85yiu,PostgreSQL
+85yiu,AWS
+6fpnp,hadoop
+6fpnp,Power BI​
+6fpnp,Google Analytics
+6fpnp,Tableau
+6fpnp,Word
+6fpnp,Visio
+6fpnp,Project
+6fpnp,PowerPoint
+6fpnp,Outlook
+6fpnp,Excel
+6fpnp,DNS
+6fpnp,AWS
+6fpnp,Oracle
+6fpnp,MySQL
+6fpnp,MS SQL
+6fpnp,ETL
+6fpnp,Python
 8vfc7,C++
 8vfc7,Python
 8t66j,Linux
@@ -556,6 +587,11 @@
 8t66j,PostgreSQL
 8t66j,RDBMS
 8t66j,Django
+8n5yu,Python
+8n5yu,Excel
+8n5yu,Google Analytics
+8n5yu,Google關鍵字廣告
+8tfmd,Python
 8cxkj,Github
 8cxkj,VPN
 8cxkj,ssh
@@ -569,8 +605,6 @@
 8cxkj,Jenkins
 8cxkj,iOS
 8cxkj,Linux
-8bjdd,Linux
-8bjdd,Python
 8va1d,Python
 8va1d,ETL
 8va1d,MySQL
@@ -581,9 +615,26 @@
 6dcfl,Python
 6dcfl,MySQL
 6dcfl,AWS
+8kn2x,C#
+8kn2x,Python
+8kn2x,Database Management
+8kn2x,SAP
+7p8if,Python
+7p8if,Excel
+7p8if,Outlook
+7p8if,PowerPoint
+7p8if,Word
 8sowq,C++
 8sowq,LLM
 8sowq,Python
+7bedq,Linux
+7bedq,Python
+7bedq,MySQL
+7bedq,Shell
+7osnc,Python
+7osnc,ETL
+7osnc,Django
+7osnc,Power BI​
 8tbys,Excel
 8tbys,Outlook
 8tbys,PowerPoint
@@ -621,6 +672,16 @@
 8rady,Hive
 8rady,ETL
 8rady,MySQL
+72ycg,Java
+72ycg,Python
+72ycg,R
+72ycg,MS SQL
+72ycg,Excel
+72ycg,Google Analytics
+72ycg,Google Tag Manager
+72ycg,Google Data Studio
+72ycg,Firebase
+72ycg,Power BI​
 8tft1,Git
 8tft1,PostgreSQL
 8tft1,RDBMS
@@ -643,20 +704,17 @@
 8si2o,Shell
 8si2o,Git
 8vdvc,Python
-7e88o,Linux
-7e88o,Mac OS
-7e88o,UNIX
-7e88o,Systems Administration
-7e88o,Java
-7e88o,Python
-7e88o,Ruby
-7e88o,MySQL
-7e88o,AWS
 8l3p1,Python
 8l3p1,ETL
 8l3p1,MS SQL
 8l3p1,Excel
 8l3p1,Power BI​
+8k4kp,Java
+8k4kp,Python
+8k4kp,R
+8k4kp,Excel
+8k4kp,PowerPoint
+8k4kp,Word
 8cxit,Linux
 8cxit,C
 8cxit,C++
@@ -682,45 +740,35 @@
 8q6g9,JavaScript
 8q6g9,ReactJS
 8q6g9,Node.js
-7etdk,Python
-7etdk,Django
-7e118,Github
-7e118,Git
-7e118,PHP
-7e118,Python
-7e118,MySQL
-7e118,AWS
+8j7pd,Python
+8mx4q,Python
+8mx4q,C++
+8mx4q,tensorflow
+8mx4q,Keras
 7krs7,C#
 7krs7,Python
 7krs7,ETL
 7krs7,Github
-7ll1d,Python
-7ll1d,RDBMS
+8n951,Python
+8n951,R
+8n951,MS SQL
+8n951,MySQL
+8n951,AWS
+8n951,Excel
+8n951,PowerPoint
+8n951,Word
+8n951,Tableau
 8ti6d,Python
 8ti6d,Java
 8ti6d,Tableau
 8ti6d,MySQL
 8ti6d,ETL
-8sezr,Python
-8sezr,AWS
-8sezr,PostgreSQL
-8sezr,Linux
-8sezr,Shell
-8sezr,Git
-8sezr,Cloud
-8sezr,UNIX
-8sezr,Github
 7n2l7,Linux
 7n2l7,Git
 7n2l7,C
 7n2l7,Python
-8ojcg,Linux
-8ojcg,Git
-8ojcg,PHP
-8ojcg,Python
-8ojcg,MySQL
-8ojcg,AWS
-8ojcg,Node.js
+8q23n,Python
+8q23n,Git
 8tpyz,Linux
 8tpyz,C++
 8tpyz,Python
@@ -728,6 +776,13 @@
 8trsy,Python
 8trsy,IoT
 8trsy,MES
+8q6w2,MS SQL
+8q6w2,AWS
+8q6w2,Python
+8v9e6,MySQL
+8v9e6,Python
+8v9e6,JIRA
+8v9e6,ETL
 8cy5n,Linux
 8cy5n,Python
 8cy5n,LLM
@@ -757,6 +812,7 @@
 8jvge,AWS
 8jvge,Node.js
 8jvge,JIRA
+8w1vp,Excel
 8te5p,Tableau
 8te5p,Looker studio
 8te5p,Power BI​
@@ -807,6 +863,9 @@
 8v996,Python
 8v996,Github
 8v996,Informatica
+8ukbm,MySQL
+8ukbm,AWS
+8ukbm,ETL
 8p8r6,ETL
 8p8r6,AWS
 8p8r6,Microsoft Azure
@@ -827,6 +886,8 @@
 7g1tw,Python
 7g1tw,Shell
 7g1tw,C#
+8s3nl,Tableau
+8s3nl,MySQL
 8p7ye,Cloud
 8p7ye,hadoop
 8p7ye,Tableau
@@ -875,9 +936,6 @@
 8qbni,e-commerce
 8qbni,HTTP
 79xm7,SAS
-8r4f8,ASP.NET
-8r4f8,MS SQL
-8r4f8,Cloud
 86d2k,Linux
 86d2k,Python
 86d2k,ANSI SQL
@@ -885,12 +943,49 @@
 86d2k,MySQL
 86d2k,hadoop
 86d2k,AWS
-8uel7,Java
-8uel7,Spring
+1yf7o,DB2
+1yf7o,MS SQL
+1yf7o,Oracle
+8msz8,Python
+8msz8,Git
+8t6vw,Python
+8t6vw,scikit-learn
+8t6vw,PyTorch
+8t6vw,tensorflow
+8t6vw,Microsoft Azure
+7gnzs,ETL
+7gnzs,MS SQL
+7gnzs,Excel
+7gnzs,PowerPoint
+7gnzs,Power BI​
+7gnzs,鼎新
+8s7c8,Tableau
+7xwf5,ANSI SQL
+7xwf5,MS SQL
 8ugrj,Java
 8ugrj,Python
 8ugrj,Scala
 8ugrj,ETL
+8904l,Database Administrator
+8904l,ETL
+8904l,MS SQL
+8904l,Oracle
+8904l,PostgreSQL
+85jia,AutoCAD
+6ne1i,Linux
+6ne1i,MS SQL
+6ne1i,Oracle
+83q03,Linux
+83q03,MS SQL
+83q03,Excel
+8v5bc,ETL
+8v5bc,Informatica
+8v5bc,PostgreSQL
+8v5bc,MS SQL
+8v5bc,Data Modeling
+8v5bc,DataStage
+8v5bc,PL/SQL
+8v5bc,Data Marts
 8fvv9,Linux
 8fvv9,Github
 8fvv9,Git
@@ -900,42 +995,129 @@
 8fvv9,CSS
 8fvv9,Node.js
 8fvv9,VueJS
-8vqzm,Go
-8vqzm,MySQL
+6shtp,Linux
+6shtp,Python
+6shtp,MS SQL
+8pr4c,Excel
+8pr4c,PowerPoint
+8pr4c,Word
+8pr4c,Power BI​
+8pr4c,SAS
+8pr4c,SPSS
+8pr4c,Python
+7dbtt,MS SQL
+6xiif,Linux
+6xiif,Oracle
+6xiif,PostgreSQL
+6xiif,AWS
+7x4u0,ETL
+7x4u0,Oracle
+7x4u0,PostgreSQL
+8vfbp,Database Administrator
+8vfbp,MS SQL
+8vfbp,Shell
 8qbnl,PostgreSQL
 8qbnl,Git
 8qbnl,e-commerce
 8qbnl,Visual C#
 8qbnl,HTTP
-6yr7q,Windows Server 2008
-6yr7q,Windows Server 2012
-6yr7q,Git
-6yr7q,ASP.NET
-6yr7q,C#
-6yr7q,Visual Studio
-6yr7q,MS SQL
+88y3w,UNIX
+88y3w,Informix
+88y3w,MS SQL
+88y3w,MySQL
+88y3w,PL/SQL
+88y3w,PostgreSQL
+8k2no,Linux
+8k2no,Shell
+8k2no,MS SQL
+8k2no,MySQL
+8k2no,Oracle
+8k2no,PostgreSQL
+8rh44,Oracle
+8rh44,PL/SQL
+8nyuz,PostgreSQL
+8nyuz,Linux
+6cpmh,Java
+6cpmh,MS SQL
+6cpmh,MySQL
+8ae3g,MS SQL
+8u985,Linux
+7f8rb,ETL
+7f8rb,MS SQL
+8vo0n,Python
+8vo0n,Looker studio
+8vo0n,Cloud
+8vo0n,ETL
+8vo0n,Github
+8vo0n,scikit-learn
+8708t,MS SQL
+8lrxp,Linux
+8jisv,Git
+8jisv,Capacity Planning
+8jisv,Data Modeling
+8jisv,Database Administrator
+8jisv,Database Management
+8jisv,DataStage
+8jisv,ETL
+8vf5u,Database Administrator
+8vf5u,MS SQL
+8vf5u,Shell
+893g3,Excel
+893g3,PowerPoint
+893g3,Tableau
+893g3,Google Analytics
+893g3,Google Tag Manager
+893g3,SimilarWeb
+893g3,Google Data Studio
 8w18m,Python
 8w18m,C#
 8w18m,Power BI​
 8w18m,MS SQL
+8w4ol,Python
+8w4ol,Excel
+8w4ol,Word
+8w4ol,PowerPoint
+8w4ol,VBA
+8w4ol,Tableau
 7kabt,Python
 7kabt,MS SQL
 7kabt,MySQL
 7kabt,PostgreSQL
 7kabt,hadoop
-5bdsg,Python
-5bdsg,Go
-5bdsg,MS SQL
-5bdsg,AWS
-5bdsg,Node.js
-5bdsg,Java
+8ve5q,PostgreSQL
+7c52x,C#
+7c52x,Database Administrator
+7c52x,Database Management
+7c52x,ETL
+7c52x,MS SQL
+7c52x,Tableau
 7p7cw,Linux
 7p7cw,Python
 7p7cw,MS SQL
 7p7cw,PostgreSQL
 7p7cw,JavaScript
+8hjx1,Linux
+8hjx1,Python
+8hjx1,MLOPs
+8ppdi,Python
+8ppdi,C#
+8ppdi,Power BI​
+8ppdi,MS SQL
+6s193,Java
+6s193,Data Modeling
+6s193,Database Administrator
+6s193,Database Management
+6s193,ETL
+6s193,Oracle
+6s193,PL/SQL
+6s193,RDBMS
+6s193,Tableau
 6yjxf,Python
 6yjxf,ETL
+7m03d,MS SQL
+89kkk,Database Administrator
+89kkk,MySQL
+89kkk,AWS
 8cy3h,Linux
 8cy3h,Github
 8cy3h,Git
@@ -945,44 +1127,56 @@
 8cy3h,ReactJS
 8cy3h,Redux
 8cy3h,e-commerce
-8hfmf,Github
-8hfmf,Git
-8hfmf,JavaScript
-8hfmf,CSS
-8hfmf,Node.js
-8hfmf,ssh
-8hfmf,TCP/IP
+8q5sd,ETL
+86z76,SAP
+86z76,SAP HANA
+86z76,MS SQL
+8lops,Java
+8lops,Python
+4owz9,Database Administrator
+4owz9,Database Management
+4owz9,MS SQL
+6jd84,Data Guard
+6jd84,Database Administrator
+6jd84,Database Management
+6jd84,MySQL
+6jd84,Oracle
+6jd84,PL/SQL
+6jd84,Toad
+87vo6,Git
+87vo6,Teradata
+87vo6,Hive
+87vo6,Data Architect
+87vo6,GIS
+87vo6,ArcGis
+87vo6,Node.js
+87vo6,XML
+87vo6,AWS
+87vo6,hadoop
+87vo6,PostgreSQL
+87vo6,MS SQL
+87vo6,ETL
+87vo6,Data Modeling
+87vo6,ANSI SQL
+87vo6,Python
+87vo6,Github
+87vo6,UML
+87vo6,Linux
+7z3gu,Draw
+7z3gu,Word
+7z3gu,Visio
+7z3gu,PowerPoint
+7z3gu,Excel
 8ls5g,Security
 8ls5g,PostgreSQL
 8ls5g,MySQL
 8ls5g,Cloud
 8ls5g,Java
-87j13,Github
-87j13,AWS
-87j13,JavaScript
-87j13,Node.js
-8q544,Linux
-8q544,Github
-8q544,Python
-8q544,Go
-8q544,PostgreSQL
-8q544,JavaScript
-8q544,Node.js
-8q544,Java
-7rle7,Java
-7rle7,HTTP
-7rle7,VueJS
-7rle7,AngularJS
-7rle7,ReactJS
-7rle7,CSS
-7rle7,JavaScript
-7rle7,HTML
-7rle7,Go
-7rle7,Python
-7rle7,C++
-7rle7,C#
-7rle7,Git
-7rle7,Linux
+84ajs,MS SQL
+8uhg9,Linux
+8uhg9,Python
+8uhg9,PyTorch
+8uhg9,tensorflow
 8cxjq,Linux
 8cxjq,iOS
 8cxjq,Github
@@ -990,23 +1184,16 @@
 8cxjq,Python
 8cxjq,SWIFT
 8cxjq,e-commerce
-8gcgt,Github
-8gcgt,Git
-8gcgt,AWS
-8gcgt,JavaScript
-8gcgt,Node.js
-5r46h,Git
-5r46h,ASP.NET
-5r46h,MS SQL
-5r46h,MySQL
-5r46h,AWS
-5r46h,HTML
-5r46h,JavaScript
-5r46h,jQuery
-72r0i,PHP
-72r0i,MySQL
-8vzud,Git
-8vzud,C#
+82r7e,MySQL
+82r7e,PL/SQL
+82r7e,PostgreSQL
+72jad,Excel
+72jad,Internet Explorer
+72jad,PowerPoint
+72jad,Word
+8i9vo,Python
+8i9vo,R
+8i9vo,LLM
 6y1ic,Django
 6y1ic,CSS
 6y1ic,jQuery
@@ -1017,213 +1204,17 @@
 6y1ic,Git
 6y1ic,Github
 6y1ic,Linux
-8qvvg,Git
-8qvvg,Java
-8qvvg,Scrum
-8qvvg,Spring
-8tahe,PHP
-8tahe,Node.js
-8tahe,Go
-8tahe,MySQL
-8tahe,PostgreSQL
 89olt,Git
 89olt,MySQL
 89olt,PostgreSQL
 89olt,RDBMS
 89olt,JavaScript
 89olt,jQuery
-8ojch,Linux
-8ojch,Git
-8ojch,PHP
-8ojch,Python
-8ojch,MySQL
-8ojch,AWS
-8ojch,Node.js
-8udst,PHP
-8udst,MySQL
-8udst,PostgreSQL
-8udst,Git
-8udst,JavaScript
-8e4a0,Github
-8e4a0,Git
-8e4a0,AJAX
-8e4a0,C#
-8e4a0,Java
-8e4a0,JSP
-8e4a0,Spring
-8e4a0,PostgreSQL
-8e4a0,JavaScript
-8e4a0,Angular
-8dhbl,Java
-8dhbl,Spring
-8dhbl,MySQL
-8dhbl,PostgreSQL
-8dhbl,J2EE
-8troy,PHP
-8troy,Go
-8troy,Git
-8troy,MySQL
-8troy,PostgreSQL
 8urv6,Java
 8urv6,Oracle
 8urv6,JavaScript
 8urv6,Spring
-8vd14,AWS
-8vd14,Linux
-8vd14,PostgreSQL
-8vd14,Git
-7yyv3,Git
-7yyv3,ASP.NET
-7yyv3,C#
-7yyv3,MS SQL
-8m40y,Java
-8m40y,Spring
-8a80w,Github
-8a80w,Git
-8a80w,AJAX
-8a80w,C#
-8a80w,Java
-8a80w,JSP
-8a80w,Spring
-8a80w,PostgreSQL
-8a80w,JavaScript
-8a80w,Angular
-83xpq,Git
-83xpq,ASP.NET
-83xpq,C#
-83xpq,MS SQL
-83xpq,MySQL
-82txu,Ruby
-82txu,Rails
-75rxy,Git
-75rxy,Ruby
-75rxy,Rails
-75rxy,MySQL
-75rxy,PL/SQL
-8taeo,PHP
-8taeo,Node.js
-8taeo,Go
-8taeo,MySQL
-8taeo,PostgreSQL
-8spy3,C#
-8kgis,JavaScript
-8kgis,Node.js
-7gpuf,PHP
-7gpuf,Node.js
-5icpr,Java
-5icpr,Spring
-5icpr,PostgreSQL
-5icpr,PL/SQL
-59at4,PHP
-59at4,MySQL
-59at4,Linux
-59at4,Git
-59at4,DNS
-8rd09,MySQL
-8rd09,AWS
-8rd09,Node.js
-8vp9e,C#
-8vp9e,AWS
-8vp9e,PostgreSQL
-8k527,Linux
-8k527,UNIX
-8k527,Git
-8k527,MySQL
-8k527,Node.js
-8k527,PHP
-8dk3n,Go
-8dk3n,MySQL
-8um5o,Linux
-8um5o,UNIX
-8um5o,Git
-8um5o,MySQL
-8um5o,Node.js
-8um5o,PHP
-8ucyb,Node.js
-8ucyb,PostgreSQL
-8ucyb,Cloud
-8ucyb,MySQL
-8b4gc,Node.js
-8ja37,Android
-8ja37,iOS
-8ja37,Github
-8ja37,Python
-8ja37,Flutter
-8ja37,Django
-74uqq,Go
-74uqq,Git
-8a1qj,Java
-8a1qj,Spring
-8a1qj,MySQL
-8a1qj,J2EE
-8pfub,Git
-8pfub,Jenkins
-8pfub,Python
-8pfub,MySQL
-8pfub,Linux
-8pfub,Sass
-8pfub,Facebook
-8te4c,ASP.NET
-8te4c,C#
-8te4c,MS SQL
-823wf,Go
-823wf,Node.js
-8te3z,ASP.NET
-8te3z,C#
-8te3z,MS SQL
-8te3z,MySQL
-8t2mg,Github
-8t2mg,Python
-8t2mg,Git
-8t2mg,AWS
-8t2mg,Django
-8t2mg,ChatGPT
 8eirr,Python
-7qcxb,C#
-7qcxb,MS SQL
-7qcxb,HTML
-7qcxb,JavaScript
-7qcxb,CSS
-7qcxb,ASP.NET
-8ugop,Java
-8ugop,Spring
-8ugop,MS SQL
-8ugop,MySQL
-81z9t,Go
-81z9t,Node.js
-8przu,Go
-8przu,MySQL
-8przu,PostgreSQL
-8u9ws,Git
-8u9ws,PHP
-8u9ws,HTML
-8u9ws,JavaScript
-8u9ws,CSS
-8vnuu,Node.js
-8vnuu,MySQL
-8vnuu,Git
-8vnuu,PostgreSQL
-8u7ts,Git
-8u7ts,Java
-8u7ts,Go
-8u7ts,JavaScript
-8u7ts,CSS
-8u7ts,VueJS
-8u7ts,Spring
-8u7ts,LLM
-8u7ts,AWS
-8tgfn,Java
-8tgfn,Spring
-8g2d3,Linux
-8g2d3,Git
-8g2d3,Java
-8g2d3,Python
-8g2d3,Go
-8g2d3,HTML
-8g2d3,JavaScript
-8g2d3,CSS
-8g2d3,VueJS
-8g2d3,HTTP
 8t66m,Linux
 8t66m,Github
 8t66m,AJAX
@@ -1233,124 +1224,14 @@
 8t66m,PostgreSQL
 8t66m,RDBMS
 8t66m,Django
-5bwie,Git
-5bwie,MySQL
-5bwie,AWS
-8qfha,C++
-8qfha,Go
-7ds5k,C#
-7ds5k,JavaScript
-7ds5k,Node.js
 8da01,Jenkins
 8da01,Git
 8da01,Java
-7rewd,Java
-7rewd,Python
-7rewd,MySQL
-7rewd,JavaScript
-7rewd,Node.js
-81d8t,Linux
-81d8t,PHP
-81d8t,MySQL
-81d8t,Node.js
-82xj8,MySQL
-82xj8,C
-82xj8,C#
-82xj8,C++
-82xj8,C++.Net
-82xj8,ASP.NET
-82xj8,Java
-82xj8,Python
-7ebl7,PHP
-7ebl7,MySQL
-7ebl7,HTML
-7ebl7,CSS
-71gfq,Git
-71gfq,ASP.NET
-71gfq,C#
-71gfq,Visual Studio
-71gfq,MS SQL
-7bmis,Github
-7bmis,Git
-7bmis,PHP
-7bmis,MySQL
-7bmis,HTML
-7bmis,JavaScript
-7bmis,Node.js
-7ryab,Linux
-7ryab,OOP
-7ryab,Git
-7ryab,PHP
-7ryab,MySQL
-7ryab,RDBMS
-8ukdn,Linux
-8ukdn,OOP
-8ukdn,Git
-8ukdn,PHP
-8ukdn,MySQL
-8ukdn,RDBMS
-8js8t,ASP.NET
-8js8t,PostgreSQL
-8js8t,MySQL
-8js8t,MS SQL
-8js8t,ETL
-8js8t,Database Administrator
-8js8t,Data Modeling
-8js8t,Spring
-8js8t,Python
-8js8t,JSP
-8js8t,Java
-8js8t,C#
-8js8t,ASP
-8lg11,Git
-8lg11,C#
-880hg,Git
-880hg,Go
-880hg,MySQL
-880hg,AWS
-4ozef,jQuery
-4ozef,XML
-4ozef,JavaScript
-4ozef,HTML
-4ozef,MS SQL
-4ozef,WinForm
-4ozef,Visual Studio .net
-4ozef,C#
-4ozef,ASP.NET
-8oi13,Java
-8oi13,Git
-8oi13,ChatGPT
-7axnf,Java
-7axnf,Spring
-7axnf,MySQL
-7axnf,JavaScript
-52mgi,PHP
-52mgi,MySQL
-52mgi,DHTML
-52mgi,HTML
-52mgi,JavaScript
-52mgi,jQuery
 8qln9,Python
 8qln9,C++
 8qln9,Node.js
 8qln9,JavaScript
 8qln9,Go
-8v5jr,Go
-8v5jr,Git
-7ifr1,Linux
-7ifr1,Git
-7ifr1,Go
-7ifr1,MySQL
-7ifr1,PostgreSQL
-7ifr1,AWS
-7ifr1,JavaScript
-7ifr1,Node.js
-8u90s,Go
-8u90s,MySQL
-8u90s,Git
-8u90s,AWS
-8u90s,Github
-86yd2,Go
 8drrw,VueJS
 8drrw,JavaScript
 8drrw,RDBMS
@@ -1368,11 +1249,6 @@
 8rf8o,Spring
 8rf8o,MS SQL
 8rf8o,MySQL
-8tsxa,Spring
-8tsxa,AWS
-8tsxa,Java
-8tsxa,Oracle
-8tsxa,MySQL
 7fmiq,OOP
 7fmiq,Servlets
 7fmiq,Java
@@ -1381,21 +1257,6 @@
 7fmiq,HTML
 7fmiq,CSS
 7fmiq,SAS
-8tt1j,C++
-8tt1j,Linux
-8tt1j,Jenkins
-8tt1j,Shell
-8tt1j,Git
-8tt1j,Github
-7m75t,Java
-7m75t,Spring
-7m75t,MySQL
-8kf10,Linux
-8kf10,Java
-8kf10,Python
-8kf10,Spring
-8kf10,MySQL
-8kf10,AWS
 8soya,OOP
 8soya,Servlets
 8soya,Java
@@ -1412,35 +1273,12 @@
 7ibvb,jQuery
 7ibvb,CSS
 7ibvb,VueJS
-85b8d,Python
-85b8d,Django
 8voqb,MySQL
 8voqb,Git
 8voqb,Github
 8voqb,Linux
 8voqb,ssh
-8mv55,Linux
-8mv55,Java
-8mv55,Python
-8mv55,Spring
-8mv55,MySQL
-8mv55,AWS
-8g1qh,C#
-8tw25,C#
-8tw25,MS SQL
-8tw25,PostgreSQL
-8tw25,JavaScript
-8tw25,VueJS
-8tw25,CSS
-8tw25,HTML
-8tw25,ASP.NET
 8qs5f,C++
-8q614,ASP.NET
-7lowe,C#
-7lowe,MySQL
-8qs4r,Java
-8qs4r,Python
-8qs4r,Go
 6f7w2,Linux
 6f7w2,Github
 6f7w2,Perl
@@ -1453,24 +1291,9 @@
 6f7w2,ReactJS
 8qs57,Linux
 8qs57,C++
-7avjr,Node.js
-7avjr,JavaScript
-7avjr,AWS
-7avjr,PostgreSQL
-7avjr,MySQL
-7avjr,Git
-7avjr,Shell
-7avjr,Github
 8vqx4,Git
 8vqx4,Python
 8vqx4,Node.js
-81unx,Git
-81unx,ASP.NET
-81unx,C#
-7menh,AWS
-7menh,Node.js
-7menh,DNS
-7menh,HTTP
 8aama,Linux
 8aama,Github
 8aama,Perl
@@ -1485,16 +1308,11 @@
 7dspd,Linux
 7dspd,Java
 7dspd,PostgreSQL
-8w0dc,Java
-8w0dc,Spring
 8t7ol,C
 8t7ol,C#
 8t7ol,C++
 8t7ol,Java
 8t7ol,MySQL
-7vm6m,C++
-7vm6m,Go
-8uijg,AWS
 7dspg,Linux
 7dspg,Git
 7dspg,Java
@@ -1507,48 +1325,16 @@
 8jn9a,Spring
 8jn9a,MySQL
 8jn9a,PostgreSQL
-6txcg,Linux
-6txcg,Jenkins
-6txcg,Java
-6txcg,MySQL
-6txcg,Junit
-8k4vx,Linux
-8k4vx,Firebase
-8k4vx,HTTP
-8k4vx,Node.js
-8k4vx,JavaScript
-8k4vx,AWS
-8k4vx,PostgreSQL
-8k4vx,MySQL
-8k4vx,LLM
-8k4vx,Python
-8k4vx,Git
-8k4vx,Mac OS
-8nh9r,PHP
-8nh9r,Node.js
-8nh9r,Go
-8nh9r,MySQL
-8nh9r,PostgreSQL
-8mu2y,Linux
-8mu2y,Python
-8mu2y,MySQL
-8uawx,Java
-8uawx,MySQL
-8uawx,MS SQL
-8dbou,ASP.NET
-8dbou,C#
-80c2q,Linux
-80c2q,Git
-80c2q,Node.js
-8ns52,Git
-8ns52,Jenkins
-8ns52,Python
-8ns52,MySQL
-8ns52,Linux
-8ns52,Sass
-8ns52,Facebook
+8ft9t,Python
+8ft9t,Tableau
+7ob2g,Python
 87fz6,Python
 87fz6,MS SQL
+6nqi9,C
+6nqi9,C++
+6nqi9,Python
+6nqi9,VBA
+6nqi9,Excel
 7umaj,PHP
 7umaj,VueJS
 7umaj,Node.js
@@ -1577,17 +1363,6 @@
 8tihn,JavaScript
 8tihn,Python
 8tihn,Node.js
-8s9ms,Git
-8s9ms,PHP
-8s9ms,Python
-8s9ms,Go
-8s9ms,Node.js
-8s9ms,Linux
-8s9ms,UNIX
-8s9ms,OOP
-8s9ms,Github
-8s9ms,UML
-8s9ms,Jenkins
 8w2gc,Python
 8w2gc,tensorflow
 8w2gc,Java
@@ -1598,63 +1373,6 @@
 8w2gc,Shell
 8tt8t,C++
 8tt8t,Python
-75p15,Go
-7kp3p,C
-7kp3p,C++
-7kp3p,Python
-7kp3p,Go
-6l2th,Java
-6l2th,Spring
-6l2th,MySQL
-6l2th,AWS
-6wrpq,ASP.NET
-6wrpq,C#
-6wrpq,HTML
-6wrpq,jQuery
-6kwfe,Java
-6kwfe,Spring
-6kwfe,ANSI SQL
-6kwfe,JavaScript
-7ccog,Github
-7ccog,Java
-7ccog,Spring
-7ccog,ANSI SQL
-7ccog,JavaScript
-8asu8,JavaScript
-8asu8,Node.js
-8asu8,ReactJS
-8lupp,Java
-8lupp,Python
-8lupp,Go
-81x0u,Git
-81x0u,AWS
-81x0u,HTML
-81x0u,JavaScript
-81x0u,CSS
-81x0u,ReactJS
-7zk5o,PHP
-7zk5o,MySQL
-7zk5o,PL/SQL
-7zk5o,AWS
-7zk5o,HTML
-7zk5o,JavaScript
-7zk5o,jQuery
-7zk5o,CSS
-7sjd3,C++
-7sjd3,JavaScript
-7sjd3,MS SQL
-7sjd3,Go
-7sjd3,Rails
-7sjd3,Ruby
-7sjd3,Python
-7sjd3,PHP
-7sjd3,Java
-7sjd3,Git
-7sjd3,Jenkins
-7sjd3,Github
-7sjd3,PostgreSQL
-7sjd3,AWS
-7sjd3,ReactJS
 7fcwq,Android
 7fcwq,C
 7fcwq,C++
@@ -1675,10 +1393,6 @@
 8tihp,C++
 8tihp,Git
 8tihp,Python
-7ce7b,Java
-7ce7b,Spring
-7ce7b,ANSI SQL
-7ce7b,JavaScript
 8rjnp,JavaScript
 8rjnp,ReactJS
 8cw2e,Linux
@@ -1697,13 +1411,8 @@
 8w5k0,Python
 8w5k0,Java
 8w5k0,Git
-8tz7r,Python
-8tz7r,AWS
-8tz7r,LLM
 885yd,iOS
 885yd,SWIFT
-8sbzf,Linux
-8sbzf,UNIX
 8jf53,OOP
 8jf53,Git
 8jf53,C#
@@ -1717,8 +1426,400 @@
 8matm,JavaScript
 8matm,ReactJS
 8matm,CSS
-8bz7f,Java
 8vka0,Go
 8vka0,Cloud
 8vwya,Java
 8vwya,Node.js
+8vxg8,Wordpress
+8vxg8,SEO
+8vxg8,PHP
+8vxg8,HTML
+8vxg8,CSS
+8vxg8,Python
+8b8bs,Github
+8b8bs,Python
+8b8bs,MySQL
+8943y,Git
+8943y,Power BI​
+8943y,Google Data Studio
+8943y,Google Tag Manager
+8943y,Google Analytics
+8943y,Tableau
+8943y,AWS
+8943y,RDBMS
+8943y,PostgreSQL
+8943y,MySQL
+8943y,ETL
+8943y,Python
+8943y,Github
+8ttei,Python
+8ttei,JavaScript
+8ttei,Django
+8ttei,Linux
+8vq68,Git
+8vq68,JIRA
+8vq68,Django
+8vq68,CSS
+8vq68,JavaScript
+8vq68,HTML
+8vq68,AWS
+8vq68,Microsoft Azure
+8vq68,Cloud
+8vq68,Python
+8vq68,Android
+8vq68,UNIX
+8vq68,Linux
+8u9pl,Git
+8u9pl,JIRA
+8u9pl,Django
+8u9pl,CSS
+8u9pl,JavaScript
+8u9pl,HTML
+8u9pl,AWS
+8u9pl,Microsoft Azure
+8u9pl,Cloud
+8u9pl,Python
+8u9pl,Android
+8u9pl,UNIX
+8u9pl,Linux
+86yyz,Linux
+86yyz,Git
+86yyz,Python
+86yyz,MySQL
+86yyz,PostgreSQL
+86yyz,ETL
+7ovbk,Linux
+7ovbk,Android
+7ovbk,Python
+7ovbk,Cloud
+8rcw1,Python
+8rcw1,Django
+5572i,CSS
+5572i,JavaScript
+5572i,HTML
+5572i,MySQL
+5572i,Python
+8r2lk,Python
+8r2lk,Java
+7a7hl,Python
+7at7v,Python
+43gvt,Linux
+43gvt,Mac OS
+43gvt,Git
+43gvt,Java
+43gvt,Python
+43gvt,MySQL
+43gvt,HTML
+43gvt,jQuery
+43gvt,CSS
+43gvt,Sass
+43gvt,Node.js
+43gvt,AngularJS
+43gvt,VueJS
+7f9ff,Python
+8qvc2,Python
+8qvc2,Power BI​
+8qvc2,Android
+8lywq,Linux
+8lywq,Android
+8lywq,Github
+8lywq,Git
+8lywq,Python
+8t7f3,Python
+8t7f3,Linux
+8t7f3,Shell
+8e1a0,Microsoft Azure
+8e1a0,Power BI​
+8e1a0,Word
+8e1a0,PowerPoint
+8e1a0,Outlook
+8e1a0,Excel
+8e1a0,Microsoft SharePoint
+8e1a0,Microsoft Exchange
+8e1a0,MySQL
+8e1a0,MS SQL
+8e1a0,Scala
+8e1a0,R
+8e1a0,Python
+8rc7d,Python
+8ixn5,Python
+8ixn5,Django
+8ixn5,JavaScript
+8ixn5,jQuery
+8ixn5,AJAX
+69za2,Python
+89ndh,Github
+89ndh,Python
+8w6pa,LLM
+8w6pa,NLP
+8w6pa,Git
+8w6pa,Github
+8w6pa,Python
+8w6pa,JavaScript
+8uh36,Bugzilla
+8uh36,Jenkins
+8uh36,JIRA
+8uh36,Python
+8uh36,Github
+8r6fl,C#
+8r6fl,Python
+8r6fl,LabVIEW
+8r6fl,VBA
+88nmv,Python
+88nmv,MS SQL
+8soqw,C++
+8soqw,Python
+7eby6,Python
+7eby6,MySQL
+7z55c,Java
+7z55c,Python
+7z55c,Scala
+8e74p,Scala
+8e74p,Hive
+8e74p,Tableau
+8e74p,Django
+8e74p,Node.js
+8e74p,AWS
+8e74p,RDBMS
+8e74p,PostgreSQL
+8e74p,Oracle
+8e74p,MySQL
+8e74p,Python
+8e74p,Java
+8e74p,Git
+8e74p,Jenkins
+8e74p,Github
+8d5t3,Linux
+8d5t3,Python
+8d5t3,C++
+8d5t3,Shell
+8d5t3,C
+8rt88,Excel
+8rt88,PowerPoint
+8rt88,Word
+8rt88,Python
+8rt88,LLM
+7bsfh,Linux
+7bsfh,Git
+7bsfh,C
+7bsfh,C++
+7bsfh,Java
+7bsfh,Python
+7bsfh,ARM
+8o07k,LLM
+8o07k,Python
+8o07k,Linux
+8o07k,Cloud
+8o07k,Microsoft Azure
+8o07k,PL/SQL
+8o07k,MS SQL
+8o07k,Power BI​
+8nyln,Power BI​
+8nyln,Microsoft SharePoint
+8nyln,MS SQL
+8nyln,Microsoft Azure
+8nyln,Python
+8nyln,Linux
+8nyln,PL/SQL
+65x2j,C#
+65x2j,C++
+65x2j,Python
+8fj1p,Python
+8fj1p,PyTorch
+8fj1p,tensorflow
+8fj1p,Microsoft Azure
+6non1,Linux
+6non1,UNIX
+6non1,C
+6non1,C++
+6non1,Python
+6non1,Bridges
+6non1,FTP
+6non1,LAN
+6non1,TCP/IP
+6non1,Github
+7ppks,C#
+7ppks,C++
+7ppks,Python
+8riln,Shell
+8riln,C
+8riln,Python
+8riln,Linux
+8riln,Git
+8iy9i,Python
+7ve30,Linux
+7ve30,Shell
+7ve30,Python
+7ve30,Firmware
+7fywv,Linux
+7fywv,Git
+7fywv,Python
+8v05w,Python
+8v05w,Go
+8v05w,C
+8v05w,Git
+87ia5,Excel
+87ia5,PowerPoint
+87ia5,Word
+87ia5,中文打字50~75
+87ia5,英文打字50~75
+8cmor,Python
+83pwo,Linux
+83pwo,C
+83pwo,C++
+83pwo,Java
+83pwo,Python
+83pwo,JavaScript
+83pwo,Version Control
+8nt4n,Python
+8nt4n,Linux
+8nt4n,C
+83y5p,Linux
+83y5p,C++
+83y5p,Java
+83y5p,Python
+87ijv,Excel
+87ijv,PowerPoint
+87ijv,Word
+87ijv,中文打字50~75
+87ijv,英文打字50~75
+8san7,C#
+8san7,Visual Studio
+8san7,MCU
+8san7,C++
+8san7,Visual Studio .net
+8san7,Python
+8san7,Assembly
+8san7,Mac OS
+8san7,Linux
+8san7,Ruby
+8san7,Java
+8bvhf,Python
+8tj0e,MS SQL
+8tj0e,MySQL
+8tj0e,Node.js
+8tj0e,Vmware
+8tj0e,AWS
+8tj0e,PHP
+8tj0e,Firebase
+8tj0e,Github
+8tj0e,Python
+8w3rx,MySQL
+8w3rx,Oracle
+8thjn,Python
+8thjn,Computer Vision
+8rsd9,Python
+8rsd9,SPSS
+8rsd9,Tableau
+8rsd9,Power BI​
+70tf5,Git
+70tf5,Python
+70tf5,R
+70tf5,MS SQL
+70tf5,PL/SQL
+70tf5,Tableau
+6km6y,Java
+6km6y,Python
+6km6y,Data Modeling
+6km6y,Database Management
+6km6y,ETL
+6km6y,OLAP
+6km6y,Tableau
+6km6y,Google Analytics
+8e6sq,Python
+8e6sq,Excel
+8t166,Android
+8t166,Java
+8t166,Kotlin
+8t166,C++
+8t166,C
+8s83i,Git
+8s83i,Python
+8uwb1,Power BI​
+8uwb1,Python
+8uwb1,MS SQL
+8uwb1,Excel
+8uwb1,Tableau
+5dbi6,Linux
+5dbi6,MySQL
+8iks7,C
+8iks7,C#
+8iks7,C++
+8iks7,Java
+8iks7,Python
+8iks7,PyTorch
+8iks7,tensorflow
+8iks7,Keras
+8iks7,Django
+80cw5,Python
+8uh3k,Linux
+8uh3k,C++
+8uh3k,Python
+7o7fr,ASP.NET
+7o7fr,C#
+7o7fr,C++
+7o7fr,Java
+7o7fr,Python
+7o7fr,MS SQL
+7o7fr,MySQL
+7o7fr,HTML
+7o7fr,JavaScript
+7o7fr,jQuery
+7o7fr,CSS
+58xv4,Linux
+58xv4,Python
+58xv4,JavaScript
+8w8rk,MS SQL
+8t2it,MySQL
+8t2it,ETL
+8tzj4,VBA
+817gq,DB2
+817gq,ETL
+817gq,Teradata
+8ulg3,Excel
+8ulg3,PowerPoint
+8ulg3,Word
+7gotd,Oracle
+6i7pc,Oracle
+8nala,MS SQL
+8nala,Oracle
+8jaxj,MS SQL
+8arx2,C++
+8arx2,Java
+8arx2,Visual Studio
+8arx2,JDBC
+8arx2,MS SQL
+8arx2,ODBC
+8arx2,Tomcat
+8arx2,HTML
+8arx2,J2EE
+8arx2,JavaScript
+8arx2,jQuery
+8arx2,CSS
+8arx2,IIS
+83cbr,Linux
+83cbr,Database Administrator
+83cbr,MS SQL
+83cbr,MySQL
+83cbr,Oracle
+77puv,Power BI​
+77puv,中文打字50~75
+77puv,Word
+77puv,Project
+77puv,PowerPoint
+77puv,Excel
+77puv,CSS
+77puv,HTML
+77puv,Sybase
+77puv,ODBC
+77puv,MySQL
+77puv,PowerBuilder
+77puv,PHP
+8vfmx,Linux
+8vfmx,Git
+8vfmx,Python
+8vfmx,PyTorch
+8vfmx,OpenCV
+8q6l5,Word
+8q6l5,Excel
+8q6l5,Mac OS

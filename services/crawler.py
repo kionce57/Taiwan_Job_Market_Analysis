@@ -8,8 +8,7 @@ import urllib.parse
 import requests
 
 # 訪問 104, headers 需要有 User-Agent and 正確的 Referer value
-# search (get detail url)時, 遇到中文會先進行 utf-8 的編碼再填入 keyword , 英文與數字不會
-# request 時要注意 pagesize <= 30, {'error': {'code': 422, 'message': 'pagesize must be less than or equal to 30', 'details': []}}
+# request 時要注意 pagesize <= 30 will fetched {'error': {'code': 422, 'message': 'pagesize must be less than or equal to 30', 'details': []}}
 # 當呼叫的 page 超過內容物時, 會 return "data" 內為 empty list 的 dict
 # 其實可以不用給 pagesize, 但會不好控制 page 上限, 故 30
 
@@ -85,7 +84,6 @@ class One_zero_four_crawler:
         logger.debug("The job detail urls are prepared")
         return job_detail_infos
 
-    # for url in job_detail_urls
     def _get_job_detail(self, url) -> dict | None:
         unneeded_cols = [
             "corpImageRight",
@@ -164,12 +162,3 @@ class One_zero_four_crawler:
         )
         return cleaned_job_details
 
-
-if __name__ == "__main__":
-    import os
-
-    print(os.getcwd())
-
-    # test = Crawler()
-
-    # print(test.area_num_mapping)

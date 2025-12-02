@@ -15,7 +15,7 @@ set_up_logging(debug=False)
 logger = logging.getLogger(__name__)
 
 
-class Main:
+class JobDataPipeline:
     def __init__(self):
         # 有在猶豫是否要弄成 class, 最終決定避免在一次任務中需要重複建立其他功能 class
         self.crawler = One_zero_four_crawler()
@@ -29,8 +29,6 @@ class Main:
         try:
             # 爬取資料
             logger.info(f"Start crawling data with keyword: {keyword} and area: {area}")
-
-            self.crawler = One_zero_four_crawler()
             datas = self.crawler.job_cleaned_pipeline_bronze(keyword, area)
         except Exception as e:
             logger.exception(f"Failed to crawl data: {e}")
@@ -97,12 +95,12 @@ class Main:
 
 
 if __name__ == "__main__":
-    main = Main()
-    # next kw: 爬蟲
+    main = JobDataPipeline()
+    # next kw: 
     # keyword = 
     # area = "台北市"
     # main.fetch_data_and_save_to_db(keyword, area)
 
-    job_name_include_regex = r"Python|Engineer|資料工程"
+    job_name_include_regex = r"Python|Software Engineer|資料工程|Backend"
     file_title = "python_taipei"
     main.select_bronze_data_and_output_csv(job_name_include_regex, file_title)

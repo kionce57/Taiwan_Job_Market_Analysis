@@ -5,6 +5,7 @@
 ## 使用流程
 
 ### 無資料情況
+
 1. 爬取
 2. 存入 DB
 3. 從 DB 讀取資料
@@ -12,10 +13,10 @@
 5. 建圖表
 
 ### 有資料情況
+
 1. 從 DB 讀取資料
 2. 篩選資料
 3. 建圖表
-
 
 ## dev step
 
@@ -37,14 +38,12 @@ D. Load: 從 db 取出資料進行二次清洗, 有需要可以存到 Silver db
 
 E. Transformer: 根據需求建立 DataFrame 以供 PowerBI 使用
 
-F. 
-
 ## 簡報結構
 
 1. 簡述程序的功能, 使用到的技術(Python, uv, powerBI, MongoDB Altas), 簡單一句話講述使用(uv, MongoDB, PowerBI)的原因
     - uv: 用來管理專案環境, 非常簡單好上手
     - MongoDB Altas: 用來儲存非結構化資料, 例如 JSON, 使用雲端則是個人嘗試
-    - PowerBI: 我用它做的圖比 Matplot 好看
+    - PowerBI: 一個意外
 2. 描述資料 pipe
 3. 展示成果(3個圖表)
 

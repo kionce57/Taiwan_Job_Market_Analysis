@@ -1,7 +1,6 @@
 import logging
 from typing import Literal
 
-import numpy as np
 import pandas as pd
 
 logger = logging.getLogger(__name__)
@@ -75,6 +74,26 @@ def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make salary DataFrame: {e}")
 
+def _convert_annual_to_monthly(df, annual_factor=13):
+    """
+    將年薪 (Type 60) 轉換為月薪，但保護 max == 9999999 的特殊標記。
+    """
+    # 1. 定義基礎遮罩：找出所有年薪制的資料
+    mask_annual = df["salaryType"] == 60
+    
+    # 2. 處理 salaryMin (下限)
+    # 邏輯：只要是年薪制，下限通常都是有效數字，直接轉換, 0/13 = 0
+    df.loc[mask_annual, "salaryMin"] = df.loc[mask_annual, "salaryMin"] // annual_factor
+    
+    # 3. 處理 salaryMax (上限) - 加入你要求的功能
+    # 邏輯：是年薪制 (Type 60) 且 (AND) 上限不是特殊標記 (Max != 9999999)
+    mask_convert_max = mask_annual & (df["salaryMax"] != 9999999)
+    
+    # 只有符合上述複合條件的，才進行除法運算
+    df.loc[mask_convert_max, "salaryMax"] = df.loc[mask_convert_max, "salaryMax"] // annual_factor
+    
+    return df
+
 
 def process_salary_info(
     original_df: pd.DataFrame, mode: Literal["exact", "negotiable"] = "exact"
@@ -106,20 +125,6 @@ def process_salary_info(
 
             monthly_salary = salary_df[(mask_monthly | mask_annual) & salary_range].copy()
 
-            ANNUAL_FACTOR = 13  # 年薪轉月薪
-
-            # 把年薪換算成月薪, 無法換算則保持原樣
-            monthly_salary["salaryMin"] = np.where(
-                monthly_salary["salaryType"] == 60,
-                monthly_salary["salaryMin"] // ANNUAL_FACTOR,
-                monthly_salary["salaryMin"],
-            )
-            monthly_salary["salaryMax"] = np.where(
-                monthly_salary["salaryType"] == 60,
-                monthly_salary["salaryMax"] // ANNUAL_FACTOR,
-                monthly_salary["salaryMax"],
-            )
-
         elif mode == "negotiable":
             mask_negotiable = salary_df["salaryType"] == 10
             mask_monthly = salary_df["salaryType"] == 50
@@ -132,18 +137,9 @@ def process_salary_info(
                 (mask_negotiable | mask_monthly | mask_annual) & salary_range
             ].copy()
 
+        monthly_salary = _convert_annual_to_monthly(monthly_salary)
         monthly_salary = monthly_salary[["_id", "salaryMin", "salaryMax"]].reset_index(drop=True)
         return monthly_salary
 
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
-
-
-def negotiable_salary():
-    """
-    B 群：面議與無上限的職缺 (Negotiable/Open-Ended)
-        目標：分析「技能關鍵字」與「資深程度」。
-        處理：不分析金額（因為是未知的）。
-        分析 Text Mining：這群職缺的 jobDescription 裡，哪些關鍵字出現頻率最高？（例如：System Design, Architecture, Lead, Cloud Native）。
-        洞察：這告訴你「想要拿到 40k+ 甚至年薪百萬，我需要具備哪些非量化的特質」。
-    """

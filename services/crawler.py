@@ -6,7 +6,7 @@ import time
 import urllib.parse
 
 import requests
-
+from pathlib import Path
 # 訪問 104, headers 需要有 User-Agent and 正確的 Referer value
 # request 時要注意 pagesize <= 30 will fetched {'error': {'code': 422, 'message': 'pagesize must be less than or equal to 30', 'details': []}}
 # 當呼叫的 page 超過內容物時, 會 return "data" 內為 empty list 的 dict
@@ -19,7 +19,8 @@ class One_zero_four_crawler:
     PAGESIZE = 30
 
     def __init__(self):
-        with open(r".\services\area_category_for_transformer.json", encoding="utf-8") as f:
+        file = Path(__file__).parent / "area_category_for_transformer.json"
+        with open(file, encoding="utf-8") as f:
             self.area_num_mapping = json.load(f)
 
     def _transformer_area_to_num(self, area: str):
@@ -151,6 +152,12 @@ class One_zero_four_crawler:
             # pattern: cleaned_detail.json
             url = row["url"]
             cleaned_job_detail = self._get_job_detail(url)
+
+            if cleaned_job_detail is None:
+                
+                logger.warning(f"The cleaned job detail is None, url:{url}, job_id:{row['job_id']}")
+                continue
+
             cleaned_job_detail["job_id"] = row["job_id"]
 
             cleaned_job_details.append(cleaned_job_detail)

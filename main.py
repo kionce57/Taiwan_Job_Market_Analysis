@@ -59,8 +59,13 @@ class JobDataPipeline:
         result_dir.mkdir(parents=True, exist_ok=True)
 
         # 從資料庫取出資料, pattern: Data from bronze
-        condition = {"header.jobName": {"$regex": job_name_include_regex, "$options": "i"}}
-        documents = self.db.select_from_bronze(condition)
+        # 沒給條件表示全部取出, 因此給空 dict
+        if not job_name_include_regex:
+            condition = {}
+            documents = self.db.select_from_bronze(condition)
+        else:
+            condition = {"header.jobName": {"$regex": job_name_include_regex, "$options": "i"}}
+            documents = self.db.select_from_bronze(condition)
 
         if not documents:
             logger.error("No documents found in the database.")
@@ -120,7 +125,7 @@ def fetch(ctx, keyword, area):
 
 
 @cli.command()
-@click.option("-r", "--regex", required=True, help="職缺名稱 Regex")
+@click.option("-r", "--regex", required=False,default=None, help="職缺名稱 Regex")
 @click.option("-f", "--filename", required=True, help="輸出檔名")
 @click.pass_context
 def export(ctx, regex, filename):
@@ -132,7 +137,7 @@ def export(ctx, regex, filename):
 @cli.command()
 @click.option("-k", "--keyword", required=True)
 @click.option("-a", "--area", default="台北市")
-@click.option("-r", "--regex", default=None)
+@click.option("-r", "--regex", required=False,default=None, help="職缺名稱 Regex")
 @click.option("-f", "--filename", required=True)
 @click.pass_context
 def run_all(ctx, keyword, area, regex, filename):
@@ -148,6 +153,7 @@ def run_all(ctx, keyword, area, regex, filename):
 
 if __name__ == "__main__":
     # example: uv run python main.py run_all -k 資料工程 -a 新北市 -r "Python|資料工程" -f "python_"
+    # select regex: all
     cli()
 
     # if need...

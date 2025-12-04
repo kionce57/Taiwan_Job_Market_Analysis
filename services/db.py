@@ -29,7 +29,6 @@ class Db(ABC):
 
 class MongoDB_one_zero_four(Db):
     DATABASE = "One_zero_four"
-    BRONZE_COLLECTION = "bronze"
 
     def __init__(self):
         logger.info("Initializing MongoDB connection...")
@@ -64,7 +63,7 @@ class MongoDB_one_zero_four(Db):
             logger.info("Successfully connected to MongoDB Atlas.")
 
             # MongoDb 的 collection 類似於 MySQL 的 table, 都是 DB 內的頂層
-            self.bronze_collection = self.db[MongoDB_one_zero_four.BRONZE_COLLECTION]
+            self.bronze_collection = self.db["bronze"]
         except ConfigurationError as e:
             logger.critical(f"MongoDB Configuration Error (Check dnspython or URI): {e}")
             raise  # 這種錯誤無法自動恢復，往上拋讓程式停止
@@ -116,6 +115,7 @@ class MongoDB_one_zero_four(Db):
 
     def select_from_bronze(self, condition: dict, projection: dict = None) -> list:
         """
+        要查找集合中的所有文档, 请将空筛选器 {} 传递给find()方法：
         condition pattern: -> like where in MySQL
             {"col":"val"}
             {"col.subcol":"val"} -> 巢狀 query
@@ -129,20 +129,21 @@ class MongoDB_one_zero_four(Db):
             {"col": 0} -> 除了 col 欄位, 都顯示
             {"col.subcol": 1} -> 只顯示 col.subcol 欄位
         """
-        if not condition:
-            raise ValueError("The select condition must be provided.")
 
         """
         Gemini:
-        呼叫 find 時，PyMongo 驅動程式會負責將你的 Python 字典 (Dictionary) 序列化 (Serialize) 為 BSON (Binary JSON) 格式。
+        呼叫 find 時, PyMongo 驅動程式會負責將你的 Python 字典 (Dictionary) 序列化 (Serialize) 為 BSON (Binary JSON) 格式。
         BSON 規範強制要求字串必須是 UTF-8 編碼。PyMongo 會自動幫你完成這個轉換。
         """
+        logger.debug(f"try to select data from bronze with condition: {condition} and projection: {projection}")
         if projection:
             cursor = self.bronze_collection.find(
                 condition, max_time_ms=10000, projection=projection
             )
         else:
             cursor = self.bronze_collection.find(condition, max_time_ms=10000)
-
-        # 官方建議使用 for loop, 確保記憶體只有當下一筆, 不過我的需求簡單, 直接用 list() 把 iterator 變成 list 就好
-        return list(cursor)
+        # 官方建議使用 for loop, 確保記憶體只有 當下一筆, 不過我的需求簡單, 直接用 list() 把 iterator 變成 list 就好
+        result_list = list(cursor)
+        logger.debug(f"select data from bronze successfully, total: {len(result_list)}")
+        
+        return result_list

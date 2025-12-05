@@ -5,7 +5,7 @@ import click
 
 from services.cleaner import (
     make_job_skill_or_specialty,
-    make_jobid_with_jobname,
+    make_jobid_with_jobname_and_category,
     process_salary_info,
     use_original_documents_make_df,
 )
@@ -78,7 +78,7 @@ class JobDataPipeline:
 
         # job_name with job_id 作為映射主表
         input_dfs = {
-            "job_name": make_jobid_with_jobname(original_df),
+            "job_name": make_jobid_with_jobname_and_category(original_df),
             "skills": make_job_skill_or_specialty(original_df, "skill"),
             "specialtys": make_job_skill_or_specialty(original_df, "specialty"),
             "exact_salary": process_salary_info(original_df, mode="exact"),
@@ -125,7 +125,7 @@ def fetch(ctx, keyword, area):
 
 
 @cli.command()
-@click.option("-r", "--regex", required=False,default=None, help="職缺名稱 Regex")
+@click.option("-r", "--regex", required=False, default=None, help="職缺名稱 Regex")
 @click.option("-f", "--filename", required=True, help="輸出檔名")
 @click.pass_context
 def export(ctx, regex, filename):
@@ -137,7 +137,7 @@ def export(ctx, regex, filename):
 @cli.command()
 @click.option("-k", "--keyword", required=True)
 @click.option("-a", "--area", default="台北市")
-@click.option("-r", "--regex", required=False,default=None, help="職缺名稱 Regex")
+@click.option("-r", "--regex", required=False, default=None, help="職缺名稱 Regex")
 @click.option("-f", "--filename", required=True)
 @click.pass_context
 def run_all(ctx, keyword, area, regex, filename):

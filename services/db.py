@@ -135,7 +135,9 @@ class MongoDB_one_zero_four(Db):
         呼叫 find 時, PyMongo 驅動程式會負責將你的 Python 字典 (Dictionary) 序列化 (Serialize) 為 BSON (Binary JSON) 格式。
         BSON 規範強制要求字串必須是 UTF-8 編碼。PyMongo 會自動幫你完成這個轉換。
         """
-        logger.debug(f"try to select data from bronze with condition: {condition} and projection: {projection}")
+        logger.debug(
+            f"try to select data from bronze with condition: {condition} and projection: {projection}"
+        )
         if projection:
             cursor = self.bronze_collection.find(
                 condition, max_time_ms=10000, projection=projection
@@ -145,5 +147,5 @@ class MongoDB_one_zero_four(Db):
         # 官方建議使用 for loop, 確保記憶體只有 當下一筆, 不過我的需求簡單, 直接用 list() 把 iterator 變成 list 就好
         result_list = list(cursor)
         logger.debug(f"select data from bronze successfully, total: {len(result_list)}")
-        
+
         return result_list

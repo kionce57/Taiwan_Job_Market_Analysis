@@ -4,9 +4,10 @@ import random
 import re
 import time
 import urllib.parse
+from pathlib import Path
 
 import requests
-from pathlib import Path
+
 # 訪問 104, headers 需要有 User-Agent and 正確的 Referer value
 # request 時要注意 pagesize <= 30 will fetched {'error': {'code': 422, 'message': 'pagesize must be less than or equal to 30', 'details': []}}
 # 當呼叫的 page 超過內容物時, 會 return "data" 內為 empty list 的 dict
@@ -154,7 +155,6 @@ class One_zero_four_crawler:
             cleaned_job_detail = self._get_job_detail(url)
 
             if cleaned_job_detail is None:
-                
                 logger.warning(f"The cleaned job detail is None, url:{url}, job_id:{row['job_id']}")
                 continue
 
@@ -168,4 +168,3 @@ class One_zero_four_crawler:
             f"The cleaned job details is prepared, total amount: {len(cleaned_job_details)}"
         )
         return cleaned_job_details
-

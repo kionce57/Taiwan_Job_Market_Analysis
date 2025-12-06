@@ -55,15 +55,15 @@ class MongoDB_one_zero_four(Db):
 
         try:
             # Mongo client 採用 lazy 連線, 這裡只是建立 object 並沒有真的 connection to mongo
-            self.client: MongoClient = MongoClient(uri)
-            self.db = self.client.get_database(MongoDB_one_zero_four.DATABASE)
+            self._client: MongoClient = MongoClient(uri)
+            self._db = self.client.get_database(MongoDB_one_zero_four.DATABASE)
 
             # 建立連線, 並檢查是否正確連線
-            self.db.command("ping")
+            self._db.command("ping")
             logger.info("Successfully connected to MongoDB Atlas.")
 
             # MongoDb 的 collection 類似於 MySQL 的 table, 都是 DB 內的頂層
-            self.bronze_collection = self.db["bronze"]
+            self._bronze_collection = self.db["bronze"]
         except ConfigurationError as e:
             logger.critical(f"MongoDB Configuration Error (Check dnspython or URI): {e}")
             raise  # 這種錯誤無法自動恢復，往上拋讓程式停止
@@ -73,6 +73,18 @@ class MongoDB_one_zero_four(Db):
         except OperationFailure as e:
             logger.critical(f"Authentication Failed (Check Username/Password): {e}")
             raise
+
+    @property
+    def client(self):
+        return self._client
+
+    @property
+    def db(self):
+        return self._db
+
+    @property
+    def bronze_collection(self):
+        return self._bronze_collection
 
     def insert_into_bronze(self, datas: list):
         logger.info("Inserting data into MongoDB bronze collection...")

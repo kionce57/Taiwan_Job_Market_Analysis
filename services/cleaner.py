@@ -1,70 +1,162 @@
 import logging
 from typing import Literal
-import pandas as pd
-import re
-from typing import Optional
 
 import pandas as pd
 
 logger = logging.getLogger(__name__)
 
+
 def _classify_job_title(title: str) -> str:
     """
     將職缺名稱映射至標準化工程職位類別。
     採用優先級匹配策略 (Priority Matching Strategy)。
-    
+
     Args:
         title (str): 原始職缺名稱
-        
+
     Returns:
         str: 標準化類別名稱
     """
     if not isinstance(title, str):
         return "Unknown"
-    
+
     t = title.lower()
-    
+
     # 1. AI / ML (優先級最高，避免被歸類為 Python Engineer)
-    if any(kw in t for kw in ['ai', 'artificial intelligence', 'machine learning', 'deep learning', 
-                              'computer vision', 'nlp', 'algorithm', '人工智慧', '機器學習', '演算法', 
-                              '深度學習', '影像識別', '自然語言', 'llm', 'gpt']):
+    if any(
+        kw in t
+        for kw in [
+            "ai",
+            "artificial intelligence",
+            "machine learning",
+            "deep learning",
+            "computer vision",
+            "nlp",
+            "algorithm",
+            "人工智慧",
+            "機器學習",
+            "演算法",
+            "深度學習",
+            "影像識別",
+            "自然語言",
+            "llm",
+            "gpt",
+        ]
+    ):
         return "AI Engineer / Researcher"
-    
+
     # 2. Data Roles (科學家與分析師)
-    if any(kw in t for kw in ['data scientist', 'data analyst', 'mining', '資料科學', '數據分析', '資料分析']):
+    if any(
+        kw in t
+        for kw in ["data scientist", "data analyst", "mining", "資料科學", "數據分析", "資料分析"]
+    ):
         return "Data Scientist / Analyst"
-    
+
     # 3. Data Engineering (數據工程)
-    if any(kw in t for kw in ['data engineer', 'etl', 'big data', 'spark', 'hadoop', 'pipeline', '資料工程', '數據工程']):
+    if any(
+        kw in t
+        for kw in [
+            "data engineer",
+            "etl",
+            "big data",
+            "spark",
+            "hadoop",
+            "pipeline",
+            "資料工程",
+            "數據工程",
+        ]
+    ):
         return "Data Engineer"
-    
+
     # 4. Infrastructure & Cloud
-    if any(kw in t for kw in ['devops', 'sre', 'site reliability', 'cloud', 'aws', 'gcp', 'azure', 'kubernetes', 'docker', 'cicd', '雲端', '系統工程', '運維']):
+    if any(
+        kw in t
+        for kw in [
+            "devops",
+            "sre",
+            "site reliability",
+            "cloud",
+            "aws",
+            "gcp",
+            "azure",
+            "kubernetes",
+            "docker",
+            "cicd",
+            "雲端",
+            "系統工程",
+            "運維",
+        ]
+    ):
         return "DevOps / SRE / Cloud Engineer"
 
     # 5. QA & Automation
-    if any(kw in t for kw in ['qa', 'test', 'automation', 'sdet', '測試', '自動化', '品保']):
+    if any(kw in t for kw in ["qa", "test", "automation", "sdet", "測試", "自動化", "品保"]):
         return "QA / Automation Engineer"
 
     # 6. Embedded / Firmware (硬體相關)
-    if any(kw in t for kw in ['firmware', 'embedded', 'driver', 'fpga', '韌體', '嵌入式', '驅動']):
+    if any(kw in t for kw in ["firmware", "embedded", "driver", "fpga", "韌體", "嵌入式", "驅動"]):
         return "Embedded / Firmware Engineer"
-        
+
     # 7. Web Development (全端優先於前後端)
-    if any(kw in t for kw in ['fullstack', 'full-stack', '全端']):
+    if any(kw in t for kw in ["fullstack", "full-stack", "全端"]):
         return "Fullstack Engineer"
 
-    if any(kw in t for kw in ['frontend', 'front-end', 'react', 'vue', 'angular', 'javascript', 'html', 'ui', 'ux', 'web', '前端']):
+    if any(
+        kw in t
+        for kw in [
+            "frontend",
+            "front-end",
+            "react",
+            "vue",
+            "angular",
+            "javascript",
+            "html",
+            "ui",
+            "ux",
+            "web",
+            "前端",
+        ]
+    ):
         return "Frontend Engineer"
-        
+
     # 後端 (包含常見後端語言，若前述未匹配則落入此區)
-    if any(kw in t for kw in ['backend', 'back-end', 'server', 'php', 'java', 'golang', 'ruby', 'node', 'c#', '.net', 'django', 'flask', 'spring', '後端']):
+    if any(
+        kw in t
+        for kw in [
+            "backend",
+            "back-end",
+            "server",
+            "php",
+            "java",
+            "golang",
+            "ruby",
+            "node",
+            "c#",
+            ".net",
+            "django",
+            "flask",
+            "spring",
+            "後端",
+        ]
+    ):
         return "Backend Engineer"
-    
+
     # 8. General / Fallback (通用軟體工程師)
-    if any(kw in t for kw in ['software engineer', 'developer', 'programmer', 'python', 'c++', 'engineer', '工程師', '軟體']):
+    if any(
+        kw in t
+        for kw in [
+            "software engineer",
+            "developer",
+            "programmer",
+            "python",
+            "c++",
+            "engineer",
+            "工程師",
+            "軟體",
+        ]
+    ):
         return "General Software Engineer"
-        
+
     return "Others"
 
 

@@ -23,7 +23,7 @@ class One_zero_four_crawler:
         file = Path(__file__).parent / "area_category_for_transformer.json"
         with open(file, encoding="utf-8") as f:
             self._area_num_mapping = json.load(f)
-    
+
     @property
     def area_num_mapping(self):
         return self._area_num_mapping

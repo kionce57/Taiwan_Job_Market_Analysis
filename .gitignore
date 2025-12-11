@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# environments
+.env
+/.ruff_cache/
+/logs/
+
+
+# others
+/services/raw_data
+/result/
+*.ipynb
+to-do.md

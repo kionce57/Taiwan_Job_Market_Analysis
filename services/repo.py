@@ -16,18 +16,23 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 
-class Db(ABC):
+class JobRepository(ABC):
     @abstractmethod
-    def __init__(self): ...
+    def insert_stage(self): ...
+
+    """Bronze stage"""
 
     @abstractmethod
-    def insert_into_bronze(self): ...
+    def select_stage(self): ...
 
-    @abstractmethod
-    def select_from_bronze(self): ...
+    """Bronze stage"""
+
+    # @abstractmethod
+    # def curate(self): ...
+    # """Silver stage"""
 
 
-class MongoDB_one_zero_four(Db):
+class MongoDB_one_zero_four(JobRepository):
     DATABASE = "One_zero_four"
 
     def __init__(self):
@@ -86,7 +91,7 @@ class MongoDB_one_zero_four(Db):
     def bronze_collection(self):
         return self._bronze_collection
 
-    def insert_into_bronze(self, datas: list):
+    def insert_stage(self, datas: list):
         logger.info("Inserting data into MongoDB bronze collection...")
         if not datas:
             logger.warning("The datas list for insert into MongoDB one zero four database is empty")
@@ -125,7 +130,8 @@ class MongoDB_one_zero_four(Db):
             # 紀錄完後，選擇是否要再往上拋出
             raise bwe
 
-    def select_from_bronze(self, condition: dict, projection: dict = None) -> list:
+    def select_stage(self, job_name_regex: str = None, projection: dict = None) -> list:
+        """Bronze stage"""
         """
         要查找集合中的所有文档, 请将空筛选器 {} 传递给find()方法：
         condition pattern: -> like where in MySQL
@@ -141,15 +147,14 @@ class MongoDB_one_zero_four(Db):
             {"col": 0} -> 除了 col 欄位, 都顯示
             {"col.subcol": 1} -> 只顯示 col.subcol 欄位
         """
-
-        """
-        Gemini:
-        呼叫 find 時, PyMongo 驅動程式會負責將你的 Python 字典 (Dictionary) 序列化 (Serialize) 為 BSON (Binary JSON) 格式。
-        BSON 規範強制要求字串必須是 UTF-8 編碼。PyMongo 會自動幫你完成這個轉換。
-        """
         logger.debug(
-            f"try to select data from bronze with condition: {condition} and projection: {projection}"
+            f"try to select data from bronze collection with regex: {job_name_regex} and projection: {projection}"
         )
+        if not job_name_regex:
+            condition = {}
+        else:
+            condition = {"header.jobName": {"$regex": job_name_regex, "$options": "i"}}
+
         if projection:
             cursor = self.bronze_collection.find(
                 condition, max_time_ms=10000, projection=projection

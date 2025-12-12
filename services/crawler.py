@@ -4,6 +4,8 @@ import random
 import re
 import time
 import urllib.parse
+from abc import ABC, abstractmethod
+from collections.abc import Iterator
 from pathlib import Path
 
 import requests
@@ -16,159 +18,130 @@ import requests
 logger = logging.getLogger(__name__)
 
 
-class One_zero_four_crawler:
-    PAGESIZE = 30
+class Crawler(ABC):
+    @abstractmethod
+    def harvest_jobs(): ...
+
+
+class OneZeroFourCrawler(Crawler):
+    NOISE_COLUMNS = [
+        "corpImageRight",
+        "environmentPic",
+        "switch",
+        "custLogo",
+        "postalCode",
+        "closeDate",
+        "reportUrl",
+        "industryNo",
+        "chinaCorp",
+        "interactionRecord",
+    ]
+    DEFAULT_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+    }
+    DETAIL_URL_PATTERN = "https://www.104.com.tw/job/ajax/content/"
+    BASE_URL = "https://www.104.com.tw/jobs/search/api/jobs"
 
     def __init__(self):
         file = Path(__file__).parent / "area_category_for_transformer.json"
-        with open(file, encoding="utf-8") as f:
-            self._area_num_mapping = json.load(f)
+        # 建議加入錯誤處理，若檔案不存在
+        if file.exists():
+            with open(file, encoding="utf-8") as f:
+                self._area_num_mapping = json.load(f)
+        else:
+            self._area_num_mapping = {}
 
-    @property
-    def area_num_mapping(self):
-        return self._area_num_mapping
+    def harvest_jobs(self, keyword: str, area: str, max_pages: int = 30) -> Iterator[dict]:
+        """
+        [ETL: Extract]
+        主入口：負責「收割」工作資料。
+        使用 Generator (yield) 模式，爬一筆回傳一筆，更適合串流處理與容錯。
+        """
+        logger.info(f"Start harvesting jobs for keyword: {keyword}")
 
-    def _transformer_area_to_num(self, area: str):
-        return self.area_num_mapping[area]
+        # 1. 搜尋階段 (Discovery)
+        for page in range(1, max_pages + 1):
+            logger.debug(f"Scanning page {page}...")
+            job_listings = self._discover_job_listings(keyword, area, page)
 
-    def _get_job_detail_url_and_jobid(self, keyword, area, page, pagesize=PAGESIZE) -> list[dict]:
-        area_num = self._transformer_area_to_num(area)
-        url_parsed_keyword = urllib.parse.quote(keyword)
+            if not job_listings:
+                logger.info("No more jobs found.")
+                break
 
+            # 2. 抓取詳情階段 (Retrieval & Sanitization)
+            for listing in job_listings:
+                job_data = self._fetch_and_sanitize_detail(listing)
+                if job_data:
+                    yield job_data  # 立即回傳，讓呼叫端決定何時存入 Bronze
+                    time.sleep(random.uniform(1.5, 4))
+
+            time.sleep(random.uniform(1, 3))
+
+    def _create_headers(self, area_num, url_parsed_keyword, page):
         headers = {
             "Accept": "application/json, text/plain, */*",
             "Host": "www.104.com.tw",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
             "Referer": f"https://www.104.com.tw/jobs/search/?area={area_num}&jobsource=joblist_search&keyword={url_parsed_keyword}&mode=s&page={page}",
+            **self.DEFAULT_HEADERS,
         }
+        return headers
 
+    def _discover_job_listings(self, keyword: str, area: str, page: int) -> list[dict]:
+        """負責與 104 列表 API 互動，回傳含有 job_id 與 link 的基礎資訊"""
+        area_num = self._area_num_mapping.get(area, "6001001000")  # Default or error handle
+        url_parsed_keyword = urllib.parse.quote(keyword)
+
+        headers = self._create_headers(area_num, url_parsed_keyword, page)
         params = {
             "area": area_num,
             "jobsource": "joblist_search",
             "keyword": keyword,
             "mode": "s",
-            "order": "15",
             "page": page,
-            "pagesize": pagesize,
+            "pagesize": 30,
         }
 
-        url = "https://www.104.com.tw/jobs/search/api/jobs"
-        # requests 會自動對 params 內的參數進行 utf-8 編碼
-        # data_format_pattern: after_search_page.json
         try:
-            logger.debug(f"Use {keyword} to search job for get job detail url")
-            jobs_resp = requests.get(url=url, headers=headers, params=params)
-            jobs_resp.raise_for_status()
-        except requests.RequestException as e:
-            # 處理網路層級的錯誤
-            logger.exception(f"Network error when requesting {url}: {e}")
-
-        # 沒工作的話, resp["data"] = []
-        jobs = jobs_resp.json().get("data")
-        if jobs == []:
+            resp = requests.get(self.BASE_URL, headers=headers, params=params)
+            resp.raise_for_status()
+            jobs: list = resp.json().get("data", [])
+            return jobs if isinstance(jobs, list) else []
+        except Exception as e:
+            logger.exception(f"Failed to discover jobs on page {page}: {e}")
             return []
 
-        job_detail_infos = []
-        url_pattern = "https://www.104.com.tw/job/ajax/content/"
+    def _fetch_and_sanitize_detail(self, listing: dict) -> dict:
+        """
+        負責抓取單一工作詳情並進行「輕度清洗 (Sanitize)」。
+        """
+        # 1. 解析 ID (Parser)
+        link = listing.get("link", {}).get("job", "")
+        match = re.search(r"/job/(\w+)", link)
+        if not match:
+            return None
 
-        logger.debug(f"The number of job: {len(jobs)}")
-        for job in jobs:
-            try:
-                url = job["link"]["job"]
-            except KeyError as e:
-                logger.exception(f"{job['custName']}-{job['jobName']} not has job link: {e}")
-                pass
+        job_id = match.group(1)
+        api_url = f"{self.DETAIL_URL_PATTERN}{job_id}"
 
-            regex = r"https://www.104.com.tw/job/(\w*)"
-            res = re.match(regex, url)
-            job_id = res.group(1)
-            url = url_pattern + job_id
-
-            # 在每個資料單位的頂層 col 加入 job_id 是必要的, 它可以讓 db 階段更簡單快速
-            job_detail_infos.append({"job_id": job_id, "url": url})
-
-        logger.debug("The job detail urls are prepared")
-        return job_detail_infos
-
-    def _get_job_detail(self, url) -> dict | None:
-        unneeded_cols = [
-            "corpImageRight",
-            "environmentPic",
-            "switch",
-            "custLogo",
-            "postalCode",
-            "closeDate",
-            "reportUrl",
-            "industryNo",
-            "chinaCorp",
-            "interactionRecord",
-        ]
-
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
-            "Referer": url,
-        }
+        # 2. 網路請求 (Fetcher)
         try:
-            logger.debug(f"Get job detail from {url}")
-            resp = requests.get(url, headers=headers)
+            resp = requests.get(api_url, headers={"Referer": api_url, **self.DEFAULT_HEADERS})
             resp.raise_for_status()
+            raw_json = resp.json()
+        except Exception as e:
+            logger.exception(f"Failed to fetch detail for {job_id}: {e}")
+            return None
 
-            try:
-                job_detail = resp.json()
-            except json.JSONDecodeError as e:
-                logger.exception(f"Failed to decode job detail json: {e}")
-                return
+        # 3. 輕度清洗 (Sanitizer) - 這裡就是你的特定網頁邏輯
+        payload = raw_json.get("data", {})
 
-            job_detail_data = job_detail["data"]
-            for col in unneeded_cols:
-                job_detail_data.pop(col, None)
+        # 移除 Header 雜訊
+        if "header" in payload and isinstance(payload["header"], dict):
+            payload["header"].pop("corpImageTop", None)
 
-            if "header" in job_detail_data:
-                job_detail_data["header"].pop("corpImageTop", None)
+        # 移除頂層雜訊
+        for col in self.NOISE_COLUMNS:
+            payload.pop(col, None)
 
-            return job_detail_data
-        except requests.RequestException as e:
-            # 處理網路層級的錯誤
-            logger.exception(f"Network error when requesting {url}: {e}")
-
-        except KeyError as e:
-            logger.exception(f"Failed to get job detail, {e}")
-
-    def job_cleaned_pipeline_bronze(self, keyword, area, pagesize=PAGESIZE) -> list:
-        logger.info("Start to fetch job detail")
-        job_detail_urls_and_ids = []
-
-        # search job, 以 page 為單位 get 每個工作頁面的 link, 回傳 empty list mean no new job
-        for page in range(1, pagesize + 1):
-            logger.debug(f"Current page :{page}")
-            url_and_id = self._get_job_detail_url_and_jobid(keyword, area, page, pagesize)
-
-            if url_and_id == []:
-                break
-
-            job_detail_urls_and_ids.extend(url_and_id)
-            time.sleep(random.uniform(1, 3))
-
-        cleaned_job_details = []
-
-        # 遍歷得到的所有 job
-        for row in job_detail_urls_and_ids:
-            logger.debug(f"fetching {row['job_id']} detail")
-            # pattern: cleaned_detail.json
-            url = row["url"]
-            cleaned_job_detail = self._get_job_detail(url)
-
-            if cleaned_job_detail is None:
-                logger.warning(f"The cleaned job detail is None, url:{url}, job_id:{row['job_id']}")
-                continue
-
-            cleaned_job_detail["job_id"] = row["job_id"]
-
-            cleaned_job_details.append(cleaned_job_detail)
-            time.sleep(random.uniform(1.5, 4))
-
-        # 傳遞給 db class 讓它存到 db 去
-        logger.info(
-            f"The cleaned job details is prepared, total amount: {len(cleaned_job_details)}"
-        )
-        return cleaned_job_details
+        # 4. 包裝回傳 (Packaging)
+        return {"job_id": job_id, **payload}

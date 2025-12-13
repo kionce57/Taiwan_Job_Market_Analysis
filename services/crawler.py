@@ -4,7 +4,7 @@ import random
 import re
 import time
 import urllib.parse
-from abc import ABC, abstractmethod
+from typing import Protocol
 from collections.abc import Iterator
 from pathlib import Path
 
@@ -18,8 +18,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 
-class Crawler(ABC):
-    @abstractmethod
+class Crawler(Protocol):
     def harvest_jobs(): ...
 
 

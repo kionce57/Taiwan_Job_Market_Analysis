@@ -1,7 +1,7 @@
 import logging
 import os
 import urllib.parse
-from abc import ABC, abstractmethod
+from typing import Protocol
 
 from dotenv import load_dotenv
 from pymongo import MongoClient, UpdateOne
@@ -16,13 +16,11 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 
-class JobRepository(ABC):
-    @abstractmethod
+class JobRepository(Protocol):
     def insert_stage(self): ...
 
     """Bronze stage"""
 
-    @abstractmethod
     def select_stage(self): ...
 
     """Bronze stage"""

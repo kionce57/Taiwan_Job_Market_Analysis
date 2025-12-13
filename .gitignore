@@ -16,7 +16,7 @@ wheels/
 
 
 # others
-/services/raw_data
+/raw_data/
 /result/
 *.ipynb
 to-do.md

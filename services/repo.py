@@ -1,7 +1,7 @@
 import logging
 import os
 import urllib.parse
-from typing import Protocol
+from interfaces.interfaces import JobRepository
 
 from dotenv import load_dotenv
 from pymongo import MongoClient, UpdateOne
@@ -14,20 +14,6 @@ from pymongo.errors import (
 
 logger = logging.getLogger(__name__)
 load_dotenv()
-
-
-class JobRepository(Protocol):
-    def insert_stage(self): ...
-
-    """Bronze stage"""
-
-    def select_stage(self): ...
-
-    """Bronze stage"""
-
-    # @abstractmethod
-    # def curate(self): ...
-    # """Silver stage"""
 
 
 class MongoDB_one_zero_four(JobRepository):

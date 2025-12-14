@@ -12,7 +12,7 @@ A comprehensive tool to analyze the job market in Taiwan by crawling data from t
 
 ## Tech Stack
 
-- **Language**: Python 3.13+
+- **Language**: Python 3.12+
 - **Package Manager**: [uv](https://github.com/astral-sh/uv)
 - **Database**: MongoDB Atlas
 - **Libraries**:

@@ -4,9 +4,9 @@ import random
 import re
 import time
 import urllib.parse
-from typing import Protocol
 from collections.abc import Iterator
 from pathlib import Path
+from typing import Protocol
 
 import requests
 
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 class Crawler(Protocol):
-    def harvest_jobs(): ...
+    def harvest_jobs(self): ...
 
 
 class OneZeroFourCrawler(Crawler):
@@ -109,7 +109,7 @@ class OneZeroFourCrawler(Crawler):
             logger.exception(f"Failed to discover jobs on page {page}: {e}")
             return []
 
-    def _fetch_and_sanitize_detail(self, listing: dict) -> dict:
+    def _fetch_and_sanitize_detail(self, listing: dict) -> dict | None:
         """
         負責抓取單一工作詳情並進行「輕度清洗 (Sanitize)」。
         """

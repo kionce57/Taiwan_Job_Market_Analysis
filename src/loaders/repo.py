@@ -1,7 +1,6 @@
 import logging
 import os
 import urllib.parse
-from interfaces.interfaces import JobRepository
 
 from dotenv import load_dotenv
 from pymongo import MongoClient, UpdateOne
@@ -11,6 +10,8 @@ from pymongo.errors import (
     OperationFailure,
     ServerSelectionTimeoutError,
 )
+
+from interfaces.interfaces import JobRepository
 
 logger = logging.getLogger(__name__)
 load_dotenv()
@@ -38,8 +39,8 @@ class MongoDB_one_zero_four(JobRepository):
             logger.error(error_msg)
             raise ValueError(error_msg)
 
-        db_user = urllib.parse.quote_plus(db_user)
-        db_pwd = urllib.parse.quote_plus(db_pwd)
+        db_user = urllib.parse.quote_plus(str(db_user))
+        db_pwd = urllib.parse.quote_plus(str(db_pwd))
         uri = f"mongodb+srv://{db_user}:{db_pwd}@{mongo_host}/?appName={cluster}"
 
         try:
@@ -114,7 +115,9 @@ class MongoDB_one_zero_four(JobRepository):
             # 紀錄完後，選擇是否要再往上拋出
             raise bwe
 
-    def select_stage(self, job_name_regex: str = None, projection: dict = None) -> list:
+    def select_stage(
+        self, job_name_regex: str | None = None, projection: dict | None = None
+    ) -> list:
         """Bronze stage"""
         """
         要查找集合中的所有文档, 请将空筛选器 {} 传递给find()方法：

@@ -166,6 +166,7 @@ def use_original_documents_make_df(documents: list[dict | list]) -> pd.DataFrame
         return df
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to convert documents to DataFrame: {e}")
+        raise
 
 
 # 製作 jobnane with job_id 的 df
@@ -173,7 +174,7 @@ def make_jobid_with_jobname_and_category(original_df: pd.DataFrame) -> pd.DataFr
     try:
         cp_ori_df = original_df.copy()
 
-        header_df = pd.json_normalize(cp_ori_df["header"])
+        header_df = pd.json_normalize(cp_ori_df["header"].to_list())
         cp_ori_df["job_name"] = header_df["jobName"]
 
         job_id_name_df = cp_ori_df[["_id", "job_name"]]
@@ -183,6 +184,7 @@ def make_jobid_with_jobname_and_category(original_df: pd.DataFrame) -> pd.DataFr
 
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make job_id with job_name DataFrame: {e}")
+        raise
 
 
 # 製作 job_id with skill 的 df
@@ -204,7 +206,7 @@ def make_job_skill_or_specialty(
 
         id_with_purpose_df = exploded_df[["_id", purpose]].reset_index(drop=True)
 
-        description_df = pd.json_normalize(id_with_purpose_df[purpose])
+        description_df = pd.json_normalize(id_with_purpose_df[purpose].to_list())
 
         df_final = pd.concat([id_with_purpose_df, description_df], axis=1)
         df_final = df_final.drop(columns=[purpose, "code"])
@@ -212,12 +214,13 @@ def make_job_skill_or_specialty(
         return df_final
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make {purpose} DataFrame: {e}")
+        raise
 
 
 def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
     try:
         cp_ori_df = original_df.copy()
-        json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"])[
+        json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
             ["salary", "salaryMin", "salaryMax"]
         ]
         # axis=1, is mean 以 row 為標準合併, index=0 與 index=0 join 以此類推
@@ -228,6 +231,7 @@ def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
         return salary_df
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make salary DataFrame: {e}")
+        raise
 
 
 def _convert_annual_to_monthly(df, annual_factor=13):
@@ -299,3 +303,4 @@ def process_salary_info(
 
     except (KeyError, ValueError, TypeError) as e:
         logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
+        raise

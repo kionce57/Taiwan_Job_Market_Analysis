@@ -5,14 +5,14 @@ from pathlib import Path
 import click
 
 from config.config_log import set_up_logging
-from services.cleaner import (
+from src.extractors.crawler import Crawler, OneZeroFourCrawler
+from src.loaders.repo import JobRepository, MongoDB_one_zero_four
+from src.transformers.cleaner import (
     make_job_skill_or_specialty,
     make_jobid_with_jobname_and_category,
     process_salary_info,
     use_original_documents_make_df,
 )
-from services.crawler import Crawler, OneZeroFourCrawler
-from services.repo import JobRepository, MongoDB_one_zero_four
 
 set_up_logging(debug=False)
 logger = logging.getLogger(__name__)
@@ -55,9 +55,7 @@ class JobDataPipeline:
             # 這裡可以做更細緻的錯誤處理，例如發送警報
             logger.exception(f"Pipeline failed during execution: {e}")
 
-    def select_stage_and_output_csv(
-        self, file_title: str, job_name_regex: str = None
-    ) -> None:
+    def select_stage_and_output_csv(self, file_title: str, job_name_regex: str = None) -> None:
         """
         ETL Export 階段：
         從 Bronze Repo 取出資料 -> 轉 Pandas DF -> 輸出 CSV

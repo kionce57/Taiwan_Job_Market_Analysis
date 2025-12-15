@@ -1,5 +1,5 @@
 # Python-generated files
-__pycache__/
+__pycache__
 *.py[oc]
 build/
 dist/
@@ -11,16 +11,15 @@ wheels/
 
 # environments
 .env
-/.ruff_cache/
-/logs/
+.ruff_cache
+logs
 
+# data
+datas
 
 # others
-/raw_data/
 /result/
 *.ipynb
 to-do.md
 /datas/
-
-# model
-Qwen3-4B-Instruct-2507
+notebooks

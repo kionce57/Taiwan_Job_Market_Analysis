@@ -42,7 +42,7 @@ class OneZeroFourCrawler(Crawler):
     BASE_URL = "https://www.104.com.tw/jobs/search/api/jobs"
 
     def __init__(self):
-        file = Path(__file__).parent / "area_category_for_transformer.json"
+        file = Path(__file__).parent.parent/ "utils" / "area_category_for_transformer.json"
         # 建議加入錯誤處理，若檔案不存在
         if file.exists():
             with open(file, encoding="utf-8") as f:

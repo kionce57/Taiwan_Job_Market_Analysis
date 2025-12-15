@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.12.0",
     "click>=8.3.1",
     "dotenv>=0.9.9",
     "ipykernel>=7.1.0",
@@ -12,12 +13,16 @@ dependencies = [
     "matplot>=0.1.9",
     "matplotlib>=3.10.7",
     "numpy>=2.3.5",
+    "openai>=2.11.0",
     "pandas>=2.3.3",
+    "pandera>=0.27.0",
     "pymongo>=4.15.4",
     "pymongoarrow>=1.10.0",
     "python-dotenv>=1.2.1",
     "requests>=2.32.5",
     "seaborn>=0.13.2",
+    "torch>=2.9.1",
+    "transformers>=4.57.3",
 ]
 
 [tool.ruff]

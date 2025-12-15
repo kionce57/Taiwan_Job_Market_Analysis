@@ -6,10 +6,9 @@
 - [ ] 定義 Silver Database Schema in /config/mysql_schema.py
 - [ ] 定義 DTOs for DataFrames
 - [ ] 導入 LLM/NLP
-- [ ] 將半結構化資料 解析 DataFrames
-- [ ] 將文本透過 Model 解析, then 製作成 DataFrames
-- [ ] 有可能的話, 將重複的 DF merge 成一個
-- [ ] 將 兩種解析 製作成並行運作, 再不濟製作成並發
+- [ ] 將半結構化資料 解析成 DataFrames, jd["jd"] and wel["wel"] 的資料要做去格式, 裡面一堆 \n
 - [ ] 完成將 解析 的結果注入到 Silver Database 的程序
+- [ ] API
 - [ ] Docker 化
-- [ ] GCP 部屬
+- [ ] GCP 部屬應用程式
+- [ ] SQL 建在本地

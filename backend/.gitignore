@@ -20,3 +20,7 @@ wheels/
 /result/
 *.ipynb
 to-do.md
+/datas/
+
+# model
+Qwen3-4B-Instruct-2507

@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "PROJECT ROOT",
+			"path": "."
+		},
+		{
+			"name": "Upload Service",
+			"path": "services/upload"
+		},
+		{
+			"name": "Web Server",
+			"path": "services/web_server"
+		}
+	],
+	"settings": {
+		"python.languageServer":"Pylance",
+		"files.exclude": {
+			"services/": true,
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/*.pyc": true
+		}
+	},
+}

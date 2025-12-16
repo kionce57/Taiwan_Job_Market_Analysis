@@ -17,6 +17,8 @@ logs
 # data
 datas
 
+# vscode
+
 # others
 /result/
 *.ipynb

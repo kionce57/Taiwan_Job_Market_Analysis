@@ -29,11 +29,13 @@ LOGGING_COFIG = {
 
 
 def set_up_logging(debug=False):
-    log_path = Path(LOGGING_COFIG["handlers"]["file"]["filename"])
-    log_dir = log_path.parent
+    log_path = Path(__file__).resolve().parent
+    parent_dir = log_path.parent.parent
+    log_dir = parent_dir / "logs"
 
-    if not os.path.exists(log_dir):
+    if not log_dir.exists():    
         log_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Created log directory at: {log_dir}")
 
     logging.config.dictConfig(LOGGING_COFIG)
 

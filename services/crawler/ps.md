@@ -5,7 +5,7 @@
 ## 目錄結構
 
 ```
-Taiwan_Job_Market_Analysis/services/upload/
+Taiwan_Job_Market_Analysis/services/crawler/
 │
 ├── .env.example                    # 環境變數範例檔案
 ├── .python-version                 # Python 版本指定檔案

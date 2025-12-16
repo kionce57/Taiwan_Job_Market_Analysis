@@ -1715,7 +1715,7 @@ wheels = [
 ]
 
 [[package]]
-name = "tjmad"
+name = "tjma-crawler"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

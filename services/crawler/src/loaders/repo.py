@@ -24,8 +24,8 @@ class MongoDB_one_zero_four(JobRepository):
         logger.info("Initializing MongoDB connection...")
         mongo_host = os.getenv("MONGO_HOST")
         cluster = os.getenv("CLUSTER")
-        db_user = os.getenv("DB_USER")
-        db_pwd = os.getenv("DB_PASSWORD")
+        db_user = os.getenv("MONGODB_USER")
+        db_pwd = os.getenv("MONGODB_PASSWORD")
 
         # 第一段是 if not all so when all() False 的時候會進入 if 區塊, 因此我們要做的是"找到導致 all() is false" 的 value, 所以是 if not value
         if not all([mongo_host, cluster, db_user, db_pwd]):

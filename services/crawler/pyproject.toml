@@ -1,7 +1,7 @@
 [project]
-name = "TJMAD"
+name = "TJMA_crawler"
 version = "0.1.0"
-description = "Upload TJMA database"
+description = "TJMA_crawler"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

@@ -1,0 +1,21 @@
+version: 
+
+services:
+  db:
+    image: mysql:8.0
+    ports: 
+      - 3306:3306
+    environment:
+      - name=value
+  crawler:
+    build:
+      context: 
+        - ./services/crawler
+      dockerfile:
+        - dockerfile
+  web:
+    build:
+      context: ./services/web_server
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"

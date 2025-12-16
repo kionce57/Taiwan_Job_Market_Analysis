@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // --- [方案一] 專案啟動 (最標準) ---
+            // 用途：執行系統入口，模擬 python -m src.main
+            "name": "Project: Run Main (Module)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.main",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            // --- [方案二] 當前檔案 + 注入路徑 (你要的這個) ---
+            // 用途：開啟任意 .py 檔按下 F5，即使裡面有 import src.xxx 也能跑
+            "name": "File: Current File (Hybrid)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",  // 執行當前開啟的檔案
+            "cwd": "${workspaceFolder}", // 設定工作目錄為專案根目錄
+            "console": "integratedTerminal",
+            "env": {
+                // [關鍵魔法]：強制把專案根目錄加入 Python 搜尋路徑
+                // 讓 Script 模式也能看懂 "src" 開頭的絕對引用
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}

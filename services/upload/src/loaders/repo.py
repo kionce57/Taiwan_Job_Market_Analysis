@@ -11,7 +11,7 @@ from pymongo.errors import (
     ServerSelectionTimeoutError,
 )
 
-from interfaces.interfaces import JobRepository
+from src.interfaces.interfaces import JobRepository
 
 logger = logging.getLogger(__name__)
 load_dotenv()

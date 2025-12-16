@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Upload TJMA database"
 readme = "README.md"
 requires-python = ">=3.12"
+packages = ["upload"]
 dependencies = [
     "click>=8.3.1",
     "dotenv>=0.9.9",

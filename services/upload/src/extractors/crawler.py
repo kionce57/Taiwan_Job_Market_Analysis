@@ -6,9 +6,10 @@ import time
 import urllib.parse
 from collections.abc import Iterator
 from pathlib import Path
-from typing import Protocol
 
 import requests
+
+from src.interfaces.interfaces import Crawler
 
 # 訪問 104, headers 需要有 User-Agent and 正確的 Referer value
 # request 時要注意 pagesize <= 30 will fetched {'error': {'code': 422, 'message': 'pagesize must be less than or equal to 30', 'details': []}}
@@ -16,10 +17,6 @@ import requests
 # 其實可以不用給 pagesize, 但會不好控制 page 上限, 故 30
 
 logger = logging.getLogger(__name__)
-
-
-class Crawler(Protocol):
-    def harvest_jobs(self): ...
 
 
 class OneZeroFourCrawler(Crawler):
@@ -42,7 +39,7 @@ class OneZeroFourCrawler(Crawler):
     BASE_URL = "https://www.104.com.tw/jobs/search/api/jobs"
 
     def __init__(self):
-        file = Path(__file__).parent.parent/ "utils" / "area_category_for_transformer.json"
+        file = Path(__file__).parent.parent / "utils" / "area_category_for_transformer.json"
         # 建議加入錯誤處理，若檔案不存在
         if file.exists():
             with open(file, encoding="utf-8") as f:
@@ -59,22 +56,26 @@ class OneZeroFourCrawler(Crawler):
         logger.info(f"Start harvesting jobs for keyword: {keyword}")
 
         # 1. 搜尋階段 (Discovery)
-        for page in range(1, max_pages + 1):
-            logger.debug(f"Scanning page {page}...")
-            job_listings = self._discover_job_listings(keyword, area, page)
+        try:
+            for page in range(1, max_pages + 1):
+                logger.debug(f"Scanning page {page}...")
+                job_listings = self._discover_job_listings(keyword, area, page)
 
-            if not job_listings:
-                logger.info("No more jobs found.")
-                break
+                if not job_listings:
+                    logger.info("No more jobs found.")
+                    break
 
-            # 2. 抓取詳情階段 (Retrieval & Sanitization)
-            for listing in job_listings:
-                job_data = self._fetch_and_sanitize_detail(listing)
-                if job_data:
-                    yield job_data  # 立即回傳，讓呼叫端決定何時存入 Bronze
-                    time.sleep(random.uniform(1.5, 4))
+                # 2. 抓取詳情階段 (Retrieval & Sanitization)
+                for listing in job_listings:
+                    job_data = self._fetch_and_sanitize_detail(listing)
+                    if job_data:
+                        yield job_data  # 立即回傳，讓呼叫端決定何時存入 Bronze
+                        time.sleep(random.uniform(1.5, 4))
 
-            time.sleep(random.uniform(1, 3))
+                time.sleep(random.uniform(1, 3))
+        except Exception as e:
+            logger.exception(f"The error occurred when harvser jobs: {e}")
+            return
 
     def _create_headers(self, area_num, url_parsed_keyword, page):
         headers = {
@@ -144,3 +145,8 @@ class OneZeroFourCrawler(Crawler):
 
         # 4. 包裝回傳 (Packaging)
         return {"job_id": job_id, **payload}
+
+
+if __name__ == "__main__":
+    a = OneZeroFourCrawler()
+    print(1234)

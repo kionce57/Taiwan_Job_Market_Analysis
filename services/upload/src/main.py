@@ -17,6 +17,8 @@ from src.transformers.cleaner import (
 set_up_logging(debug=False)
 logger = logging.getLogger(__name__)
 
+# 請使用這種路徑 uv run python -m src.main, 否則它導入 module 會失敗
+
 
 class JobDataPipeline:
     BATCH_SIZE = 100
@@ -55,7 +57,9 @@ class JobDataPipeline:
             # 這裡可以做更細緻的錯誤處理，例如發送警報
             logger.exception(f"Pipeline failed during execution: {e}")
 
-    def select_stage_and_output_csv(self, file_title: str, job_name_regex: str = None) -> None:
+    def select_stage_and_output_csv(
+        self, file_title: str, job_name_regex: str | None = None
+    ) -> None:
         """
         ETL Export 階段：
         從 Bronze Repo 取出資料 -> 轉 Pandas DF -> 輸出 CSV

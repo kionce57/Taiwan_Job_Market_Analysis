@@ -177,7 +177,7 @@ if __name__ == "__main__":
     # import json
     # keywords = ["something", "something2",...,...]
 
-    # with open("/services/area_category_for_transformer.json", "w", encoding="utf-8") as f:
+    # with open("./src/utils/area_category_for_transformer.json", "w", encoding="utf-8") as f:
     #     doc = json.load(f)
     #     areas = doc.keys()
 

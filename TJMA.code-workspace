@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "Upload Service",
-			"path": "services/upload"
+			"name": "Crawler Service",
+			"path": "services/crawler"
 		},
 		{
 			"name": "Web Server",

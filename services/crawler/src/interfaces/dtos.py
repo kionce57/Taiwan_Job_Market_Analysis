@@ -55,7 +55,7 @@ class JobDetail(pa.DataFrameModel):
         strict = True
 
 class Welfare(pa.DataFrameModel):
-    job_uid: Series[int] = pa.Field()
+    job_uid: Series[int] = pa.Field(coerce=True)
     welfare_description: Series[str] = pa.Field() # 修正大小寫: Welfare -> welfare
 
 class Major(pa.DataFrameModel):

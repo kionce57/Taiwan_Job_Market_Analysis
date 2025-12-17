@@ -1,21 +1,48 @@
-version: 
+version: '3.8'
 
 services:
   db:
     image: mysql:8.0
+    container_name: tjma_mysql
+    restart: always
     ports: 
       - 3306:3306
     environment:
-      - name=value
+      - MySQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+
+      - MYSQL_CRAWLER_USER=${MYSQL_CRAWLER_USER}
+      - MYSQL_CRAWLER_PASSWORD=${MYSQL_CRAWLER_PASSWORD}
+
+      - MYSQL_WEB_USER=${MYSQL_WEB_USER}
+      - MYSQL_WEB_PASSWORD=${MYSQL_WEB_PASSWORD}
+    volumes:
+      - ./mysql_data:/var/lib/mysql 
+      - ./init/mysql_init.sh:/docker-entrypoint-initdb.d/mysql_init.sh
+    command: --default-authentication-plugin=mysql_native_password
   crawler:
     build:
-      context: 
-        - ./services/crawler
-      dockerfile:
-        - dockerfile
+      context: ./services/crawler
+      dockerfile: dockerfile
+    container_name: "tjma_crawler"
+    ports:
+        - "8000:8000"
+    env_file:
+      - ./services/crawler/.env
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
   web:
     build:
       context: ./services/web_server
       dockerfile: dockerfile
+    container_name: "tjma_web"
     ports:
       - "8080:8080"
+    env_file:
+      - ./services/web_server/.env
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db

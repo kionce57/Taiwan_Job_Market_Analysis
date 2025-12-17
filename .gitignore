@@ -12,16 +12,15 @@ wheels/
 # environments
 .env
 .ruff_cache
+
+# log
 logs
 
-# data
-datas
-
-# vscode
+# datas
+mysql_data
 
 # others
 /result/
 *.ipynb
 to-do.md
-/datas/
 notebooks

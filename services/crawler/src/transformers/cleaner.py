@@ -1,6 +1,17 @@
 import logging
 from typing import Literal
-
+from src.interfaces.dtos import (
+    CustInfo,
+    DimJob,
+    JobDetail,
+    Welfare,
+    Major,
+    Skills,
+    Specialties,
+    Category,
+    Language,
+)
+import numpy as np
 import pandas as pd
 
 logger = logging.getLogger(__name__)
@@ -160,7 +171,7 @@ def _classify_job_title(title: str) -> str:
     return "Others"
 
 
-def use_original_documents_make_df(documents: list[dict | list]) -> pd.DataFrame:
+def make_original_df(documents: list[dict | list]) -> pd.DataFrame:
     try:
         df = pd.DataFrame(documents)
         return df
@@ -169,22 +180,22 @@ def use_original_documents_make_df(documents: list[dict | list]) -> pd.DataFrame
         raise
 
 
-# 製作 jobnane with job_id 的 df
-def make_jobid_with_jobname_and_category(original_df: pd.DataFrame) -> pd.DataFrame:
-    try:
-        cp_ori_df = original_df.copy()
+# # 製作 jobnane with job_id 的 df
+# def make_jobid_with_jobname_and_category(original_df: pd.DataFrame) -> pd.DataFrame:
+#     try:
+#         cp_ori_df = original_df.copy()
 
-        header_df = pd.json_normalize(cp_ori_df["header"].to_list())
-        cp_ori_df["job_name"] = header_df["jobName"]
+#         header_df = pd.json_normalize(cp_ori_df["header"].to_list())
+#         cp_ori_df["job_name"] = header_df["jobName"]
 
-        job_id_name_df = cp_ori_df[["_id", "job_name"]]
-        job_id_name_df["job_category"] = job_id_name_df["job_name"].apply(_classify_job_title)
+#         job_id_name_df = cp_ori_df[["_id", "job_name"]]
+#         job_id_name_df["job_category"] = job_id_name_df["job_name"].apply(_classify_job_title)
 
-        return job_id_name_df
+#         return job_id_name_df
 
-    except (KeyError, ValueError, TypeError) as e:
-        logger.exception(f"Failed to make job_id with job_name DataFrame: {e}")
-        raise
+#     except (KeyError, ValueError, TypeError) as e:
+#         logger.exception(f"Failed to make job_id with job_name DataFrame: {e}")
+#         raise
 
 
 # 製作 job_id with skill 的 df
@@ -217,90 +228,160 @@ def make_job_skill_or_specialty(
         raise
 
 
-def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
-    try:
-        cp_ori_df = original_df.copy()
-        json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
-            ["salary", "salaryMin", "salaryMax"]
-        ]
-        # axis=1, is mean 以 row 為標準合併, index=0 與 index=0 join 以此類推
-        salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
+def make_cust_df(original_df: pd.DataFrame) -> pd.DataFrame:
+    cust_df = original_df[["custNo", "industry", "employees"]].copy()
 
-        salary_df = salary_df.drop(columns="jobDetail", axis=1)
+    # 從 nested 結構中拿 custname, 先取出 -> 變 list[dict] -> json_normalize 抽出所有的 key 變成 df
+    header = original_df["header"]
+    header_list = header.to_list()
+    header_df = pd.json_normalize(header_list)
+    cust_df.loc[:, "cust_name"] = header_df["custName"].values
+    cust_df.loc[:, "employees"] = cust_df["employees"].astype(str).str.strip("人").replace("", "0")
 
-        return salary_df
-    except (KeyError, ValueError, TypeError) as e:
-        logger.exception(f"Failed to make salary DataFrame: {e}")
-        raise
-
-
-def _convert_annual_to_monthly(df, annual_factor=13):
-    """
-    將年薪 (Type 60) 轉換為月薪，但保護 max == 9999999 的特殊標記。
-    """
-    # 1. 定義基礎遮罩：找出所有年薪制的資料
-    mask_annual = df["salaryType"] == 60
-
-    # 2. 處理 salaryMin (下限)
-    # 邏輯：只要是年薪制，下限通常都是有效數字，直接轉換, 0/13 = 0
-    df.loc[mask_annual, "salaryMin"] = df.loc[mask_annual, "salaryMin"] // annual_factor
-
-    # 3. 處理 salaryMax (上限) - 加入你要求的功能
-    # 邏輯：是年薪制 (Type 60) 且 (AND) 上限不是特殊標記 (Max != 9999999)
-    mask_convert_max = mask_annual & (df["salaryMax"] != 9999999)
-
-    # 只有符合上述複合條件的，才進行除法運算
-    df.loc[mask_convert_max, "salaryMax"] = df.loc[mask_convert_max, "salaryMax"] // annual_factor
-
-    return df
+    cust_df["employees"] = cust_df.loc[:, "employees"].astype(int)
+    cust_df.rename(columns={"custNo": "cust_no"}, inplace=True)
+    
+    return CustInfo(cust_df)
 
 
-def process_salary_info(
-    original_df: pd.DataFrame, mode: Literal["exact", "negotiable"] = "exact"
-) -> pd.DataFrame:
-    """
-    salaryType=10 is 面議
-    salaryType=50 is 月薪(會包含 xxx 以上)
-    salaryType=60 is 年薪(會包含 xxx 以上)
-    該 func 只處理明確標示薪資上下限的職缺
-    """
-    if mode not in ["exact", "negotiable"]:
-        raise ValueError("exact_or_negotiable must be 'exact' or 'negotiable'")
+def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
+    dim_job = original_df.loc[:, ("job_id", "custNo")]
 
-    cp_ori_df = original_df.copy()
+    header_sub = pd.json_normalize(original_df["header"].to_list()).loc[:, ("jobName", "appearDate")]
 
-    try:
-        json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
-            ["salary", "salaryMin", "salaryMax", "salaryType"]
-        ]
+    condi_sub = pd.json_normalize(original_df["condition"].to_list()).loc[:, ("edu", "workExp")]
 
-        # axis=1, 表示以 row 為標準合併, index=0 與 index=0 join 以此類推
-        salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
-        salary_df = salary_df.drop(columns="jobDetail", axis=1)
+    job_detail_sub = pd.json_normalize(original_df["jobDetail"].to_list())[
+                [
+                    "salaryMin", "salaryMax", "salaryType", 
+                    "workType", "addressArea", "addressRegion",
+                    "workPeriod", "vacationPolicy"
+                ]
+            ]
 
-        if mode == "exact":
-            mask_monthly = salary_df["salaryType"] == 50
-            mask_annual = salary_df["salaryType"] == 60
-            salary_range = (salary_df["salaryMin"] > 0) & (salary_df["salaryMax"] != 9999999)
+    dim_job = pd.concat([dim_job, header_sub], axis=1)
 
-            monthly_salary = salary_df[(mask_monthly | mask_annual) & salary_range].copy()
+    dim_job = pd.concat([dim_job, condi_sub], axis=1)
 
-        elif mode == "negotiable":
-            mask_negotiable = salary_df["salaryType"] == 10
-            mask_monthly = salary_df["salaryType"] == 50
-            mask_annual = salary_df["salaryType"] == 60
-            salary_range = (salary_df["salaryMin"] == 0) & (salary_df["salaryMax"] == 0) | (
-                salary_df["salaryMax"] == 9999999
-            )
+    dim_job = pd.concat([dim_job, job_detail_sub], axis=1)
+    dim_job["salary_min"] = dim_job["salaryMin"].astype(int)
+    dim_job["salary_max"] = dim_job["salaryMax"].astype(int)
+    dim_job["salary_type"] = dim_job["salaryType"].astype(int)
 
-            monthly_salary = salary_df[
-                (mask_negotiable | mask_monthly | mask_annual) & salary_range
-            ].copy()
+    dim_job.drop(columns=["salaryMin", "salaryMax", "salaryType"], inplace=True)
+    
+    # 改名
+    column_mapping: Dict[str, str] = {
+        "jobName": "job_name",
+        "appearDate": "appear_date",
+        "custNo": "cust_no",
+        "workExp": "work_exp",
+        "workType": "work_type",
+        "addressArea": "address_area",
+        "addressRegion": "address_region",
+        "workPeriod": "work_period",
+        "vacationPolicy": "vacation_policy"
+    }
 
-        monthly_salary = _convert_annual_to_monthly(monthly_salary)
-        monthly_salary = monthly_salary[["_id", "salaryMin", "salaryMax"]].reset_index(drop=True)
-        return monthly_salary
+    # 2. 執行改名
+    # inplace=True 代表直接修改 dim_job 本體
+    dim_job.rename(columns=column_mapping, inplace=True)
 
-    except (KeyError, ValueError, TypeError) as e:
-        logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
-        raise
+    # 將 [] 補成 Nan
+    mask = dim_job["work_type"].apply(lambda x: x == [])
+    dim_job.loc[mask, "work_type"] = np.nan
+
+    # 轉成日期 type
+    dim_job["appear_date"] = pd.to_datetime(dim_job["appear_date"], format="%Y/%m/%d", errors="coerce")
+
+    return DimJob(dim_job)
+
+# 要先拿到 dim job table 的 id with job_id, 後續的 dataframe 才能根據 job_id merge, 獲得 job 在 SQL 的 id
+
+# def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
+#     try:
+#         cp_ori_df = original_df.copy()
+#         json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
+#             ["salary", "salaryMin", "salaryMax"]
+#         ]
+#         # axis=1, is mean 以 row 為標準合併, index=0 與 index=0 join 以此類推
+#         salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
+
+#         salary_df = salary_df.drop(columns="jobDetail", axis=1)
+
+#         return salary_df
+#     except (KeyError, ValueError, TypeError) as e:
+#         logger.exception(f"Failed to make salary DataFrame: {e}")
+#         raise
+
+
+# def _convert_annual_to_monthly(df, annual_factor=13):
+#     """
+#     將年薪 (Type 60) 轉換為月薪，但保護 max == 9999999 的特殊標記。
+#     """
+#     # 1. 定義基礎遮罩：找出所有年薪制的資料
+#     mask_annual = df["salaryType"] == 60
+
+#     # 2. 處理 salaryMin (下限)
+#     # 邏輯：只要是年薪制，下限通常都是有效數字，直接轉換, 0/13 = 0
+#     df.loc[mask_annual, "salaryMin"] = df.loc[mask_annual, "salaryMin"] // annual_factor
+
+#     # 3. 處理 salaryMax (上限) - 加入你要求的功能
+#     # 邏輯：是年薪制 (Type 60) 且 (AND) 上限不是特殊標記 (Max != 9999999)
+#     mask_convert_max = mask_annual & (df["salaryMax"] != 9999999)
+
+#     # 只有符合上述複合條件的，才進行除法運算
+#     df.loc[mask_convert_max, "salaryMax"] = df.loc[mask_convert_max, "salaryMax"] // annual_factor
+
+#     return df
+
+
+# def process_salary_info(
+#     original_df: pd.DataFrame, mode: Literal["exact", "negotiable"] = "exact"
+# ) -> pd.DataFrame:
+#     """
+#     salaryType=10 is 面議
+#     salaryType=50 is 月薪(會包含 xxx 以上)
+#     salaryType=60 is 年薪(會包含 xxx 以上)
+#     該 func 只處理明確標示薪資上下限的職缺
+#     """
+#     if mode not in ["exact", "negotiable"]:
+#         raise ValueError("exact_or_negotiable must be 'exact' or 'negotiable'")
+
+#     cp_ori_df = original_df.copy()
+
+#     try:
+#         json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
+#             ["salary", "salaryMin", "salaryMax", "salaryType"]
+#         ]
+
+#         # axis=1, 表示以 row 為標準合併, index=0 與 index=0 join 以此類推
+#         salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
+#         salary_df = salary_df.drop(columns="jobDetail", axis=1)
+
+#         if mode == "exact":
+#             mask_monthly = salary_df["salaryType"] == 50
+#             mask_annual = salary_df["salaryType"] == 60
+#             salary_range = (salary_df["salaryMin"] > 0) & (salary_df["salaryMax"] != 9999999)
+
+#             monthly_salary = salary_df[(mask_monthly | mask_annual) & salary_range].copy()
+
+#         elif mode == "negotiable":
+#             mask_negotiable = salary_df["salaryType"] == 10
+#             mask_monthly = salary_df["salaryType"] == 50
+#             mask_annual = salary_df["salaryType"] == 60
+#             salary_range = (salary_df["salaryMin"] == 0) & (salary_df["salaryMax"] == 0) | (
+#                 salary_df["salaryMax"] == 9999999
+#             )
+
+#             monthly_salary = salary_df[
+#                 (mask_negotiable | mask_monthly | mask_annual) & salary_range
+#             ].copy()
+
+#         monthly_salary = _convert_annual_to_monthly(monthly_salary)
+#         monthly_salary = monthly_salary[["_id", "salaryMin", "salaryMax"]].reset_index(drop=True)
+#         return monthly_salary
+
+#     except (KeyError, ValueError, TypeError) as e:
+#         logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
+#         raise

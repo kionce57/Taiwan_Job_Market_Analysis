@@ -1,6 +1,5 @@
 import logging
 import logging.config
-import os
 from pathlib import Path
 
 LOGGING_COFIG = {
@@ -33,7 +32,7 @@ def set_up_logging(debug=False):
     parent_dir = log_path.parent.parent
     log_dir = parent_dir / "logs"
 
-    if not log_dir.exists():    
+    if not log_dir.exists():
         log_dir.mkdir(parents=True, exist_ok=True)
         print(f"Created log directory at: {log_dir}")
 

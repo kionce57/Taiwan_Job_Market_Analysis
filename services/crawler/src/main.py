@@ -78,7 +78,19 @@ class JobDataPipeline:
             logger.info(f"Fetched {len(documents)} documents. Starting transformation...")
 
             # Transformation
+            # step 1 originale df
             original_df = use_original_documents_make_df(documents)
+
+            # step 2 製作 cust df
+
+            # insert cust df
+
+            # step  dim_job
+
+            # insert dim_job
+
+            # select select job_uid, job_id from dim_job
+            # step
             input_dfs = self._make_input_dfs(original_df)
 
             logger.info(f"Exporting {len(input_dfs)} CSV files to {result_dir.absolute()}...")

@@ -8,5 +8,8 @@ class JobRepository(Protocol):
     def select_stage(self): ...
 
 
+class JobSQL
+
+
 class Crawler(Protocol):
     def harvest_jobs(self, keyword, area) -> Iterator: ...

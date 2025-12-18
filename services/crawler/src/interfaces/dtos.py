@@ -16,7 +16,7 @@ class DimJob(pa.DataFrameModel):
     # 注意: id (Auto Increment) 通常在 Insert 前的 DataFrame 不存在，故不列入驗證
     job_id: Series[str] = pa.Field()
     job_name: Series[str] = pa.Field()
-    work_type: Series[str] = pa.Field(nullable=True, isin=['正職', '兼職', '派遣', '工讀', '實習']) # 補上 SQL 預設值欄位
+    work_type: Series[str] = pa.Field(nullable=True)
     
     salary_type: Series[int] = pa.Field(isin=[10, 20, 30, 40, 50, 60, 70])
     salary_min: Series[int] = pa.Field(ge=0)
@@ -61,8 +61,6 @@ class Welfare(pa.DataFrameModel):
         coerce = True # 強制轉型 (例如字串 "100" 轉為 數字 100)
         strict = True # 嚴格模式 (DataFrame 不能有 Schema 未定義的欄位)
 
-    # INDEX welfare_tags ((CAST(tags AS CHAR(50) ARRAY)));
-    # INDEX legal_tags ((CAST(legal_tags AS CHAR(50) ARRAY)));
 class Major(pa.DataFrameModel):
     job_uid: Series[int] = pa.Field()
     major_name: Series[str] = pa.Field()

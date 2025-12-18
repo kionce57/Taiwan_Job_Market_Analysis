@@ -21,6 +21,5 @@ mysql_data
 
 # others
 /result/
-*.ipynb
 to-do.md
 notebooks

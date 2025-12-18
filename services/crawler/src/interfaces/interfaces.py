@@ -2,13 +2,18 @@ from collections.abc import Iterator
 from typing import Protocol
 
 
-class JobRepository(Protocol):
+class BronzeJobRepository(Protocol):
     def insert_stage(self): ...
 
     def select_stage(self): ...
 
 
-class JobSQL
+class SilverJobRepository(Protocol):
+    def insert_stage(self):...
+
+    def select_stage(self):...
+
+    def update_stage(self):...
 
 
 class Crawler(Protocol):

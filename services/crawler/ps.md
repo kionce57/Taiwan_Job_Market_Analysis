@@ -4,7 +4,7 @@
 
 ## 目錄結構
 
-```
+```text
 Taiwan_Job_Market_Analysis/services/crawler/
 │
 ├── .env.example                    # 環境變數範例檔案

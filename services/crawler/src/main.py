@@ -6,12 +6,10 @@ import click
 
 from config.config_log import set_up_logging
 from src.extractors.crawler import Crawler, OneZeroFourCrawler
-from src.loaders.repo import JobRepository, MongoDB_one_zero_four
+from src.loaders.repo import BronzeJobRepository, MongoDB_one_zero_four
 from src.transformers.cleaner import (
     make_job_skill_or_specialty,
-    make_jobid_with_jobname_and_category,
-    process_salary_info,
-    use_original_documents_make_df,
+
 )
 
 set_up_logging(debug=False)
@@ -23,7 +21,7 @@ logger = logging.getLogger(__name__)
 class JobDataPipeline:
     BATCH_SIZE = 100
 
-    def __init__(self, crawler: Crawler, repo: JobRepository):
+    def __init__(self, crawler: Crawler, repo: BronzeJobRepository):
         # 有在猶豫無狀態是否還要弄成 class, 最終決定避免在一次任務中重複建立 instance
         self.crawler = crawler
         self.repo = repo

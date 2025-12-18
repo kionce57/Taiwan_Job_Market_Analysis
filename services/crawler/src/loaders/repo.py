@@ -11,13 +11,13 @@ from pymongo.errors import (
     ServerSelectionTimeoutError,
 )
 
-from src.interfaces.interfaces import JobRepository
+from src.interfaces.interfaces import BronzeJobRepository
 
 logger = logging.getLogger(__name__)
 load_dotenv()
 
 
-class MongoDB_one_zero_four(JobRepository):
+class MongoDB_one_zero_four(BronzeJobRepository):
     DATABASE = "One_zero_four"
 
     def __init__(self):

@@ -1,5 +1,6 @@
 import logging
-from typing import Literal
+from typing import Literal, cast
+from pandera.typing import DataFrame, Series
 from src.interfaces.dtos import (
     CustInfo,
     DimJob,
@@ -235,21 +236,29 @@ def make_cust_df(original_df: pd.DataFrame) -> pd.DataFrame:
     header = original_df["header"]
     header_list = header.to_list()
     header_df = pd.json_normalize(header_list)
-    cust_df.loc[:, "cust_name"] = header_df["custName"].values
-    cust_df.loc[:, "employees"] = cust_df["employees"].astype(str).str.strip("人").replace("", "0")
 
-    cust_df["employees"] = cust_df.loc[:, "employees"].astype(int)
+    cust_df.loc[:, "cust_name"] = header_df["custName"].values
+
+    cust_df.loc[:, "employees"] = (
+        cust_df["employees"]
+        .astype(str)
+        .str.replace(r"[^\d]", "", regex=True) # 只保留數字，去掉"人"或其他文字
+        .replace("", "0")                      # 處理原本就是空字串或"暫不提供"的情況
+    )
+    cust_df.loc[:, "employees"] = cust_df["employees"].fillna("0").astype(int)
     cust_df.rename(columns={"custNo": "cust_no"}, inplace=True)
     
-    return CustInfo(cust_df)
+    validate_df = CustInfo.validate(cust_df)
+
+    return cast(DataFrame[CustInfo], validate_df)
 
 
 def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
-    dim_job = original_df.loc[:, ("job_id", "custNo")]
+    dim_job = original_df[["job_id", "custNo"]].copy()
 
-    header_sub = pd.json_normalize(original_df["header"].to_list()).loc[:, ("jobName", "appearDate")]
+    header_sub = pd.json_normalize(original_df["header"].to_list()).loc[:, ["jobName", "appearDate"]]
 
-    condi_sub = pd.json_normalize(original_df["condition"].to_list()).loc[:, ("edu", "workExp")]
+    condi_sub = pd.json_normalize(original_df["condition"].to_list()).loc[:, ["edu", "workExp"]]
 
     job_detail_sub = pd.json_normalize(original_df["jobDetail"].to_list())[
                 [
@@ -271,7 +280,7 @@ def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
     dim_job.drop(columns=["salaryMin", "salaryMax", "salaryType"], inplace=True)
     
     # 改名
-    column_mapping: Dict[str, str] = {
+    column_mapping: dict[str, str] = {
         "jobName": "job_name",
         "appearDate": "appear_date",
         "custNo": "cust_no",
@@ -294,9 +303,14 @@ def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
     # 轉成日期 type
     dim_job["appear_date"] = pd.to_datetime(dim_job["appear_date"], format="%Y/%m/%d", errors="coerce")
 
-    return DimJob(dim_job)
+    validate_df = DimJob.validate(dim_job)
+    return cast(DataFrame[DimJob], validate_df)
 
 # 要先拿到 dim job table 的 id with job_id, 後續的 dataframe 才能根據 job_id merge, 獲得 job 在 SQL 的 id
+# 先去開發 sqlalchemy 
+
+
+
 
 # def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
 #     try:

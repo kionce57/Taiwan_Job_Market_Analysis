@@ -1,19 +1,21 @@
 import logging
 from typing import Literal, cast
-from pandera.typing import DataFrame, Series
+
+import numpy as np
+import pandas as pd
+from pandera.typing import DataFrame
+
 from src.interfaces.dtos import (
+    Category,
     CustInfo,
     DimJob,
     JobDetail,
-    Welfare,
+    Language,
     Major,
     Skills,
     Specialties,
-    Category,
-    Language,
+    Welfare,
 )
-import numpy as np
-import pandas as pd
 
 logger = logging.getLogger(__name__)
 
@@ -181,24 +183,6 @@ def make_original_df(documents: list[dict | list]) -> pd.DataFrame:
         raise
 
 
-# # 製作 jobnane with job_id 的 df
-# def make_jobid_with_jobname_and_category(original_df: pd.DataFrame) -> pd.DataFrame:
-#     try:
-#         cp_ori_df = original_df.copy()
-
-#         header_df = pd.json_normalize(cp_ori_df["header"].to_list())
-#         cp_ori_df["job_name"] = header_df["jobName"]
-
-#         job_id_name_df = cp_ori_df[["_id", "job_name"]]
-#         job_id_name_df["job_category"] = job_id_name_df["job_name"].apply(_classify_job_title)
-
-#         return job_id_name_df
-
-#     except (KeyError, ValueError, TypeError) as e:
-#         logger.exception(f"Failed to make job_id with job_name DataFrame: {e}")
-#         raise
-
-
 # 製作 job_id with skill 的 df
 def make_job_skill_or_specialty(
     original_df: pd.DataFrame, mode: Literal["skill", "specialty"]
@@ -242,31 +226,38 @@ def make_cust_df(original_df: pd.DataFrame) -> pd.DataFrame:
     cust_df.loc[:, "employees"] = (
         cust_df["employees"]
         .astype(str)
-        .str.replace(r"[^\d]", "", regex=True) # 只保留數字，去掉"人"或其他文字
-        .replace("", "0")                      # 處理原本就是空字串或"暫不提供"的情況
+        .str.replace(r"[^\d]", "", regex=True)  # 只保留數字，去掉"人"或其他文字
+        .replace("", "0")  # 處理原本就是空字串或"暫不提供"的情況
     )
     cust_df.loc[:, "employees"] = cust_df["employees"].fillna("0").astype(int)
     cust_df.rename(columns={"custNo": "cust_no"}, inplace=True)
-    
+
     validate_df = CustInfo.validate(cust_df)
 
     return cast(DataFrame[CustInfo], validate_df)
 
 
-def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
+def make_dim_job(original_df: pd.DataFrame) -> pd.DataFrame:
     dim_job = original_df[["job_id", "custNo"]].copy()
 
-    header_sub = pd.json_normalize(original_df["header"].to_list()).loc[:, ["jobName", "appearDate"]]
+    header_sub = pd.json_normalize(original_df["header"].to_list()).loc[
+        :, ["jobName", "appearDate"]
+    ]
 
     condi_sub = pd.json_normalize(original_df["condition"].to_list()).loc[:, ["edu", "workExp"]]
 
     job_detail_sub = pd.json_normalize(original_df["jobDetail"].to_list())[
-                [
-                    "salaryMin", "salaryMax", "salaryType", 
-                    "workType", "addressArea", "addressRegion",
-                    "workPeriod", "vacationPolicy"
-                ]
-            ]
+        [
+            "salaryMin",
+            "salaryMax",
+            "salaryType",
+            "workType",
+            "addressArea",
+            "addressRegion",
+            "workPeriod",
+            "vacationPolicy",
+        ]
+    ]
 
     dim_job = pd.concat([dim_job, header_sub], axis=1)
 
@@ -278,7 +269,7 @@ def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
     dim_job["salary_type"] = dim_job["salaryType"].astype(int)
 
     dim_job.drop(columns=["salaryMin", "salaryMax", "salaryType"], inplace=True)
-    
+
     # 改名
     column_mapping: dict[str, str] = {
         "jobName": "job_name",
@@ -289,7 +280,7 @@ def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
         "addressArea": "address_area",
         "addressRegion": "address_region",
         "workPeriod": "work_period",
-        "vacationPolicy": "vacation_policy"
+        "vacationPolicy": "vacation_policy",
     }
 
     # 2. 執行改名
@@ -301,101 +292,318 @@ def make_dim_job(original_df:pd.DataFrame) -> pd.DataFrame:
     dim_job.loc[mask, "work_type"] = np.nan
 
     # 轉成日期 type
-    dim_job["appear_date"] = pd.to_datetime(dim_job["appear_date"], format="%Y/%m/%d", errors="coerce")
+    dim_job["appear_date"] = pd.to_datetime(
+        dim_job["appear_date"], format="%Y/%m/%d", errors="coerce"
+    )
 
     validate_df = DimJob.validate(dim_job)
     return cast(DataFrame[DimJob], validate_df)
 
+
 # 要先拿到 dim job table 的 id with job_id, 後續的 dataframe 才能根據 job_id merge, 獲得 job 在 SQL 的 id
-# 先去開發 sqlalchemy 
 
 
+def _merge_job_uid(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    將原始 DataFrame 與 job_uid_df 進行 merge，獲取資料庫內的 job_uid。
+
+    Args:
+        original_df: 原始資料 DataFrame，必須包含 job_id 欄位
+        job_uid_df: 包含 job_id 與 id (資料庫主鍵) 映射的 DataFrame
+
+    Returns:
+        合併後的 DataFrame，包含 job_uid 欄位
+    """
+    # 資料庫中 dim_job 的主鍵叫 id，這裡重新命名為 job_uid 供內部使用
+    uid_df = job_uid_df[["job_id", "id"]].rename(columns={"id": "job_uid"})
+    merged = original_df.merge(uid_df, on="job_id", how="left")
+    return merged
 
 
-# def _make_id_with_salary_df(original_df: pd.DataFrame) -> pd.DataFrame:
-#     try:
-#         cp_ori_df = original_df.copy()
-#         json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
-#             ["salary", "salaryMin", "salaryMax"]
-#         ]
-#         # axis=1, is mean 以 row 為標準合併, index=0 與 index=0 join 以此類推
-#         salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
+def make_job_detail(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 JobDetail DataFrame。
 
-#         salary_df = salary_df.drop(columns="jobDetail", axis=1)
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
 
-#         return salary_df
-#     except (KeyError, ValueError, TypeError) as e:
-#         logger.exception(f"Failed to make salary DataFrame: {e}")
-#         raise
+    Returns:
+        符合 JobDetail Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
+
+        job_detail_sub = pd.json_normalize(merged_df["jobDetail"].to_list())[
+            ["needEmp", "manageResp", "businessTrip", "remoteWork", "jobDescription"]
+        ]
+
+        result_df = pd.DataFrame(
+            {
+                "job_uid": merged_df["job_uid"],
+                "need_emp": job_detail_sub["needEmp"],
+                "manage_resp": job_detail_sub["manageResp"],
+                "business_trip": job_detail_sub["businessTrip"],
+                "remote_work": job_detail_sub["remoteWork"],
+                "job_description": job_detail_sub["jobDescription"],
+            }
+        )
+
+        validate_df = JobDetail.validate(result_df)
+        return cast(DataFrame[JobDetail], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make JobDetail DataFrame: {e}")
+        raise
 
 
-# def _convert_annual_to_monthly(df, annual_factor=13):
-#     """
-#     將年薪 (Type 60) 轉換為月薪，但保護 max == 9999999 的特殊標記。
-#     """
-#     # 1. 定義基礎遮罩：找出所有年薪制的資料
-#     mask_annual = df["salaryType"] == 60
+def make_welfare(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Welfare DataFrame。
 
-#     # 2. 處理 salaryMin (下限)
-#     # 邏輯：只要是年薪制，下限通常都是有效數字，直接轉換, 0/13 = 0
-#     df.loc[mask_annual, "salaryMin"] = df.loc[mask_annual, "salaryMin"] // annual_factor
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
 
-#     # 3. 處理 salaryMax (上限) - 加入你要求的功能
-#     # 邏輯：是年薪制 (Type 60) 且 (AND) 上限不是特殊標記 (Max != 9999999)
-#     mask_convert_max = mask_annual & (df["salaryMax"] != 9999999)
+    Returns:
+        符合 Welfare Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
 
-#     # 只有符合上述複合條件的，才進行除法運算
-#     df.loc[mask_convert_max, "salaryMax"] = df.loc[mask_convert_max, "salaryMax"] // annual_factor
+        welfare_sub = pd.json_normalize(merged_df["welfare"].to_list())[
+            ["tag", "welfare", "legalTag"]
+        ]
 
-#     return df
+        result_df = pd.DataFrame(
+            {
+                "job_uid": merged_df["job_uid"],
+                "tags": welfare_sub["tag"],
+                "welfare_description": welfare_sub["welfare"],
+                "legal_tags": welfare_sub["legalTag"],
+            }
+        )
+
+        validate_df = Welfare.validate(result_df)
+        return cast(DataFrame[Welfare], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Welfare DataFrame: {e}")
+        raise
 
 
-# def process_salary_info(
-#     original_df: pd.DataFrame, mode: Literal["exact", "negotiable"] = "exact"
-# ) -> pd.DataFrame:
-#     """
-#     salaryType=10 is 面議
-#     salaryType=50 is 月薪(會包含 xxx 以上)
-#     salaryType=60 is 年薪(會包含 xxx 以上)
-#     該 func 只處理明確標示薪資上下限的職缺
-#     """
-#     if mode not in ["exact", "negotiable"]:
-#         raise ValueError("exact_or_negotiable must be 'exact' or 'negotiable'")
+def make_major(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Major DataFrame (一對多關係表)。
 
-#     cp_ori_df = original_df.copy()
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
 
-#     try:
-#         json_normalized_df = pd.json_normalize(cp_ori_df["jobDetail"].to_list())[
-#             ["salary", "salaryMin", "salaryMax", "salaryType"]
-#         ]
+    Returns:
+        符合 Major Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
 
-#         # axis=1, 表示以 row 為標準合併, index=0 與 index=0 join 以此類推
-#         salary_df = pd.concat([cp_ori_df, json_normalized_df], axis=1)
-#         salary_df = salary_df.drop(columns="jobDetail", axis=1)
+        # 取出 major 欄位 (是一個 list of strings)
+        cp_df = merged_df[["job_uid", "condition"]].copy()
+        cp_df["major"] = cp_df["condition"].apply(lambda x: x.get("major", []))
 
-#         if mode == "exact":
-#             mask_monthly = salary_df["salaryType"] == 50
-#             mask_annual = salary_df["salaryType"] == 60
-#             salary_range = (salary_df["salaryMin"] > 0) & (salary_df["salaryMax"] != 9999999)
+        # 展開一對多關係
+        exploded_df = cp_df.explode("major").reset_index(drop=True)
+        exploded_df = exploded_df.dropna(subset=["major"])
+        exploded_df = exploded_df[exploded_df["major"] != ""]
 
-#             monthly_salary = salary_df[(mask_monthly | mask_annual) & salary_range].copy()
+        result_df = exploded_df[["job_uid", "major"]].rename(columns={"major": "major_name"})
 
-#         elif mode == "negotiable":
-#             mask_negotiable = salary_df["salaryType"] == 10
-#             mask_monthly = salary_df["salaryType"] == 50
-#             mask_annual = salary_df["salaryType"] == 60
-#             salary_range = (salary_df["salaryMin"] == 0) & (salary_df["salaryMax"] == 0) | (
-#                 salary_df["salaryMax"] == 9999999
-#             )
+        if result_df.empty:
+            # 如果沒有資料，返回空的符合 schema 的 DataFrame
+            return pd.DataFrame(columns=["job_uid", "major_name"])
 
-#             monthly_salary = salary_df[
-#                 (mask_negotiable | mask_monthly | mask_annual) & salary_range
-#             ].copy()
+        validate_df = Major.validate(result_df)
+        return cast(DataFrame[Major], validate_df)
 
-#         monthly_salary = _convert_annual_to_monthly(monthly_salary)
-#         monthly_salary = monthly_salary[["_id", "salaryMin", "salaryMax"]].reset_index(drop=True)
-#         return monthly_salary
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Major DataFrame: {e}")
+        raise
 
-#     except (KeyError, ValueError, TypeError) as e:
-#         logger.exception(f"Failed to make {mode} salary DataFrame: {e}")
-#         raise
+
+def make_skills(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Skills DataFrame (一對多關係表)。
+
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
+
+    Returns:
+        符合 Skills Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
+
+        cp_df = merged_df[["job_uid", "condition"]].copy()
+        cp_df["skill"] = cp_df["condition"].apply(lambda x: x.get("skill", []))
+
+        exploded_df = cp_df.explode("skill").reset_index(drop=True)
+        exploded_df = exploded_df.dropna(subset=["skill"])
+
+        # 解析 dict 結構取得 description
+        skill_desc = pd.json_normalize(exploded_df["skill"].to_list())
+
+        result_df = pd.DataFrame(
+            {"job_uid": exploded_df["job_uid"].values, "skill_name": skill_desc["description"]}
+        )
+
+        if result_df.empty:
+            return pd.DataFrame(columns=["job_uid", "skill_name"])
+
+        validate_df = Skills.validate(result_df)
+        return cast(DataFrame[Skills], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Skills DataFrame: {e}")
+        raise
+
+
+def make_specialties(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Specialties DataFrame (一對多關係表)。
+
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
+
+    Returns:
+        符合 Specialties Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
+
+        cp_df = merged_df[["job_uid", "condition"]].copy()
+        cp_df["specialty"] = cp_df["condition"].apply(lambda x: x.get("specialty", []))
+
+        exploded_df = cp_df.explode("specialty").reset_index(drop=True)
+        exploded_df = exploded_df.dropna(subset=["specialty"])
+
+        specialty_desc = pd.json_normalize(exploded_df["specialty"].to_list())
+
+        result_df = pd.DataFrame(
+            {
+                "job_uid": exploded_df["job_uid"].values,
+                "specialty_name": specialty_desc["description"],
+            }
+        )
+
+        if result_df.empty:
+            return pd.DataFrame(columns=["job_uid", "specialty_name"])
+
+        validate_df = Specialties.validate(result_df)
+        return cast(DataFrame[Specialties], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Specialties DataFrame: {e}")
+        raise
+
+
+def make_category(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Category DataFrame (一對多關係表)。
+
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
+
+    Returns:
+        符合 Category Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
+
+        # jobCategory 在 jobDetail 內
+        job_detail_list = merged_df["jobDetail"].to_list()
+        cp_df = pd.DataFrame(
+            {
+                "job_uid": merged_df["job_uid"],
+                "jobCategory": [jd.get("jobCategory", []) for jd in job_detail_list],
+            }
+        )
+
+        exploded_df = cp_df.explode("jobCategory").reset_index(drop=True)
+        exploded_df = exploded_df.dropna(subset=["jobCategory"])
+
+        category_desc = pd.json_normalize(exploded_df["jobCategory"].to_list())
+
+        result_df = pd.DataFrame(
+            {
+                "job_uid": exploded_df["job_uid"].values,
+                "category_name": category_desc["description"],
+            }
+        )
+
+        if result_df.empty:
+            return pd.DataFrame(columns=["job_uid", "category_name"])
+
+        validate_df = Category.validate(result_df)
+        return cast(DataFrame[Category], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Category DataFrame: {e}")
+        raise
+
+
+def make_language(original_df: pd.DataFrame, job_uid_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    製作 Language DataFrame (一對多關係表)。
+
+    Args:
+        original_df: 原始資料 DataFrame
+        job_uid_df: 包含 job_id 與 job_uid 映射的 DataFrame
+
+    Returns:
+        符合 Language Schema 的 DataFrame
+    """
+    try:
+        merged_df = _merge_job_uid(original_df, job_uid_df)
+
+        cp_df = merged_df[["job_uid", "condition"]].copy()
+        cp_df["language"] = cp_df["condition"].apply(lambda x: x.get("language", []))
+
+        exploded_df = cp_df.explode("language").reset_index(drop=True)
+        exploded_df = exploded_df.dropna(subset=["language"])
+
+        if exploded_df.empty:
+            return pd.DataFrame(
+                columns=["job_uid", "language", "listening", "speaking", "reading", "writing"]
+            )
+
+        # 解析 language dict 結構
+        lang_list = exploded_df["language"].to_list()
+        lang_records = []
+        for idx, lang_item in enumerate(lang_list):
+            ability = lang_item.get("ability", {})
+            lang_records.append(
+                {
+                    "job_uid": exploded_df.iloc[idx]["job_uid"],
+                    "language": lang_item.get("language", ""),
+                    "listening": ability.get("listening", ""),
+                    "speaking": ability.get("speaking", ""),
+                    "reading": ability.get("reading", ""),
+                    "writing": ability.get("writing", ""),
+                }
+            )
+
+        result_df = pd.DataFrame(lang_records)
+
+        if result_df.empty:
+            return pd.DataFrame(
+                columns=["job_uid", "language", "listening", "speaking", "reading", "writing"]
+            )
+
+        validate_df = Language.validate(result_df)
+        return cast(DataFrame[Language], validate_df)
+
+    except (KeyError, ValueError, TypeError) as e:
+        logger.exception(f"Failed to make Language DataFrame: {e}")
+        raise

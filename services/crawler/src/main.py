@@ -9,7 +9,6 @@ from src.extractors.crawler import Crawler, OneZeroFourCrawler
 from src.loaders.repo import BronzeJobRepository, MongoDB_one_zero_four
 from src.transformers.cleaner import (
     make_job_skill_or_specialty,
-
 )
 
 set_up_logging(debug=False)

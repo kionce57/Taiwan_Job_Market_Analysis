@@ -1,0 +1,729 @@
+[
+    {
+        "_id": "8uzq4",
+        "condition": {
+            "acceptRole": {
+                "disRole": {
+                    "disability": [],
+                    "needHandicapCompendium": false
+                },
+                "role": []
+            },
+            "certificate": [],
+            "driverLicense": [],
+            "edu": "大學以上",
+            "language": [],
+            "localLanguage": [],
+            "major": [],
+            "other": "",
+            "skill": [
+                {
+                    "code": "11009005012",
+                    "description": "AI"
+                },
+                {
+                    "code": "11009005014",
+                    "description": "演算法設計"
+                },
+                {
+                    "code": "11009005016",
+                    "description": "生成式AI"
+                }
+            ],
+            "specialty": [
+                {
+                    "code": "12001002016",
+                    "description": "Github"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003086",
+                    "description": "PyTorch"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                },
+                {
+                    "code": "12001001007",
+                    "description": "Linux"
+                }
+            ],
+            "workExp": "不拘"
+        },
+        "contact": {
+            "email": "",
+            "hrName": "蔡小姐",
+            "other": "",
+            "phone": [],
+            "reply": "本職務設定3個工作天回覆",
+            "visit": ""
+        },
+        "custNo": "80682392000",
+        "employees": "10人",
+        "header": {
+            "analysisType": 4,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8uzq4",
+            "appearDate": "2025/12/03",
+            "applyDate": "",
+            "custName": "悟空科技股份有限公司",
+            "custUrl": "https://www.104.com.tw/company/112c7o3k",
+            "hrBehaviorPR": 0.9868962852839342,
+            "isApplied": false,
+            "isFollowed": false,
+            "isSaved": false,
+            "jobName": "AI工程師Python",
+            "userApplyCount": 0
+        },
+        "industry": "其它軟體及網路相關業",
+        "jobDetail": {
+            "addressArea": "台北市",
+            "addressDetail": "建國北路一段90號5樓之3(丙園金融大樓）",
+            "addressNo": "6001001003",
+            "addressRegion": "台北市中山區",
+            "businessTrip": "無需出差外派",
+            "delegatedRecruit": "",
+            "hireType": 0,
+            "industryArea": "",
+            "jobCategory": [
+                {
+                    "code": "2007001020",
+                    "description": "AI工程師"
+                },
+                {
+                    "code": "2007001012",
+                    "description": "演算法工程師"
+                },
+                {
+                    "code": "2007001022",
+                    "description": "資料工程師"
+                }
+            ],
+            "jobDescription": "-具Python使用經驗\n-具PyTorch 使用經驗\n-具Git 與 CI/CD 流程（GitLab CI、GitHub Actions）使用經驗\n-具獨立研究開源程式碼相關經驗\n-具Linux環境、Docker、Anaconda、GCP等相關經驗 \n-具資料庫（SQL、Redis）等相關經驗\n-有創造性與成長性思維，樂於學習並能與團隊協作\n\n【職務内容】\nAI系統之功能設計與開發\n資料處理流程構築與維護\nAPI開發、測試及文件整理\n圖像 AI 生成式技術的開發及應用生成式 AI 技術應用之流程開發\n現場客戶支援（需配合團隊作業）\n\n【應徵流程】\n* 投遞履歷（歡迎附上 GitHub）\n* 與部門主管進行面談 - 技術測驗（Python）與技術面談\n* Offer 與 Onboarding",
+            "jobType": 1,
+            "landmark": "距捷運松江南京站約400公尺",
+            "latitude": "25.0500012",
+            "longitude": "121.5362706",
+            "manageResp": "不需負擔管理責任",
+            "needEmp": "1人",
+            "remoteWork": null,
+            "salary": "月薪45,000元以上",
+            "salaryMax": 9999999,
+            "salaryMin": 45000,
+            "salaryType": 50,
+            "startWorkingDay": "不限",
+            "vacationPolicy": "週休二日",
+            "workPeriod": "日班，平日9:00-17:00",
+            "workType": []
+        },
+        "job_id": "8uzq4",
+        "welfare": {
+            "legalTag": [
+                "勞保",
+                "健保",
+                "陪產假",
+                "產假",
+                "特別休假",
+                "育嬰留停",
+                "產檢假"
+            ],
+            "tag": [
+                "年終獎金",
+                "停車費補助",
+                "電信費補助",
+                "配發公務機",
+                "員工團體保險"
+            ],
+            "welfare": "享勞健保及一般合乎勞基法規定福利\n週休二日\n外勤人員除了勞健保之外尚有加入團保福利\n比照勞基法休假制度"
+        }
+    },
+    {
+        "_id": "8nwo9",
+        "condition": {
+            "acceptRole": {
+                "disRole": {
+                    "disability": [],
+                    "needHandicapCompendium": false
+                },
+                "role": []
+            },
+            "certificate": [],
+            "driverLicense": [],
+            "edu": "大學以上",
+            "language": [
+                {
+                    "ability": {
+                        "listening": "中等",
+                        "reading": "中等",
+                        "speaking": "中等",
+                        "writing": "中等"
+                    },
+                    "code": 1,
+                    "language": "英文"
+                }
+            ],
+            "localLanguage": [],
+            "major": [
+                "電機電子工程相關",
+                "資訊工程相關"
+            ],
+            "other": "o\tExperience of automation test\no\tKnowledge of product/project development from the designing to validation \no\tStrong analyzing and debugging skills in both hardware (Oscilloscope/JTAG) and software \no\tKnowledge of test case planning and validation is a plus \no\tFamiliar with ARM/8051 architecture.\no\tFamiliar with MCU H/W experience.",
+            "skill": [
+                {
+                    "code": "11009002004",
+                    "description": "系統架構規劃"
+                },
+                {
+                    "code": "11009002010",
+                    "description": "韌體工程開發"
+                },
+                {
+                    "code": "11009005003",
+                    "description": "韌體程式設計"
+                }
+            ],
+            "specialty": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001006027",
+                    "description": "XML"
+                },
+                {
+                    "code": "12001001020",
+                    "description": "Shell"
+                },
+                {
+                    "code": "12001002017",
+                    "description": "Jenkins"
+                },
+                {
+                    "code": "12001003009",
+                    "description": "C#"
+                },
+                {
+                    "code": "12001003010",
+                    "description": "C++"
+                },
+                {
+                    "code": "12001005023",
+                    "description": "AWS"
+                }
+            ],
+            "workExp": "5年以上"
+        },
+        "contact": {
+            "email": "",
+            "hrName": "HR",
+            "other": "",
+            "phone": [],
+            "reply": "本職務設定3個工作天回覆",
+            "visit": ""
+        },
+        "custNo": "130000000171407",
+        "employees": "200人",
+        "header": {
+            "analysisType": 1,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8nwo9",
+            "appearDate": "2025/11/24",
+            "applyDate": "",
+            "custName": "PHOENIX TECHNOLOGIES INC_美商費尼克斯有限公司台灣分公司",
+            "custUrl": "https://www.104.com.tw/company/1a2x6blnkf",
+            "hrBehaviorPR": 0.8583736263736264,
+            "isApplied": false,
+            "isFollowed": false,
+            "isSaved": false,
+            "jobName": "Python Automation Engineer (Devops)",
+            "userApplyCount": 0
+        },
+        "industry": "電腦軟體服務業",
+        "jobDetail": {
+            "addressArea": "台北市",
+            "addressDetail": "瑞湖街88號7樓",
+            "addressNo": "6001001010",
+            "addressRegion": "台北市內湖區",
+            "businessTrip": "無需出差外派",
+            "delegatedRecruit": "",
+            "hireType": 0,
+            "industryArea": "",
+            "jobCategory": [
+                {
+                    "code": "2007001005",
+                    "description": "韌體工程師"
+                }
+            ],
+            "jobDescription": "Python:\n• Experience building Python software from scratch for Embedded applications\n• Creating scalable solution for embedded applications/Software Architecture/Design patterns\n• Exposure to Python automation (Pytest/Robot Framework)\n• Python expertise (abstraction in Python, decorators, properties, list of comprehensions, OOP, etc.)\n\nHW/FW:\n• Communication protocols\n• HW components: GPU/CPU - BMC/Ipmitool\n• Debugging interfaces (Jtag, etc.)\n• Low level code exposure: SystemC, HDL\n• Experience with: C, C++ and C# (.Net applications)\n• Shell/PowerShell/Command line interactionsDevOps:\n• Build CI/CD solutions with Azure DevOps (or AWS)\n• Yaml experience for pipeline design (Jenkins/Kubernetes works too)\n• Azure ecosystem (Entra ID, Azure CLI, Azure REST API)\n• Release processes (nuget, universal packages, etc.)\n• Powershell/Shell\n• Security Practices\n\nDevOps:\n• Build CI/CD solutions with Azure DevOps (or AWS)\n• Yaml experience for pipeline design (Jenkins/Kubernetes works too)\n• Azure ecosystem (Entra ID, Azure CLI, Azure REST API)\n• Release processes (nuget, universal packages, etc.)\n• Powershell / Shell\n• Security Practices",
+            "jobType": 1,
+            "landmark": "",
+            "latitude": "25.0723653",
+            "longitude": "121.5758522",
+            "manageResp": "不需負擔管理責任",
+            "needEmp": "1人",
+            "remoteWork": null,
+            "salary": "待遇面議",
+            "salaryMax": 0,
+            "salaryMin": 0,
+            "salaryType": 10,
+            "startWorkingDay": "不限",
+            "vacationPolicy": "週休二日",
+            "workPeriod": "日班",
+            "workType": []
+        },
+        "job_id": "8nwo9",
+        "welfare": {
+            "legalTag": [
+                "哺乳室",
+                "週休二日",
+                "陪產假",
+                "產假",
+                "特別休假",
+                "育嬰留停",
+                "勞退提撥金",
+                "產檢假",
+                "員工體檢"
+            ],
+            "tag": [
+                "員工配股",
+                "員工認股",
+                "三節獎金/禮品",
+                "特殊節日獎金禮品",
+                "交通車",
+                "零食櫃",
+                "咖啡吧",
+                "員工舒壓按摩",
+                "不扣薪病假",
+                "結婚禮金",
+                "生育津貼",
+                "停車費補助",
+                "員工進修補助",
+                "員工教育獎助學金",
+                "旅遊補助",
+                "國內旅遊",
+                "國外旅遊",
+                "部門聚餐",
+                "慶生會",
+                "家庭日",
+                "特約商店",
+                "免費下午茶",
+                "電影觀賞",
+                "優於勞基法特休",
+                "員工團體保險",
+                "可遠端/在家上班"
+            ],
+            "welfare": "◆ 獎金 / 禮品類\n1.三節禮金\n2.生日禮金\n3.婚喪喜慶補助\n4.員工推薦獎金\n◆ 保險類\n1.勞保\n2.健保\n3.員工團保\n4.眷屬團保\n◆ 休閒類\n1.部門聚餐\n2.慶生會\n3.電影欣賞會\n4.戶外團康活動, Sports Day\n5.員工旅遊\n◆ 請 / 休假制度\n1.週休二日 (不用補班)\n2.特休/年假 (新進員工可享10天年假)\n3.陪產假\n4.彈性休假\n5.15天不扣薪病假\n6.彈性上下班制度, 可自由分配時間\n◆ 補助類\n1.免費機車位/上下班免費交通接駁車\n2.進修補助\n3.定期健康檢查\n"
+        }
+    },
+    {
+        "_id": "6yfn5",
+        "condition": {
+            "acceptRole": {
+                "disRole": {
+                    "disability": [],
+                    "needHandicapCompendium": true
+                },
+                "role": []
+            },
+            "certificate": [],
+            "driverLicense": [],
+            "edu": "大學、碩士",
+            "language": [],
+            "localLanguage": [],
+            "major": [],
+            "other": "- a positive working and team work attitude every single day. \n- a self-driven characteristic, and being responsible and proactive of what you do.\n- enjoy life, and live for the moment.",
+            "skill": [],
+            "specialty": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001006013",
+                    "description": "HTML"
+                },
+                {
+                    "code": "12001006017",
+                    "description": "JavaScript"
+                },
+                {
+                    "code": "12001006030",
+                    "description": "jQuery"
+                },
+                {
+                    "code": "12001006032",
+                    "description": "CSS"
+                },
+                {
+                    "code": "12001006043",
+                    "description": "Django"
+                }
+            ],
+            "workExp": "3年以上"
+        },
+        "contact": {
+            "email": "",
+            "hrName": "HR",
+            "other": "",
+            "phone": [],
+            "reply": "",
+            "visit": ""
+        },
+        "custNo": "53343286000",
+        "employees": "300人",
+        "header": {
+            "analysisType": 1,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/6yfn5",
+            "appearDate": "2025/11/26",
+            "applyDate": "",
+            "custName": "日新軟體股份有限公司",
+            "custUrl": "https://www.104.com.tw/company/oi77qwg",
+            "hrBehaviorPR": 0.3780130849730822,
+            "isApplied": false,
+            "isFollowed": false,
+            "isSaved": false,
+            "jobName": "Software Engineer(Python)",
+            "userApplyCount": 0
+        },
+        "industry": "電腦軟體服務業",
+        "jobDetail": {
+            "addressArea": "台北市",
+            "addressDetail": "瑞光路333號16樓",
+            "addressNo": "6001001010",
+            "addressRegion": "台北市內湖區",
+            "businessTrip": "無需出差外派",
+            "delegatedRecruit": "",
+            "hireType": 0,
+            "industryArea": "內湖科技園區",
+            "jobCategory": [
+                {
+                    "code": "2007001004",
+                    "description": "軟體工程師"
+                }
+            ],
+            "jobDescription": "We are looking for a Python Developer who is capable of developing interactive web pages, backend API servers, web-tracking modules, and data wrangling with Python.\n\n\nWhat You Will Do:\n- Participate in developing medium ~ large projects\n- Bridge backend data to frontend web with data wrangling in the middle tier\n- Collaborate with team members within and outside of the department\n- Present outcomes or results in regular meetings\n\nWhat You Will Need:\n- 3+ years of experience in (mediumn ~ large) web projects with modern programming languages.\n- expert in Python, fimiliar in using Django/Flask is a plus. (other frameworks are also good)\n- proficiency in data wrangling with NumPy/Pandas or other similar library tools.\n- familiar with Web API development\n- basic understanding of web, HTML, javascript and css.\n- knowledge of or expousre to visualization tools. (e.g. e-charts or other charting tools)\n- basic understanding of version control flow, e.g. Git flow.\n- development under Windows, (Linux is a plus).\n\nWhat We Expect Of You: \n- a positive working attitude every single day. \n- a self-driven characteristic, and being responsible and proactive of what you do.\n- comply with standards, and able to perform solo/team work\n- enjoy life, and ready to embrace the unique Neutec culture. ",
+            "jobType": 1,
+            "landmark": "距捷運港墘站約340公尺",
+            "latitude": "25.0770622",
+            "longitude": "121.5751213",
+            "manageResp": "不需負擔管理責任",
+            "needEmp": "1人",
+            "remoteWork": null,
+            "salary": "待遇面議",
+            "salaryMax": 0,
+            "salaryMin": 0,
+            "salaryType": 10,
+            "startWorkingDay": "不限",
+            "vacationPolicy": "週休二日",
+            "workPeriod": "日班，09:00~18:00",
+            "workType": []
+        },
+        "job_id": "6yfn5",
+        "welfare": {
+            "legalTag": [],
+            "tag": [
+                "員工餐廳",
+                "零食櫃",
+                "咖啡吧",
+                "健身器材",
+                "員工舒壓按摩",
+                "生活工作諮詢",
+                "不扣薪病假",
+                "社團補助",
+                "員工進修補助",
+                "旅遊補助",
+                "外語學習補助",
+                "國內旅遊",
+                "國外旅遊",
+                "家庭日",
+                "優於勞基法特休",
+                "可遠端/在家上班"
+            ],
+            "welfare": "在日新，我們以人為本．信任夥伴．開放溝通．共享共好\n\n◆ 我們的薪酬制度，促使同仁激勵自我與個人發展，有努力就會有收穫 \n    ·  固定年終獎金1個月、考核獎金一年2次\n    ·  交通津貼、年節獎金及生日禮金\n    ·  年度調薪、升遷與教育訓練制度\n\n◆ 我們的完善休假保險制度，照顧同仁的身體與心靈的健康 \n     · 法令規定的勞保健保勞退當然有，除此之外我們還有團保意外險醫療險\n     · 優於勞基法的休假制度：每年5天不扣薪病假、每年12天以上的特別休假\n     · 年資達到5年10年，另有10天起跳的年資假\n     · 年度體檢、年資健檢、哺乳室、線上諮商，每月還有護理師臨場服務\n\n◆ 我們有福委會、社團跟許多活動，為增進同仁情誼、也希望同仁達到工作與生活平衡 \n    · 國外員工旅遊(全額補助及旅遊公假)\n    · 每週一次運動時間、每月一次按摩舒壓 \n    · 福委會活動 ( 國內旅遊、家庭日、電影招待日、各類社團活動、慶生會等)\n    · 部門一季Game Day ( 皮件手做、烘培、Go-kart、滑雪體驗 ...等豐富有趣的活動)\n\n◆ 在日新最幸福的是..... \n     · 我們的咖啡廳有咖啡師來提供咖啡、下午茶點心，讓大家工作之餘也能放鬆心請\n     · 我們有餐廳，由廚師團隊提供每日豐盛的早餐和午餐，不用煩惱每天要吃什麼\n     · 我們有健身空間、器材及按摩椅，認真工作完也有機會動一動\n\n在日新，我們的工作模式建立在互相尊重、互相信任，有貢獻就有回饋，現今正在尋找積極主動誠信的夥伴，一起創造工作的自由度與樂趣。"
+        }
+    },
+    {
+        "_id": "8vsve",
+        "condition": {
+            "acceptRole": {
+                "disRole": {
+                    "disability": [],
+                    "needHandicapCompendium": false
+                },
+                "role": []
+            },
+            "certificate": [],
+            "driverLicense": [],
+            "edu": "大學以上",
+            "language": [],
+            "localLanguage": [],
+            "major": [],
+            "other": "- 2 年以上後端開發經驗，具備獨立以 Python 開發 Web 後端的實務經驗\n- 具備資料庫 Schema 獨立設計能力，熟悉關聯式資料庫（MySQL 或相近 DB）\n- 熟悉 Git 版本控制，對 CI/CD 有實作經驗或明確概念\n- 具備產品思維，願意理解業務場景，而不只是單純寫 code\n- 了解基本的測試 / TDD 概念，願意實際撰寫測試來保護品質\n- 熟悉 AI 自動化與協作工具（如 n8n、AnyCross、ChatGPT、Claude、Gemini 等）",
+            "skill": [
+                {
+                    "code": "11009005012",
+                    "description": "AI"
+                },
+                {
+                    "code": "11009005016",
+                    "description": "生成式AI"
+                },
+                {
+                    "code": "11009009009",
+                    "description": "網路應用軟體操作"
+                }
+            ],
+            "specialty": [
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                }
+            ],
+            "workExp": "2年以上"
+        },
+        "contact": {
+            "email": "",
+            "hrName": "Alvin",
+            "other": "",
+            "phone": [],
+            "reply": "",
+            "visit": ""
+        },
+        "custNo": "130000000196055",
+        "employees": "300人",
+        "header": {
+            "analysisType": 3,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8vsve",
+            "appearDate": "2025/12/01",
+            "applyDate": "",
+            "custName": "阿爾法餐飲股份有限公司",
+            "custUrl": "https://www.104.com.tw/company/1a2x6bm6l3",
+            "hrBehaviorPR": 0.8662083789392356,
+            "isApplied": false,
+            "isFollowed": false,
+            "isSaved": false,
+            "jobName": "Backend Engineer 後端工程師",
+            "userApplyCount": 0
+        },
+        "industry": "餐館業",
+        "jobDetail": {
+            "addressArea": "台北市",
+            "addressDetail": "忠孝東路五段410號15樓",
+            "addressNo": "6001001007",
+            "addressRegion": "台北市信義區",
+            "businessTrip": "無需出差外派",
+            "delegatedRecruit": "",
+            "hireType": 0,
+            "industryArea": "",
+            "jobCategory": [
+                {
+                    "code": "2007001016",
+                    "description": "後端工程師"
+                },
+                {
+                    "code": "2007001017",
+                    "description": "全端工程師"
+                },
+                {
+                    "code": "2007001004",
+                    "description": "軟體工程師"
+                }
+            ],
+            "jobDescription": "Overview:\nYou will be responsible for designing and building internal backend systems that connect our ERP (NetSuite), POS, HR and membership systems. You will work closely with analysts and business teams to deliver stable, secure and maintainable services that actually help stores and operations run better.\n\n你將負責設計與建置公司內部的系統, 串接 ERP（NetSuite, POS, 人資與會員等各項系統. 你會與分析師以及各事業單位密切合作, 提供穩定, 安全且易於維護的服務, 實際幫助門市與營運運作得更好.\n\nWhat you will do:\n- 使用 Python（Flask / FastAPI）開發與維護後端服務與 RESTful API\n- 串接內部與外部系統：如 NetSuite（ERP）、POS、HR、會員系統、Line OA 等\n- 設計與維護關聯式資料庫（如 MySQL / PostgreSQL），確保資料正確性、效能與可擴充性\n- 維護雲端服務（Google Cloud Platform：Container、SQL 等）\n- 使用 Git 進行版本管理，並建立與維護 CI/CD 流程進行部署\n- 撰寫自動化測試（單元測試 / TDD），維持程式品質\n- 系統設計與效能優化，確保系統的穩定性、安全性與可維運性\n\nSkill you must have:\n- 2 年以上後端開發經驗，具備獨立以 Python 開發 Web 後端的實務經驗\n- 具備資料庫 Schema 獨立設計能力，熟悉關聯式資料庫（MySQL 或相近 DB）\n- 熟悉 Git 版本控制，對 CI/CD 有實作經驗或明確概念\n- 具備產品思維，願意理解業務場景，而不只是單純寫 code\n- 了解基本的測試 / TDD 概念，願意實際撰寫測試來保護品質\n- 熟悉 AI 自動化與協作工具（如 n8n、AnyCross、ChatGPT、Claude、Gemini 等） \n\nPlus  Point:\n- 熟悉 Line Messaging API / Line OA、會員系統\n- 有實作過 NetSuite API / SDK 客製或其他 ERP 整合經驗\n- 有 DevOps / SRE 經驗（Docker、監控、Log、Alert、Security）\n- 了解前端 framework（React.js、Next.js 等）\n- 對 AI Agents / 自動化流程（如自動通知、對話機器人、報表生成）有實作經驗或強烈興趣\n- 有深入參與 SaaS 平台開發的經驗",
+            "jobType": 1,
+            "landmark": "距捷運永春站約120公尺",
+            "latitude": "25.0404458",
+            "longitude": "121.5749506",
+            "manageResp": "不需負擔管理責任",
+            "needEmp": "1人",
+            "remoteWork": null,
+            "salary": "待遇面議",
+            "salaryMax": 0,
+            "salaryMin": 0,
+            "salaryType": 10,
+            "startWorkingDay": "不限",
+            "vacationPolicy": "週休二日",
+            "workPeriod": "日班",
+            "workType": []
+        },
+        "job_id": "8vsve",
+        "welfare": {
+            "legalTag": [
+                "哺乳室",
+                "週休二日",
+                "家庭照顧假",
+                "勞保",
+                "健保",
+                "陪產假",
+                "產假",
+                "特別休假",
+                "育嬰留停",
+                "女性生理假",
+                "勞退提撥金",
+                "安胎假",
+                "產檢假",
+                "就業保險",
+                "防疫照顧假",
+                "員工體檢",
+                "職災保險"
+            ],
+            "tag": [
+                "年終獎金",
+                "專業證照獎金",
+                "結婚禮金",
+                "生育津貼",
+                "住院慰問金",
+                "員工優惠",
+                "優於勞基法特休",
+                "伙食津貼"
+            ],
+            "welfare": "阿爾法絕不虧待與我們一同打拼的夥伴\n\n【基本安心保障】\n\t勞保、健保、勞退提撥6%\n\t彈性月排休9-11天、年度特休假、法定假別\n\t結婚禮金、生育慰問金、喪葬慰問金、托兒補助津貼、臨場健康服務\n\n【店鋪正職人員】\n(以下獎金福利只適用店鋪夥伴，不含行政單位，部分不含中央廚房)\n\n\t季獎金-平均每人每季 6,000~20,000 元(不含中央廚房)\n\t新人到職獎金-入職滿 1 個月 2,000 元，滿 2 個月 2,000 元\n      訓練獎金 5,000元~1,000元，越快通過培訓獎金越高\n\t介紹獎金-最高享20,000元\n\t配合營運獎金-5,000元(不含中央廚房)\n\t年終獎金，新進人員按比例發放\n\t夜間津貼(限雞湯大叔，麵屋一燈)\n\t滿一年正職人員【產前假】60天\n\t生兒獎勵金-正職、計時滿一年即有嬰兒用品提貨券最高享10,000元\n     員工托兒補助\n\t考取相關證照獎勵\n\t免費年度健康檢查\n\t全集團美食，同仁享 68 折員工價，親友 88 折。\n\t年度春酒\n\t過年店休除夕-初三(不含百貨店)"
+        }
+    },
+    {
+        "_id": "8v203",
+        "condition": {
+            "acceptRole": {
+                "disRole": {
+                    "disability": [],
+                    "needHandicapCompendium": false
+                },
+                "role": [
+                    {
+                        "code": 2,
+                        "description": "應屆畢業生"
+                    }
+                ]
+            },
+            "certificate": [],
+            "driverLicense": [],
+            "edu": "大學、碩士",
+            "language": [
+                {
+                    "ability": {
+                        "listening": "精通",
+                        "reading": "精通",
+                        "speaking": "精通",
+                        "writing": "精通"
+                    },
+                    "code": 18,
+                    "language": "中文"
+                },
+                {
+                    "ability": {
+                        "listening": "中等",
+                        "reading": "中等",
+                        "speaking": "中等",
+                        "writing": "中等"
+                    },
+                    "code": 1,
+                    "language": "英文"
+                }
+            ],
+            "localLanguage": [],
+            "major": [
+                "數學及電算機科學學科類"
+            ],
+            "other": "",
+            "skill": [
+                {
+                    "code": "11009002008",
+                    "description": "軟體工程系統開發"
+                },
+                {
+                    "code": "11009005001",
+                    "description": "軟體程式設計"
+                }
+            ],
+            "specialty": [
+                {
+                    "code": "12001002017",
+                    "description": "Jenkins"
+                },
+                {
+                    "code": "12001003045",
+                    "description": "Python"
+                },
+                {
+                    "code": "12001003097",
+                    "description": "LLM"
+                },
+                {
+                    "code": "12001002018",
+                    "description": "Git"
+                }
+            ],
+            "workExp": "不拘"
+        },
+        "contact": {
+            "email": "",
+            "hrName": "邱小姐 Yuki",
+            "other": "Please send your CV to Tradebeyond career page\nhttps://www.careers-page.com/tradebeyond/job/Y6VW6559",
+            "phone": [],
+            "reply": "",
+            "visit": ""
+        },
+        "custNo": "130000000087583",
+        "employees": "300人",
+        "header": {
+            "analysisType": 2,
+            "analysisUrl": "//www.104.com.tw/jobs/apply/analysis/8v203",
+            "appearDate": "2025/11/27",
+            "applyDate": "",
+            "custName": "TradeBeyond_香港商科銳投資控股有限公司台灣分公司",
+            "custUrl": "https://www.104.com.tw/company/1a2x6bjuvz",
+            "hrBehaviorPR": 0.6345023302346083,
+            "isApplied": false,
+            "isFollowed": false,
+            "isSaved": false,
+            "jobName": "Python Engineer",
+            "userApplyCount": 0
+        },
+        "industry": "電腦軟體服務業",
+        "jobDetail": {
+            "addressArea": "台北市",
+            "addressDetail": "",
+            "addressNo": "6001001011",
+            "addressRegion": "台北市南港區",
+            "businessTrip": "無需出差外派",
+            "delegatedRecruit": "",
+            "hireType": 0,
+            "industryArea": "",
+            "jobCategory": [
+                {
+                    "code": "2007001004",
+                    "description": "軟體工程師"
+                },
+                {
+                    "code": "2007001016",
+                    "description": "後端工程師"
+                }
+            ],
+            "jobDescription": "For more than 20 years, TradeBeyond has been advancing a more efficient, responsible supply chain. Responding to retail sourcing’s need for smarter, automated workflows and data transparency, we developed the industry’s leading supply chain platform, CBX, which is relied on by many of the largest brands and retailers around the world.  \n \nAs consumers, businesses, and governments alike have increased their commitment to sustainability, Fortune 500 companies such as The Home Depot, REI, Safeway, Lidl, and Lululemon have turned to TradeBeyond to help optimize product development, manage suppliers, reduce waste, and improve quality and compliance. \n\nLearn more at TradeBeyond.com \n\nAbout the Role\n\nYou’ll join our AI team to build the Python foundation that makes our AI-powered products smarter and faster. Day to day, you’ll focus on the services for AI initiatives—working closely with AI engineers and data scientists to ship services and APIs. Over time, you’ll take on AI functionality development such as semantic retrieval and agent workflows, progressing toward ownership of AI-backed services end-to-end. \n\nCurrent success is measured by reliable services and clear interfaces; future success is stronger AI/LLM capability in the systems you help deliver—so users and customers feel the difference. \n\nResponsibilities: \n\n* Build & ship Python services and REST endpoints with clear, consistent error responses. \n\n* Quality & delivery: contribute tests, reviews, and branch workflows; deliver via Jenkins pipeline. \n\n* Reviews & Docs: participate in code/design reviews and document key technical decisions. \n\n* Quarterly objectives: under mentoring, deliver one scoped AI-backed mini-project each quarter. \n\n \n\nRequirements (Must-Have) \n\n* Programming languages: proficient in Python for production services. \n\nVersion control & CI/CD: daily Git usage and experience running Jenkins pipelines. \n\n* Foundations: basic logging/metrics/health checks; ability to follow specs, document changes clearly, and deliver on time. \n\n* Languages: native Mandarin and intermediate-level English. \n\nNice-to-Have \n\n* REST basics: exposure to implementing RESTful APIs (routing, versioning, status codes, pagination, auth basics) with consistent error semantics (e.g. Problem Details). \n\n* LLM exposure: experience calling LLM APIs with timeouts/retries and basic cost/latency awareness; prototypes or features built with OpenAI/Gemini/Azure. \n\n* Information retrieval: understand embeddings/vector search; experience with a vector store (pgvector or MongoDB Atlas Vector Search). \n\n*DB skills: comfortable in Postgres and familiar with SQL performance for API workloads. \n\n* Container & Cloud: exposure to container packaging (Docker) and cloud-hosted deployments (Kubernetes). \n\nObservability tooling: familiarity with Prometheus/Grafana dashboards or tracing basics. \n\nTradeBeyond Offers \n \nYou will work in a flat and open team environment where your experience and expertise are valued. You will work in partnership with a leadership team who have profound domain knowledge in their functional areas and are keen to work with you to continuously make positive impacts for our customers and employees. Externally, you will be engaging with a client network on a global footprint.  \n\nWe  offer competitive compensation in a dynamic, high growth and global environment. At TradeBeyond, we value the diversity of our employees and partners. We believe that our company thrives when we support and celebrate our differences. \n\nWe are an equal opportunity employer and welcome applications from all qualified candidates. All information provided by applicants will be treated in strictest confidence and handled confidentially for recruitment-related purposes within the company and our associated company. Applicants may be considered for other suitable positions within the company over a one-year period, after which their personal data will be destroyed \n\n \n\n \n",
+            "jobType": 1,
+            "landmark": "",
+            "latitude": "25.0312347",
+            "longitude": "121.6111949",
+            "manageResp": "不需負擔管理責任",
+            "needEmp": "1人",
+            "remoteWork": null,
+            "salary": "待遇面議",
+            "salaryMax": 0,
+            "salaryMin": 0,
+            "salaryType": 10,
+            "startWorkingDay": "不限",
+            "vacationPolicy": "週休二日",
+            "workPeriod": "日班，09:00~18:00",
+            "workType": []
+        },
+        "job_id": "8v203",
+        "welfare": {
+            "legalTag": [],
+            "tag": [],
+            "welfare": "•      符合勞基法規勞保 健保 勞退\n•\t友好和合作的工作環境\n•      不定期員工聚餐\n•      零食點心\n•\t多元化，有包容性的國際團隊\n•\t提供有吸引力的薪資\n•\t完善的晉升發展機會\n•\t在職培訓\n•\t有趣的員工活動\n•\t員工推薦獎金"
+        }
+    }
+]

@@ -58,9 +58,9 @@ class JobDetail(pa.DataFrameModel):
 
 class Welfare(pa.DataFrameModel):
     job_uid: Series[int] = pa.Field(coerce=True)
-    tags: Series[list] = pa.Field()
+    tags: Series[object] = pa.Field()  # list of strings
     welfare_description: Series[str] = pa.Field()
-    legal_tags: Series[list] = pa.Field()
+    legal_tags: Series[object] = pa.Field()  # list of strings
 
     class Config:
         coerce = True  # 強制轉型 (例如字串 "100" 轉為 數字 100)

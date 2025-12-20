@@ -19,4 +19,4 @@ ENV PATH="/src/.venv/bin:$PATH"
 
 COPY . .
 
-CMD ["python", "--version"]
+CMD ["uv", "run", "python", "-m", "src.main", "--mode", "transform"]

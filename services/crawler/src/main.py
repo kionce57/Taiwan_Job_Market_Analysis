@@ -1,14 +1,32 @@
 import logging
 from collections.abc import Iterator
-from pathlib import Path
 
 import click
+import pandas as pd
 
 from config.config_log import set_up_logging
+from config.mysql_schema import (
+    bridge_category,
+    bridge_language,
+    bridge_major,
+    bridge_skills,
+    bridge_specialties,
+    cust_info,
+    dim_job,
+    job_detail,
+    metadata_obj,
+    salary_type,
+    welfare,
+)
+from src.interfaces.interfaces import BronzeJobRepository, SilverJobRepository
 from src.extractors.crawler import Crawler, OneZeroFourCrawler
-from src.loaders.repo import BronzeJobRepository, MongoDB_one_zero_four
+from src.loaders.repo import MongoDB_one_zero_four
+from src.loaders.sql_repo import TjmaDatabase
 from src.transformers.cleaner import (
-    make_job_skill_or_specialty,
+    make_all_job_related_dfs,
+    make_cust_df,
+    make_dim_job,
+    make_original_df,
 )
 
 set_up_logging(debug=False)
@@ -20,10 +38,16 @@ logger = logging.getLogger(__name__)
 class JobDataPipeline:
     BATCH_SIZE = 100
 
-    def __init__(self, crawler: Crawler, repo: BronzeJobRepository):
+    def __init__(
+        self,
+        crawler: Crawler,
+        bronze_repo: BronzeJobRepository,
+        silver_repo: SilverJobRepository | None = None,
+    ):
         # 有在猶豫無狀態是否還要弄成 class, 最終決定避免在一次任務中重複建立 instance
         self.crawler = crawler
-        self.repo = repo
+        self.bronze_repo = bronze_repo
+        self.silver_repo = silver_repo
 
     def fetch_data_and_save_to_repo(self, keyword: str, area: str):
         if not isinstance(keyword, str) and not isinstance(area, str):
@@ -54,143 +78,126 @@ class JobDataPipeline:
             # 這裡可以做更細緻的錯誤處理，例如發送警報
             logger.exception(f"Pipeline failed during execution: {e}")
 
-    def select_stage_and_output_csv(
-        self, file_title: str, job_name_regex: str | None = None
-    ) -> None:
+    def bronze_to_silver(self, job_name_regex: str | None = None) -> None:
         """
-        ETL Export 階段：
-        從 Bronze Repo 取出資料 -> 轉 Pandas DF -> 輸出 CSV
+        bronze_to_silver 階段：
+        1. 從 Bronze Repo (MongoDB) 取出資料
+        2. 轉換為 Pandas DataFrame
+        3. 將 cust_info 存入 Silver Repo (MySQL)
+        4. 將 dim_job 存入 Silver Repo
+        5. 從 Silver Repo 取回 job_id -> id 的映射
+        6. 將其他 DataFrames 存入 Silver Repo
         """
-        result_dir = Path("result")
-        result_dir.mkdir(parents=True, exist_ok=True)
+        if self.silver_repo is None:
+            raise ValueError("Silver repo (TjmaDatabase) is not initialized.")
 
-        try:
-            # [優化] 直接傳遞參數，無論是 None 還是字串，交由 Repo 內部處理
-            documents = self.repo.select_stage(job_name_regex)
+        logger.info("Starting bronze_to_silver pipeline...")
 
-            if not documents:
-                logger.warning("No documents found in the database matching criteria.")
-                return
+        # Step 0: 確保表格存在 (使用正確的 schema)
+        logger.info("Creating tables if not exist...")
+        self.silver_repo.create_tables(metadata_obj)
 
-            logger.info(f"Fetched {len(documents)} documents. Starting transformation...")
+        # Step 0.5: 插入 salary_type 參考資料
+        logger.info("Inserting salary_type reference data...")
+        salary_type_data = pd.DataFrame(
+            [
+                {"type": 10, "name": "面議"},
+                {"type": 20, "name": "時薪"},
+                {"type": 30, "name": "論件計酬"},
+                {"type": 40, "name": "日薪"},
+                {"type": 50, "name": "月薪"},
+                {"type": 60, "name": "年薪"},
+                {"type": 70, "name": "部分工時(月薪)"},
+            ]
+        )
+        self.silver_repo.insert_stage(salary_type, salary_type_data)
 
-            # Transformation
-            # step 1 originale df
-            original_df = use_original_documents_make_df(documents)
+        # Step 1: 從 Bronze Repo 取出資料
+        logger.info("Fetching data from Bronze (MongoDB)...")
+        documents = self.bronze_repo.select_stage(job_name_regex=job_name_regex)
+        if not documents:
+            logger.warning("No documents found in Bronze repo.")
+            return
 
-            # step 2 製作 cust df
+        logger.info(f"Fetched {len(documents)} documents from Bronze.")
 
-            # insert cust df
+        # Step 2: 轉換為原始 DataFrame
+        original_df = make_original_df(documents)
 
-            # step  dim_job
+        # Step 3: 製作並存入 cust_info
+        logger.info("Processing and inserting cust_info...")
+        cust_df = make_cust_df(original_df)
+        self.silver_repo.insert_stage(cust_info, cust_df)
+        logger.info(f"Inserted {len(cust_df)} records into cust_info.")
 
-            # insert dim_job
+        # Step 4: 製作並存入 dim_job
+        logger.info("Processing and inserting dim_job...")
+        dim_job_df = make_dim_job(original_df)
+        self.silver_repo.insert_stage(dim_job, dim_job_df)
+        logger.info(f"Inserted {len(dim_job_df)} records into dim_job.")
 
-            # select select job_uid, job_id from dim_job
-            # step
-            input_dfs = self._make_input_dfs(original_df)
+        # Step 5: 從 Silver Repo 取回 job_id -> id 的映射
+        logger.info("Fetching job_uid mapping from dim_job...")
+        job_uid_df = self.silver_repo.select_stage(dim_job, columns=["id", "job_id"])
+        logger.info(f"Retrieved {len(job_uid_df)} job_id mappings.")
 
-            logger.info(f"Exporting {len(input_dfs)} CSV files to {result_dir.absolute()}...")
+        # Step 6: 製作所有依賴 job_uid 的 DataFrame
+        logger.info("Processing job-related DataFrames...")
+        all_dfs = make_all_job_related_dfs(original_df, job_uid_df)
 
-            # Export
-            for name, df in input_dfs.items():
-                file_path = result_dir / f"{file_title}_{name}.csv"
-                df.to_csv(file_path, index=False, encoding="utf-8-sig")
+        # Step 7: 存入各個表
+        table_mapping = {
+            "job_detail": job_detail,
+            "welfare": welfare,
+            "major": bridge_major,
+            "skills": bridge_skills,
+            "specialties": bridge_specialties,
+            "category": bridge_category,
+            "language": bridge_language,
+        }
 
-            logger.info("Export to csv files completed.")
+        for df_name, df in all_dfs.items():
+            table = table_mapping[df_name]
+            if not df.empty:
+                logger.info(f"Inserting {len(df)} records into {table.name}...")
+                self.silver_repo.insert_stage(table, df)
+            else:
+                logger.debug(f"Skipping {table.name} (empty DataFrame).")
 
-        except Exception as e:
-            logger.exception(f"Failed to export CSVs: {e}")
+        logger.info("bronze_to_silver pipeline completed successfully.")
 
     def _flush_buffer(self, data: list[dict]):
         """Helper method to write data to repo"""
         try:
-            self.repo.insert_stage(data)
+            self.bronze_repo.insert_stage(data)
             logger.debug(f"Flushed batch of {len(data)} records to repo.")
         except Exception as e:
             logger.error(f"Failed to insert batch to repo: {e}")
             raise e  # 拋出異常以中止 Pipeline，或選擇記錄後繼續 (視業務需求)
 
-    def _make_input_dfs(self, original_df) -> dict:
-        input_dfs = {
-            "job_name": make_jobid_with_jobname_and_category(original_df),
-            "skills": make_job_skill_or_specialty(original_df, "skill"),
-            "specialtys": make_job_skill_or_specialty(original_df, "specialty"),
-            "exact_salary": process_salary_info(original_df, mode="exact"),
-            "negotiable_salary": process_salary_info(original_df, mode="negotiable"),
-        }
-        return input_dfs
 
-
-@click.group()
-@click.pass_context
-def cli(ctx):
-    """
-    Job Data Pipeline CLI 工具
-    在這裡統一初始化 Class
-    """
-    # 確保 ctx.obj 是一個字典 (或直接存 pipeline 實例也可以)
-    ctx.ensure_object(dict)
-
-    # 1. 在這裡初始化一次，所有子指令都能用
-    # 這樣就很有「放在一起」的感覺，邏輯也更集中
-    ctx.obj["pipeline"] = JobDataPipeline(
-        crawler=OneZeroFourCrawler(), repo=MongoDB_one_zero_four()
-    )
-
-
-@cli.command()
-@click.option("-k", "--keyword", required=True, help="搜尋關鍵字")
-@click.option("-a", "--area", default="台北市", show_default=True, help="搜尋地區")
-@click.pass_context  # 2. 加上這個讓它能接收 ctx
-def fetch(ctx, keyword, area):
-    """僅執行資料爬取"""
-    # 3. 直接從 ctx 拿出來用，不用再 pipeline = ...
-    pipeline = ctx.obj["pipeline"]
-    pipeline.fetch_data_and_save_to_repo(keyword, area)
-
-
-@cli.command()
-@click.option("-r", "--regex", required=False, default=None, help="職缺名稱 Regex")
-@click.option("-f", "--filename", required=True, help="輸出檔名")
-@click.pass_context
-def export(ctx, regex, filename):
-    """僅執行匯出"""
-    pipeline = ctx.obj["pipeline"]
-    pipeline.select_stage_and_output_csv(regex, filename)
-
-
-@cli.command()
-@click.option("-k", "--keyword", required=True)
-@click.option("-a", "--area", default="台北市")
-@click.option("-r", "--regex", required=False, default=None, help="職缺名稱 Regex")
-@click.option("-f", "--filename", required=True)
-@click.pass_context
-def run_all(ctx, keyword, area, regex, filename):
-    """執行完整流程"""
-    # 使用 context invoke 可以直接呼叫上面的指令，避免重複代碼
-    ctx.invoke(fetch, keyword=keyword, area=area)
-
-    if regex is None:
-        regex = keyword
-
-    ctx.invoke(export, regex=regex, filename=filename)
+# CLI 入口點
+# cmd pattern: uv run python -m src.main --keyword "python" --area "6001001000" --mode "crawl"
+# cmd pattern: uv run python -m src.main --mode "transform"
+@click.command()
+@click.option("--keyword", "-k", default="python", help="Search keyword for job listings")
+@click.option("--area", "-a", default="6001001000", help="Area code for job search")
+@click.option("--mode", "-m", type=click.Choice(["crawl", "transform"]), default="crawl")
+@click.option("--regex", "-r", default=None, help="Job name regex for transform mode")
+def main(keyword: str, area: str, mode: str, regex: str | None):
+    """Taiwan Job Market Analysis - Data Pipeline"""
+    if mode == "crawl":
+        crawler = OneZeroFourCrawler()
+        bronze_repo = MongoDB_one_zero_four()
+        pipeline = JobDataPipeline(crawler, bronze_repo)
+        pipeline.fetch_data_and_save_to_repo(keyword, area)
+    elif mode == "transform":
+        crawler = OneZeroFourCrawler()
+        bronze_repo = MongoDB_one_zero_four()
+        silver_repo = TjmaDatabase()
+        pipeline = JobDataPipeline(crawler, bronze_repo, silver_repo)
+        pipeline.bronze_to_silver(job_name_regex=regex)
 
 
 if __name__ == "__main__":
-    # example: uv run python main.py run_all -k 資料工程 -a 新北市 -r "Python|資料工程" -f "python_"
-    # select regex: all
-    cli()
-
-    # if need...
-    # import json
-    # keywords = ["something", "something2",...,...]
-
-    # with open("./src/utils/area_category_for_transformer.json", "w", encoding="utf-8") as f:
-    #     doc = json.load(f)
-    #     areas = doc.keys()
-
-    # for area in areas:
-    #     for keyword in keywords:
-    #         main = JobDataPipeline()
-    #         main.fetch_data_and_save_to_repo(keyword, area)
+    main()

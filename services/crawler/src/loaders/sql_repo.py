@@ -1,4 +1,5 @@
 import os
+import urllib.parse
 
 import pandas as pd
 import sqlalchemy as sa
@@ -24,8 +25,21 @@ class TjmaDatabase(SilverJobRepository):
         if not all([driver, username, password, host, database]):
             raise ValueError("Missing required database environment variables")
 
+        # URL encode username and password to handle special characters
+        username = urllib.parse.quote_plus(str(username))
+        password = urllib.parse.quote_plus(str(password))
+
         conn_str = f"{driver}://{username}:{password}@{host}/{database}"
         self.engine = sa.create_engine(conn_str)
+
+    def create_tables(self, metadata: sa.MetaData) -> None:
+        """
+        Create all tables defined in the metadata if they don't exist.
+
+        Args:
+            metadata: SQLAlchemy MetaData object containing table definitions.
+        """
+        metadata.create_all(self.engine)
 
     def insert_stage(self, table: sa.Table, df: pd.DataFrame) -> None:
         """

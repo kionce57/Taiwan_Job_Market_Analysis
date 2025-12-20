@@ -49,7 +49,7 @@ dim_job: Table = Table(
     Column("id", BigInteger, primary_key=True, autoincrement=True, comment="內部代理鍵"),
     Column("job_id", String(40), nullable=False, unique=True, comment="外部業務鍵"),
     Column("job_name", String(250)),
-    Column("work_type", String(30)),
+    Column("work_type", String(100)),
     # --- 薪資與獎金 ---
     Column("salary_type", Integer, ForeignKey("salary_type.type"), server_default=text("30")),
     Column("salary_min", Integer, server_default=text("0")),
@@ -62,14 +62,14 @@ dim_job: Table = Table(
     # [修正 3] 補回缺失的 work_exp
     Column("work_exp", String(100)),
     Column("edu", String(100)),
-    Column("work_period", String(50)),
-    Column("vacation_policy", String(50)),
+    Column("work_period", String(200)),
+    Column("vacation_policy", String(200)),
     # --- 元數據與弱關聯 ---
     Column("cust_no", String(24)),
     Column("appear_date", Date),
     Column(
-        "updated_date", Date, server_default=func.current_date()
-    ),  # 建議用 current_date 對齊 SQL 語意
+        "updated_date", Date, server_default=text("(CURDATE())")
+    ),  # MySQL 需要用 CURDATE() 而非 CURRENT_DATE
     # --- 索引定義 (修正處) ---
     Index("idx_salary", "salary_min"),
     # [修正 4] 索引欄位名稱需與 Column 定義一致 (原為 city, district)

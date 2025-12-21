@@ -12,7 +12,7 @@
             "justMyCode": true
         },
         {
-            // --- [方案二] 當前檔案 + 注入路徑 (你要的這個) ---
+            // --- [方案二] 當前檔案 + 注入路徑 ---
             // 用途：開啟任意 .py 檔按下 F5，即使裡面有 import src.xxx 也能跑
             "name": "File: Current File (Hybrid)",
             "type": "debugpy",

@@ -40,13 +40,14 @@ services:
   web:
     build:
       context: ./services/web_server
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: "tjma_web"
     ports:
       - "8080:8080"
     env_file:
       - ./services/web_server/.env
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       - DB_HOST=db

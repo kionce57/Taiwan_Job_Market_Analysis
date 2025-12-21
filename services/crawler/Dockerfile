@@ -1,7 +1,5 @@
 FROM python:3.12.11-slim-bookworm
 
-LABEL maintainer="TJMA Crawler"
-
 ENV PYTHONUNBUFFERED=1
 
 ENV UV_COMPILE_BYTECODE=1

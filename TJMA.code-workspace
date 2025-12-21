@@ -11,6 +11,10 @@
 		{
 			"name": "Web Server",
 			"path": "services/web_server"
+		},
+		{
+			"name": "Frontend",
+			"path": "frontend"
 		}
 	],
 	"settings": {

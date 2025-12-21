@@ -1,6 +1,7 @@
 {
     "exclude": [
         "services/",
+        "frontend/",
         "**/node_modules",
         "**/__pycache__"
     ]

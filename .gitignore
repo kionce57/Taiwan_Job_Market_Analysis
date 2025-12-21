@@ -9,6 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
+# Node.js dependencies
+node_modules
+
 # environments
 .env
 .ruff_cache
@@ -23,3 +26,4 @@ mysql_data
 /result/
 to-do.md
 notebooks
+.pytest_cache

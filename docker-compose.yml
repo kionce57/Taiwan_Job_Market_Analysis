@@ -23,6 +23,7 @@ services:
       timeout: 5s
       retries: 10
       start_period: 30s
+
   crawler:
     build:
       context: ./services/crawler
@@ -37,6 +38,7 @@ services:
         condition: service_healthy
     environment:
       - DB_HOST=db
+
   web:
     build:
       context: ./services/web_server
@@ -51,3 +53,14 @@ services:
         condition: service_healthy
     environment:
       - DB_HOST=db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: "tjma_frontend"
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    restart: unless-stopped

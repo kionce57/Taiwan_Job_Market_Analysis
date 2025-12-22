@@ -1,98 +1,105 @@
-"""Dashboard API router with mock data support."""
+"""Dashboard API router with MySQL data support."""
 
-from datetime import datetime, timedelta
-import random
+from datetime import datetime
+from typing import Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, Query
 
+from src.db import DatabaseRepository
 from src.models import CategoryPoint, DashboardData, DashboardMeta, TimeSeriesPoint
 
 router = APIRouter(prefix="/api", tags=["dashboard"])
 
 
-def generate_mock_data() -> DashboardData:
-    """Generate mock dashboard data for frontend development."""
-    # Generate 30 days of trend data
-    today = datetime.now()
+def get_repository() -> DatabaseRepository:
+    """Dependency injection for database repository."""
+    return DatabaseRepository()
+
+
+def calculate_percentage(value: int, total: int) -> float:
+    """Calculate percentage safely."""
+    return round(value / total * 100, 1) if total > 0 else 0.0
+
+
+@router.get("/dashboard", response_model=DashboardData)
+async def get_dashboard_data(
+    job_name: Optional[str] = Query(None, description="Filter by job name (partial match)"),
+    repo: DatabaseRepository = Depends(get_repository),
+) -> DashboardData:
+    """
+    Get aggregated dashboard data from MySQL.
+
+    Args:
+        job_name: Optional job name filter for partial matching
+        repo: Database repository (injected)
+
+    Returns:
+        Aggregated dashboard statistics
+    """
+    # Fetch all data from MySQL
+    trend_df = repo.get_job_count_by_date(job_name)
+    skills_df = repo.get_top_skills(job_name)
+    regions_df = repo.get_jobs_by_region(job_name)
+    industries_df = repo.get_jobs_by_industry(job_name)
+    salary_df = repo.get_salary_distribution(job_name)
+    total_jobs = repo.get_total_jobs(job_name)
+
+    # Transform trend data
     trend = [
         TimeSeriesPoint(
-            date=(today - timedelta(days=i)).strftime("%Y-%m-%d"),
-            jobCount=random.randint(800, 1500),
-            avgSalary=random.randint(45000, 65000),
+            date=row["date"].strftime("%Y-%m-%d")
+            if hasattr(row["date"], "strftime")
+            else str(row["date"]),
+            jobCount=int(row["jobCount"]),
+            avgSalary=float(row["avgSalary"] or 0),
         )
-        for i in range(30)
+        for _, row in trend_df.iterrows()
     ]
-    trend.reverse()
+    trend.reverse()  # Oldest first
 
-    # Top 10 skills
-    skill_names = [
-        "Python", "JavaScript", "React", "SQL", "Java",
-        "TypeScript", "AWS", "Docker", "Node.js", "Kubernetes"
-    ]
+    # Transform skills data
     skills = [
-        CategoryPoint(label=name, value=random.randint(100, 500))
-        for name in skill_names
+        CategoryPoint(label=row["label"], value=int(row["value"]))
+        for _, row in skills_df.iterrows()
     ]
-    skills.sort(key=lambda x: x.value, reverse=True)
 
-    # Regional distribution
-    region_names = ["台北市", "新北市", "桃園市", "台中市", "高雄市", "新竹縣市", "台南市"]
-    total_region_jobs = 5000
-    regions = []
-    remaining = total_region_jobs
-    for i, name in enumerate(region_names):
-        if i == len(region_names) - 1:
-            value = remaining
-        else:
-            value = random.randint(100, remaining // 2)
-            remaining -= value
-        regions.append(CategoryPoint(
-            label=name,
-            value=value,
-            percentage=round(value / total_region_jobs * 100, 1)
-        ))
-    regions.sort(key=lambda x: x.value, reverse=True)
-
-    # Industry distribution
-    industry_names = [
-        "軟體/網路", "電子零組件", "半導體", "金融/保險",
-        "資訊服務", "電腦系統", "其他"
+    # Transform regions data with percentage
+    total_region_jobs = int(regions_df["value"].sum()) if not regions_df.empty else 0
+    regions = [
+        CategoryPoint(
+            label=row["label"],
+            value=int(row["value"]),
+            percentage=calculate_percentage(int(row["value"]), total_region_jobs),
+        )
+        for _, row in regions_df.iterrows()
     ]
-    total_industry_jobs = 5000
-    industries = []
-    remaining = total_industry_jobs
-    for i, name in enumerate(industry_names):
-        if i == len(industry_names) - 1:
-            value = remaining
-        else:
-            value = random.randint(200, remaining // 2)
-            remaining -= value
-        industries.append(CategoryPoint(
-            label=name,
-            value=value,
-            percentage=round(value / total_industry_jobs * 100, 1)
-        ))
-    industries.sort(key=lambda x: x.value, reverse=True)
 
-    # Salary distribution
-    salary_ranges = [
-        ("< 30K", 150), ("30K-40K", 450), ("40K-50K", 800),
-        ("50K-60K", 600), ("60K-80K", 350), ("80K-100K", 150), ("> 100K", 50)
+    # Transform industries data with percentage
+    total_industry_jobs = int(industries_df["value"].sum()) if not industries_df.empty else 0
+    industries = [
+        CategoryPoint(
+            label=row["label"],
+            value=int(row["value"]),
+            percentage=calculate_percentage(int(row["value"]), total_industry_jobs),
+        )
+        for _, row in industries_df.iterrows()
     ]
-    total_salary_jobs = sum(v for _, v in salary_ranges)
+
+    # Transform salary distribution with percentage
+    total_salary_jobs = int(salary_df["value"].sum()) if not salary_df.empty else 0
     salary_dist = [
         CategoryPoint(
-            label=label,
-            value=value,
-            percentage=round(value / total_salary_jobs * 100, 1)
+            label=row["label"],
+            value=int(row["value"]),
+            percentage=calculate_percentage(int(row["value"]), total_salary_jobs),
         )
-        for label, value in salary_ranges
+        for _, row in salary_df.iterrows()
     ]
 
     return DashboardData(
         meta=DashboardMeta(
-            lastUpdated=today.isoformat(),
-            totalJobs=sum(s.value for s in skills),
+            lastUpdated=datetime.now().isoformat(),
+            totalJobs=total_jobs,
         ),
         trend=trend,
         skills=skills,
@@ -100,18 +107,3 @@ def generate_mock_data() -> DashboardData:
         industries=industries,
         salaryDist=salary_dist,
     )
-
-
-@router.get("/dashboard", response_model=DashboardData)
-async def get_dashboard_data() -> DashboardData:
-    """
-    Get aggregated dashboard data.
-    
-    Returns mock data for now. Switch to real DB queries when ready.
-    """
-    # TODO: Replace with real database queries:
-    # from src.db import DatabaseRepository
-    # repo = DatabaseRepository()
-    # ... build DashboardData from repo queries
-    
-    return generate_mock_data()

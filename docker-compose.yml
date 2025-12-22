@@ -3,6 +3,7 @@ services:
     image: mysql:8.4.7
     container_name: tjma_mysql
     restart: always
+    command: --mysql-native-password=ON
     ports: 
       - 3307:3306
     environment:
@@ -18,7 +19,7 @@ services:
       - ./mysql_data:/var/lib/mysql 
       - ./init:/docker-entrypoint-initdb.d
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -45,7 +46,7 @@ services:
       dockerfile: Dockerfile
     container_name: "tjma_web"
     ports:
-      - "8080:8080"
+      - "8080:8000"
     env_file:
       - ./services/web_server/.env
     depends_on:

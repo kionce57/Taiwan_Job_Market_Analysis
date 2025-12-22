@@ -5,29 +5,41 @@ interface UseDashboardDataResult {
   data: DashboardData | null;
   loading: boolean;
   error: string | null;
-  refetch: () => void;
+  refetch: (jobName?: string) => void;
 }
 
 /**
  * Custom hook for fetching dashboard data
  * Handles loading, error states, and refetch capability
+ *
+ * @param jobName - Optional job name filter for searching jobs
  */
-export function useDashboardData(): UseDashboardDataResult {
+export function useDashboardData(jobName?: string): UseDashboardDataResult {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (filterJobName?: string) => {
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch('/api/dashboard');
-      
+      const params = new URLSearchParams();
+      const searchTerm = filterJobName ?? jobName;
+      if (searchTerm) {
+        params.set('job_name', searchTerm);
+      }
+
+      const url = params.toString()
+        ? `/api/dashboard?${params.toString()}`
+        : '/api/dashboard';
+
+      const response = await fetch(url);
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+
       const result = await response.json() as DashboardData;
       setData(result);
     } catch (err) {
@@ -37,7 +49,7 @@ export function useDashboardData(): UseDashboardDataResult {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [jobName]);
 
   useEffect(() => {
     fetchData();
